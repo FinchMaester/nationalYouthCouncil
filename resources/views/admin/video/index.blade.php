@@ -20,13 +20,13 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-  
+
       <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Video Description</th>
                 <th>Video URL</th>
-            
+
                 <th>Action</th>
             </tr>
         </thead>
@@ -35,19 +35,20 @@
                 <tr data-widget="expandable-table" aria-expanded="false">
                     <td>{{ $video->vid_desc ?? '' }}</td>
                     <td>{{ $video->vid_url ?? '' }}</td>
-                    
+
                     <td>
                         {{-- <a href="/admin/video/edit/{{ $video->id }}"> --}}
                             <div style="display: flex; flex-direction:row;">
-                              <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+                              <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $video->id }}">
                                 Update
                               </button>
+                              {{-- #exampleModals --}}
                         {{-- </a> --}}
                         {{-- <a href="{{ url('admin/video/delete/'.$video->id) }}"> --}}
                         {{-- <button type="button" class="btn-block btn-danger btn-sm button-size" data-toggle="modal"
                             data-target="#modal-default" style="width:auto;"
                             onclick="replaceLinkFunction">Delete</button> --}}
-                            <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $video->id }}">
                               Delete
                             </button>
 
@@ -58,14 +59,14 @@
         </tbody>
 
         @foreach($videos as $video)
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="delete{{ $video->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-             
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                  <a href="{{ url('admin/video/delete/' .$video->id) }}">
@@ -82,14 +83,14 @@
 
         {{-- Update --}}
         @foreach($videos as $video)
-        <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit{{ $video->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-             
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                  <a href="{{ url('admin/video/edit/' .$video->id) }}">
@@ -104,24 +105,24 @@
 
         @endforeach
     </table>
-  
+
         </div>
       </section>
-     
+
       <script>
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
-  
+
         myModal.addEventListener('shown.bs.modal', function () {
         myInput.focus()
         })
       </script>
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
     @stop
