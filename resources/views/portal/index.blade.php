@@ -1276,16 +1276,20 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                         <div class="u-container-layout u-container-layout-1">
                             <div class="u-absolute-hcenter u-expanded u-grey-light-2 u-map">
                                 <div class="embed-responsive">
-                                    <iframe class="embed-responsive-item"
+                                    {{-- <iframe class="embed-responsive-item"
                                         src="//maps.google.com/maps?output=embed&amp;q=Manhattan%2C%20New%20York&amp;z=10&amp;t=m"
-                                        data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe>
+                                        data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe> --}}
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.122872624117!2d85.3701424150148!3d27.682596982802103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b3541f0cc39%3A0x18658ddd0e314eca!2sSanothimi!5e0!3m2!1sen!2snp!4v1679308387051!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="u-align-left u-container-style u-layout-cell u-shape-rectangle u-size-23-lg u-size-23-xl u-size-30-md u-size-30-sm u-size-30-xs u-white u-layout-cell-2"
                         data-animation-name="customAnimationIn" data-animation-duration="1500"
                         data-animation-delay="500">
+
+
                         <div class="u-container-layout u-container-layout-2">
                             <h3 class="u-text u-text-1">Contact Us</h3>
                             <div class="u-expanded-width u-form u-form-1">
