@@ -59,7 +59,7 @@
             <button type="button" class="btn btn-block btn-warning btn-sm"><i class="fas fa-edit"></i> Update </button>
         </a> --}}
         {{-- <a href="{{ url('admin/image/delete/'.$image->id) }}"> --}}
-          <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn-danger button-size" data-bs-toggle="modal"  data-bs-target="#delete{{ $image->id }}">
             Delete
           </button>
         </div>
@@ -70,7 +70,7 @@
   </tbody>
   @foreach($images as $image)
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="delete{{ $image->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
