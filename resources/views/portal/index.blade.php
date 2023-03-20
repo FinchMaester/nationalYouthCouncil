@@ -11,12 +11,13 @@
                                 <img class="u-image u-image-1" src="{{ asset('img/National-Youth-Council-Nepal.png') }}"
                                     data-image-width="800" data-image-height="418">
                                 <h2 class="u-text u-text-1" data-animation-name="customAnimationIn"
-                                    data-animation-duration="1500">राष्ट्रिय युवा परिषद्<br>
+                                    data-animation-duration="1500"> <h1 class="sec_title">{{ __("National Youth Council") }}<br>
+
                                 </h2>
-                                <a href="{{ route('render_about') }}"
+                                <a href="{{ route('contact_page') }}"
                                     class="u-active-palette-1-dark-2 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-dark-2 u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-white u-btn-1"
                                     data-animation-name="customAnimationIn" data-animation-duration="1500"
-                                    data-animation-delay="500">read more</a>
+                                    data-animation-delay="500">contact us</a>
                             </div>
                         </div>
                     </div>
@@ -193,12 +194,6 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
 
 
-
-
-
-
-
-
         </div>
     </section>
 
@@ -277,7 +272,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-3">
                                 <div class="u-container-layout u-container-layout-5">
-                                    <h3 class="u-align-center u-text u-text-5"> उपाध्यक्ष</h3>
+                                    <h3 class="u-align-center u-text u-text-1"> उपाध्यक्ष</h3>
                                 </div>
                             </div><span class="u-align-center-xs u-file-icon u-icon u-icon-4"
                                 data-animation-name="customAnimationIn" data-animation-duration="1500"
@@ -286,7 +281,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-4">
                                 <div class="u-container-layout u-container-layout-6">
-                                    <h4 class="u-align-center u-text u-text-6"> श्री सुरेन्द्र बस्नेत</h4>
+                                    <h4 class="u-align-center u-text u-text-6"><br> श्री सुरेन्द्र बस्नेत</h4>
                                     <p class="u-align-center u-text u-text-7"><span class="u-icon"><svg
                                                 class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                                 style="width: 1em; height: 1em;">
@@ -337,7 +332,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
                                 <div class="u-container-layout u-container-layout-8">
-                                    <h3 class="u-align-center u-text u-text-9">{{ $team->role}}</h3>
+                                    <h3 class="u-align-center u-text u-text-1">{{ __("$team->role")}}</h3>
+                                    {{-- {{ __("National Youth Council") }} --}}
                                 </div>
                             </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
                                 data-animation-name="customAnimationIn" data-animation-duration="1500"
@@ -346,7 +342,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
                                 <div class="u-container-layout u-container-layout-9">
-                                    <h4 class="u-align-center u-text u-text-10"> {{ $team->name}}</h4>
+                                    <h4 class="u-align-center u-text u-text-6"> {{ __("$team->name")}}</h4>
                                     <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
                                                 class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                                 style="width: 1em; height: 1em;">
@@ -1361,21 +1357,21 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
             <div class="u-blog u-expanded-width u-blog-1">
                 <div class="u-repeater u-repeater-1">
                     <!--blog_post-->
-                    <div
-                        class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
-                        <div
-                            class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-1">
-                            <a class="u-post-header-link" href="blog/post-5.html">
+                    @foreach ($posts as $post)
+                    <div class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
+                        <div class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-1 ">
+
+                            <a class="u-post-header-link" href="#">
                                 <!--blog_post_image-->
                                 <img alt=""
                                     class="u-blog-control u-expanded-width-xs u-image u-image-default u-image-1"
-                                    src="images/8ad73f3c.jpeg" data-image-width="567" data-image-height="696">
+                                    src="{{ asset('uploads/posts/' . $post->image) }}" data-image-width="567" data-image-height="696">
                                 <!--/blog_post_image-->
                             </a>
                             <!--blog_post_header-->
                             <h4 class="u-blog-control u-text u-text-2">
                                 <a class="u-post-header-link" href="blog/post-5.html">
-                                    <!--blog_post_header_content-->Post 6 Headline
+                                    <!--blog_post_header_content-->{{ $post->title }}
                                     <!--/blog_post_header_content-->
                                 </a>
                             </h4>
@@ -1396,11 +1392,13 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                 <!--/blog_post_metadata_comments-->
                             </div>
                             <!--/blog_post_metadata-->
+
                         </div>
                     </div>
+                    @endforeach
                     <!--/blog_post-->
                     <!--blog_post-->
-                    <div
+                    {{-- <div
                         class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-2">
                         <div
                             class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-2">
@@ -1436,10 +1434,10 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </div>
                             <!--/blog_post_metadata-->
                         </div>
-                    </div>
+                    </div> --}}
                     <!--/blog_post-->
                     <!--blog_post-->
-                    <div
+                    {{-- <div
                         class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-3">
                         <div
                             class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-3">
@@ -1475,7 +1473,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </div>
                             <!--/blog_post_metadata-->
                         </div>
-                    </div>
+                    </div> --}}
                     <!--/blog_post-->
                 </div>
             </div>
