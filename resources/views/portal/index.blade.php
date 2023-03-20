@@ -1279,7 +1279,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                     {{-- <iframe class="embed-responsive-item"
                                         src="//maps.google.com/maps?output=embed&amp;q=Manhattan%2C%20New%20York&amp;z=10&amp;t=m"
                                         data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe> --}}
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.122872624117!2d85.3701424150148!3d27.682596982802103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1b3541f0cc39%3A0x18658ddd0e314eca!2sSanothimi!5e0!3m2!1sen!2snp!4v1679308387051!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.110886592172!2d85.37060381501485!3d27.682967482802056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bcb8584a51f%3A0x306902437b9fd83a!2sNational%20Youth%20Council%20(NYC)!5e0!3m2!1sen!2snp!4v1679309550445!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
