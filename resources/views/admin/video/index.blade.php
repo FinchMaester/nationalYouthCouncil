@@ -106,8 +106,7 @@
         @endforeach
     </table>
 
-        </div>
-      </section>
+
 
       <script>
         var myModal = document.getElementById('myModal')
