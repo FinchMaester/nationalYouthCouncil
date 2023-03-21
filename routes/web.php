@@ -250,13 +250,14 @@ Route::get('render_administrative', [App\Http\Controllers\RenderController::clas
 Route::get('render_chairperson', [App\Http\Controllers\RenderController::class, 'render_chairperson'])->name('render_chairperson');
 Route::get('render_executive_members', [App\Http\Controllers\RenderController::class, 'render_executive_members'])->name('render_executive_members');
 Route::get('render_posts/{slug}', [App\Http\Controllers\RenderController::class, 'render_posts'])->name('render_posts');
+Route::get('render_all_posts', [App\Http\Controllers\RenderController::class, 'render_all_posts'])->name('render_all_posts');
 
 
 
 Route::get('render_otherpost/{slug}', [App\Http\Controllers\RenderController::class, 'render_otherpost'])->name('render_otherpost');
 Route::get('render_otherpost_news/{id}', [App\Http\Controllers\RenderController::class, 'render_otherpost_news'])->name('render_otherpost_news');
 Route::get('render_info/{slug}', [App\Http\Controllers\RenderController::class, 'render_info'])->name('render_info');
-Route::get('render_other_post/{slug}', [App\Http\Controllers\RenderController::class, 'render_other_post'])->name('render_other_post');
+Route::get('render_other_post', [App\Http\Controllers\RenderController::class, 'render_other_post'])->name('render_other_post');
 
 // FOR MESSAGE
 

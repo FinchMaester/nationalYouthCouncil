@@ -5,6 +5,9 @@
 
 }
 /* For GLobal */
+
+/* for side posts */
+
 body{
   background: url("../img/bg.png") fixed ;
   background-size: 100% 100%;
@@ -18,8 +21,8 @@ body{
   gap: 1.6rem;
   padding-left: 7.5%;
 
-
 }
+
 .aboutuscontainer{
   border: #0c3c85 2px solid;
 }

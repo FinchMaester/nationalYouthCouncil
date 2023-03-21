@@ -263,11 +263,28 @@ class RenderController extends Controller
         $post = Post::where("slug", $slug)->first();
         $posts = Post::all();
         $links = Link::latest()->get()->take(6);
+        $postslist = Post::all()->except($post->id);
         return view('portal.render_post',[
             'sitesetting'=>$sitesetting,
             'posts'=>$posts,
             'post'=>$post,
-            'links'=>$links
+            'links'=>$links,
+            'postslist'=>$postslist
+        ]);
+    }
+
+    public function render_all_posts()
+    {
+        # code...
+        $sitesetting = SiteSetting::first();
+        $posts = Post::all();
+        $links = Link::latest()->get()->take(6);
+        $postslist = Post::latest()->get()->take(6);
+        return view('portal.render_all_posts',[
+            'sitesetting'=>$sitesetting,
+            'posts'=>$posts,
+            'links'=>$links,
+            'postslist'=>$postslist
         ]);
     }
 

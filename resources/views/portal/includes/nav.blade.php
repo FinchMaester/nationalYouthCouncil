@@ -224,10 +224,22 @@
                                             <li class="u-nav-item"><a href="{{ route('render_tender') }}"
                                                     class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">बोलपत्र</a>
                                             </li>
+                                            {{-- added jankari --}}
+                                            <li class="u-nav-item"><a href="{{ route('render_rules') }}"
+                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">ऐन
+                                                तथा नियमावली</a>
+                                        </li>
+                                        <li class="u-nav-item"><a href="{{ route('render_directot') }}"
+                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">निर्देशिका</a>
+                                        </li>
+                                        <li class="u-nav-item"><a href="{{ route('render_press') }}"
+                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">प्रेश
+                                                विज्ञप्ती</a>
+                                        </li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="u-nav-item"><a
+                                {{-- <li class="u-nav-item"><a
                                         class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">जानकरी</a>
                                     <div class="u-nav-popup">
@@ -245,7 +257,7 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li class="u-nav-item"><a
                                         class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">अन्य डाउनलोड</a>
@@ -276,6 +288,12 @@
                                         </ul>
                                     </div>
                                 </li>
+
+                                <li class="u-nav-item"><a
+                                    class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                    href="{{ route('render_all_posts') }}" style="padding: 10px 16px;">ब्लग</a>
+
+                            </li>
                                 <li class="u-nav-item"><a href="{{ route('contact_page') }}"
                                         class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         style="padding: 10px 18px 10px 16px;">सम्पर्क</a>
