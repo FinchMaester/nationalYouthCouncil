@@ -103,7 +103,7 @@
                 </div>
 
 
-             
+
 
                 {{-- @foreach (config('app.languages') as $langLocale => $langName)
                 <a href="{{ url()->current() }}?change_language={{ $langLocale }}"
@@ -141,7 +141,7 @@
                     class="u-active-palette-4-dark-1 u-border-none u-btn u-button-style u-palette-4-light-1 u-btn-4">
                     {{ strtoupper($langLocale) }}
                 </a>
-                @endforeach 
+                @endforeach
             </div>
             {{-- </...........> --}}
             <div class="u-align-center-xs u-palette-4-dark-1 u-section-row u-sticky u-sticky-e2a9" id="sec-71fa">
@@ -174,11 +174,11 @@
                         <div class="u-custom-menu u-nav-container">
                             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="{{ route('home') }}" style="padding: 10px 16px;">गृहपृष्ठ</a>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">हाम्रोबारे</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
@@ -210,7 +210,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">दस्तावेज</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3">
@@ -227,7 +227,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">जानकरी</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
@@ -246,7 +246,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">अन्य डाउनलोड</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
@@ -260,7 +260,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">ग्यालेरी</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6">
@@ -276,7 +276,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a href="{{ route('contact_page') }}"
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         style="padding: 10px 18px 10px 16px;">सम्पर्क</a>
                                 </li>
                             </ul>

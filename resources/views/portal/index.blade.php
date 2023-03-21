@@ -1365,7 +1365,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                     <div class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
                         <div class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-1 ">
 
-                            <a class="u-post-header-link" href="#">
+                            <a class="u-post-header-link" href="">
                                 <!--blog_post_image-->
                                 <img alt=""
                                     class="u-blog-control u-expanded-width-xs u-image u-image-default u-image-1"
@@ -1374,9 +1374,13 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </a>
                             <!--blog_post_header-->
                             <h4 class="u-blog-control u-text u-text-2">
-                                <a class="u-post-header-link" href="blog/post-5.html">
-                                    <!--blog_post_header_content-->{{ $post->title }}
+                                {{-- <a class="u-post-header-link">
+                                    <!--blog_post_header_content-->
                                     <!--/blog_post_header_content-->
+                                </a> --}}
+                                <a href="/render_posts/{{ $post->slug }}">
+                                    {{ $post->title }}
+
                                 </a>
                             </h4>
                             <!--/blog_post_header-->
