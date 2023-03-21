@@ -149,8 +149,9 @@
                     class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-middle-xs u-sheet-2">
                     <a href="{{ route('home') }}" class="u-image u-logo u-image-1" data-image-width="3000"
                         data-image-height="2984">
-                        <img src="{{ $sitesetting->main_logo }}" class="u-logo-image u-logo-image-1"
+                        <img src="{{ asset($sitesetting->main_logo)}}" class="u-logo-image u-logo-image-1"
                             data-image-width="80">
+
                     </a>
                     <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1">
                         <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
