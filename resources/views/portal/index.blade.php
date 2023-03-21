@@ -1345,7 +1345,12 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                     <div class="u-container-style u-image u-image-contain u-layout-cell u-size-15-lg u-size-15-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1"
                         data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"
                         data-image-width="396" data-image-height="768">
-                        <div class="u-container-layout u-container-layout-3"></div>
+                        <div class="u-container-layout u-container-layout-3">
+
+                            <img class="u-back-image u-expanded u-back-image-1"
+                            src="{{ asset('uploads/image/' . $img->img) }}">
+
+                        </div>
                     </div>
                 </div>
             </div>
