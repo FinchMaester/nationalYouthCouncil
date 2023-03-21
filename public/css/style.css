@@ -14,6 +14,21 @@ body{
   background-repeat: no-repeat;
 
 }
+/*  */
+
+.card-wel{
+    position: absolute;
+    top: 15%;
+    right: 0px;
+    /* bottom: 2px; */
+}
+
+/*  */
+
+.other_posts{
+    border: black solid 1px;
+}
+
 .about_us{
   width: 92%;
   display: flex;

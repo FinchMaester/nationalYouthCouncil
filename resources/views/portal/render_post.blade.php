@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-
+{{--
             <div class="other_posts my-4 py-4">
                 <h5>Other Posts</h5>
                 <ul class="list_title">
@@ -78,6 +78,18 @@
                     @endforeach
 
                 </ul>
+            </div> --}}
+
+            <div class="col-md-3">
+                <div class="card-wel">
+                <h5 class="title_card">Other Services</h5>
+                @foreach ($postslist as $list )
+                        <a class="card-wel-title" href="{{ route('render_posts', $list->slug) }}">
+                            <li>{{ $list->title }}</li>
+                        </a>
+                    @endforeach
+
+                </div>
             </div>
 
         </div>
