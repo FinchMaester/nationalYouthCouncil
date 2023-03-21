@@ -44,21 +44,21 @@
                     <td><img id="preview" src="{{ url('uploads/information/image/' . $info->image) }}"
                       style="width: 100px; height:100px; object-fit:cover;" /></td>
                     <td><iframe src="{{ asset('uploads/information/file/' . $info->file) }}" title="" style="width: 100px; height:100px;"></iframe>
-                      
+
                     <td>
-                        
+
                         {{-- <a href="edit/{{ $info->id }}"> --}}
                             <div style="display: flex; flex-direction:row;">
-                              <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+                              <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $info->id }}">
                                 Update
                               </button>
                         {{-- </a> --}}
-                        
+
                         {{-- <a href="{{ url('admin/information/destroy/'.$info->id) }}"> --}}
                             {{-- <button type="button" class="btn-block btn-danger btn-sm" data-toggle="modal"
                                 data-target="#modal-default" style="width:auto;"
                                 onclick="replaceLinkFunction">Delete</button> --}}
-                                <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $info->id }}">
                                     Delete
                                   </button>
 
@@ -71,14 +71,14 @@
         </tbody>
         @foreach ($information as $info )
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="delete{{ $info->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-               
+
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                    <a href="{{ url('admin/information/destroy/' .$info->id) }}">
@@ -90,20 +90,20 @@
             </div>
           </div>
 
-            
+
         @endforeach
 
         {{-- Update --}}
         @foreach ($information as $info )
 
-        <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit{{ $info->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-               
+
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                    <a href="{{ url('admin/information/edit/' .$info->id) }}">
@@ -115,14 +115,14 @@
             </div>
           </div>
 
-            
+
         @endforeach
     </table>
 
     <script>
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
-  
+
         myModal.addEventListener('shown.bs.modal', function () {
         myInput.focus()
         })
