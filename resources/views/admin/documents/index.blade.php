@@ -63,14 +63,14 @@
                         {{-- <a href="edit/{{ $document->id }}"> --}}
                         <div style="display: flex; flex-direction:row;">
                             <button type="button" class="btn-warning button-size" data-bs-toggle="modal"
-                                data-bs-target="#exampleModals">
+                                data-bs-target="#edit{{ $document->id }}">
                                 Update
                             </button>
                             {{-- </a> --}}
 
                             {{-- <a href="{{ url('admin/documents/destroy/'.$document->id) }}"> --}}
                             <button type="button" class="btn-danger button-size" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
+                                data-bs-target="#delete{{ $document->id }}">
                                 Delete
                             </button>
                             {{-- </a> --}}
@@ -80,7 +80,7 @@
             @endforeach
         </tbody>
         @foreach ($documents as $document)
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="delete{{ $document->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -102,7 +102,7 @@
 
         {{-- for edit --}}
         @foreach ($documents as $document)
-            <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="edit{{ $document->id }}" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
