@@ -728,6 +728,7 @@ ol {
   line-height: inherit;
   letter-spacing: inherit;
   text-transform: inherit;
+  text-decoration: none;
 }
 .u-text:not(ul):not(ol):not(p):not(.u-post-content):not(.u-block-content):not(.u-product-desc):not(.u-cart-block-content):not(.u-checkout-block-content) a {
   color: inherit;
@@ -32812,8 +32813,8 @@ input.u-field-input.u-field-input.u-border-active-palette-1-light-3:checked {
 .u-border-palette-1-base.u-input,
 .u-border-palette-1-base.u-field-input.u-field-input,
 .u-separator-palette-1-base:after {
-  border-color: #47b8c9;
-  stroke: #47b8c9;
+  border-color: #0b1f6d;
+  stroke: #0b1f6d;
 }
 .u-button-style.u-border-palette-1-base {
   border-color: #47b8c9 !important;
@@ -39976,6 +39977,7 @@ a.u-button-style.u-button-style.active > .u-text-active-white[class*="u-border-"
 .u-popupmenu-items.u-text-hover-white .u-nav-link:hover,
 .u-popupmenu-items.u-popupmenu-items.u-text-active-white .u-nav-link.active {
   color: #ffffff !important;
+
 }
 .u-text-white .u-svg-link,
 .u-text-hover-white:hover .u-svg-link,
