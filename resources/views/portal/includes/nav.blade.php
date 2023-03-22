@@ -103,7 +103,7 @@
                 </div>
 
 
-             
+
 
                 {{-- @foreach (config('app.languages') as $langLocale => $langName)
                 <a href="{{ url()->current() }}?change_language={{ $langLocale }}"
@@ -141,7 +141,7 @@
                     class="u-active-palette-4-dark-1 u-border-none u-btn u-button-style u-palette-4-light-1 u-btn-4">
                     {{ strtoupper($langLocale) }}
                 </a>
-                @endforeach 
+                @endforeach
             </div>
             {{-- </...........> --}}
             <div class="u-align-center-xs u-palette-4-dark-1 u-section-row u-sticky u-sticky-e2a9" id="sec-71fa">
@@ -149,8 +149,9 @@
                     class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-middle-xs u-sheet-2">
                     <a href="{{ route('home') }}" class="u-image u-logo u-image-1" data-image-width="3000"
                         data-image-height="2984">
-                        <img src="{{ $sitesetting->main_logo }}" class="u-logo-image u-logo-image-1"
+                        <img src="{{ asset($sitesetting->main_logo)}}" class="u-logo-image u-logo-image-1"
                             data-image-width="80">
+
                     </a>
                     <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1">
                         <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
@@ -174,11 +175,11 @@
                         <div class="u-custom-menu u-nav-container">
                             <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="{{ route('home') }}" style="padding: 10px 16px;">गृहपृष्ठ</a>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">हाम्रोबारे</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
@@ -210,7 +211,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">दस्तावेज</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3">
@@ -223,11 +224,23 @@
                                             <li class="u-nav-item"><a href="{{ route('render_tender') }}"
                                                     class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">बोलपत्र</a>
                                             </li>
+                                            {{-- added jankari --}}
+                                            <li class="u-nav-item"><a href="{{ route('render_rules') }}"
+                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">ऐन
+                                                तथा नियमावली</a>
+                                        </li>
+                                        <li class="u-nav-item"><a href="{{ route('render_directot') }}"
+                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">निर्देशिका</a>
+                                        </li>
+                                        <li class="u-nav-item"><a href="{{ route('render_press') }}"
+                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">प्रेश
+                                                विज्ञप्ती</a>
+                                        </li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                {{-- <li class="u-nav-item"><a
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">जानकरी</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-4">
@@ -244,9 +257,9 @@
                                             </li>
                                         </ul>
                                     </div>
-                                </li>
+                                </li> --}}
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">अन्य डाउनलोड</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
@@ -260,7 +273,7 @@
                                     </div>
                                 </li>
                                 <li class="u-nav-item"><a
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         href="#" style="padding: 10px 16px;">ग्यालेरी</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-6">
@@ -275,8 +288,14 @@
                                         </ul>
                                     </div>
                                 </li>
+
+                                <li class="u-nav-item"><a
+                                    class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                    href="{{ route('render_all_posts') }}" style="padding: 10px 16px;">ब्लग</a>
+
+                            </li>
                                 <li class="u-nav-item"><a href="{{ route('contact_page') }}"
-                                        class="u-active-white u-button-style u-hover-palette-4-light-1 u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                         style="padding: 10px 18px 10px 16px;">सम्पर्क</a>
                                 </li>
                             </ul>

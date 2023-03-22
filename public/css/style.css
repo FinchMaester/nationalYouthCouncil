@@ -5,34 +5,56 @@
 
 }
 /* For GLobal */
+
+/* for side posts */
+
 body{
   background: url("../img/bg.png") fixed ;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
 }
+/*  */
+
+.card-wel{
+    position: absolute;
+    top: 15%;
+    right: 0px;
+    /* bottom: 2px; */
+}
+
+/*  */
+
+.other_posts{
+    border: black solid 1px;
+}
+
 .about_us{
   width: 92%;
   display: flex;
   /* border: 2px solid black; */
   gap: 1.6rem;
   padding-left: 7.5%;
-  
-  
+
 }
+
 .aboutuscontainer{
   border: #0c3c85 2px solid;
 }
 .fb_container{
   display: flex;
   width: 30%;
-  
+
   border: 2px solid pink;
+}
+.side_logo{
+    height: 50px;
+    width: auto;
 }
 
 
 .lang-container{
-  
+
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
@@ -42,6 +64,11 @@ body{
 .lang-link {
   text-decoration: none;
   color: red;
+}
+/* For mukta font */
+.font-mukta{
+    font-family: 'Mukta', sans-serif;
+
 }
 
 
@@ -53,14 +80,14 @@ body{
     font-weight: 800;
     margin: 20px;
   }
-  
+
   /* For margin and width of the section */
   .wid_mar{
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%;
   }
-  
+
   /* For Header */
 /* For Top Bar */
 
@@ -103,7 +130,7 @@ font-weight: 700;
 font-size: 1.2vw;
 font-weight: 600;
 }
-/* 
+/*
 
 
 
@@ -186,7 +213,7 @@ nav ul li ul li a {
     text-align: center;
     margin-left: 30%;
   }
- 
+
   .side-logo-container{
     margin-left: 20%;
   }
@@ -211,7 +238,7 @@ nav ul li ul li a {
     width: 130px;
     /* width: 100px; */
     margin-left: -280px;
-    
+
   }
 
   .image_one{
@@ -237,7 +264,7 @@ nav ul li ul li a {
     font-size: 18px;
     font-weight: 700;
     }
-    
+
   .title_fi{
     font-size: 2.5vw;
     font-weight: 600;
@@ -340,7 +367,7 @@ nav ul li ul li a {
   transform: rotate(-45deg);
 } */
 
-  
+
 /* For Quick News */
 .quick_news {
     align-items: center;
@@ -350,7 +377,7 @@ nav ul li ul li a {
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
     padding-bottom: 5px;
   }
-  
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -371,7 +398,7 @@ nav ul li ul li a {
       font-size: 17px;
       border-radius: 5px 0 0 5px;
   }
-  
+
   .news_slider {
     height: fit-content;
     margin: auto;
@@ -381,12 +408,12 @@ nav ul li ul li a {
     border-left: 20px;
 
   }
-  
+
   .news_slider .news_track {
     animation: scroll 30s linear infinite;
     display: flex;
     width: calc(250px * 14);
-    
+
   }
   .news_slider .news_slide {
     height: 50px;
@@ -399,7 +426,7 @@ nav ul li ul li a {
       text-decoration: none;
   }
 .news_slide p{
-  
+
     margin-left: 300px;
     margin-top: 10px;
     margin-left: 200px;
@@ -408,24 +435,24 @@ nav ul li ul li a {
     color: black;
     font-family: 'Mukta', sans-serif;
 }
-  
+
   /* For Cover Page Section */
 .cover_page{
     min-height: 590px;
 }
- 
+
 
   .cover_slider .carousel-inner .carousel-item img{
-    
+
     height:590px;
     width: 100%;
     object-position: center;
   }
-  
+
 
   .team_cover{
     background-color: yellow;
-    
+
   }
 
   .right_intro.card{
@@ -435,7 +462,7 @@ nav ul li ul li a {
     height: 190px;
     background-color: rgb(228, 241, 245);
     font-family: 'Mukta', sans-serif;
-    
+
   }
   .right_intro.card .card-head{
     background-color: #2A5A8E;
@@ -443,7 +470,7 @@ nav ul li ul li a {
     text-align: center;
     padding: 7px;
     margin-bottom: 7px;
-    
+
   }
   .right_intro.card_one img{
     height: 120px;
@@ -461,11 +488,11 @@ nav ul li ul li a {
   .eng{
     font-size: 12px;
   }
-  
+
   .bold_name{
     font-weight: bold;
   }
-  
+
 
   .about_utitle{
     text-align: center;
@@ -489,7 +516,7 @@ nav ul li ul li a {
     height: 350px;
     width: 100%;
   }
-  
+
 
 
   /* For Tabs */
@@ -499,12 +526,12 @@ nav ul li ul li a {
   background-image: linear-gradient(to right top, #0c3c85, #0e3b7f, #103a78, #133972, #16386b);
   padding: 15px;
 }
-/* 
+/*
   .allbox_one, .allbox_two, .allbox_three{
     border: 2px solid #fff;
     background-color: #fff;
     margin: 10px;
-    
+
   } */
 
 
@@ -572,20 +599,20 @@ nav ul li ul li a {
 
   font-size: 14px;
 
-  
+
 }
 
 .events_cal i{
   margin-right: 10px;
 }
 
-  
+
   /* FOr Clients */
 .gallery_slider {
   align-items: center;
   justify-content: center;
 }
-  
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -601,7 +628,7 @@ nav ul li ul li a {
     position: relative;
     width: auto;
   }
-  
+
   .slider .slide-track {
     animation: scroll 40s linear infinite;
     display: flex;
@@ -617,37 +644,37 @@ nav ul li ul li a {
       object-fit: cover;
       object-position: center;
   }
-  
+
   /* For Videos */
   .videos_one iframe, .videos_two iframe, .videos_three iframe{
     width: 100%;
     height: 315px;
     margin-right: 5px;
   }
-  
 
 
-  
+
+
   /* For Contact Form Section */
   .contact_form{
     min-height: 480px;
   }
-  
-  
-  
-  
+
+
+
+
   .cform_left iframe{
     height: 100%;
       width: 100%;
   }
-  
-  
-  
+
+
+
   /* Form in the right */
   .cform_right{
     background: #fff;
   }
-  
+
   .quick_contact{
     border: 2px solid gray;
     margin-bottom: 7px;
@@ -661,7 +688,7 @@ nav ul li ul li a {
     text-align:center;
     color: white;
   }
-  #quick_contact .form-control, 
+  #quick_contact .form-control,
   #quick_contact textarea {
   width: 100%;
   margin-bottom: 5px;
@@ -669,7 +696,7 @@ nav ul li ul li a {
   letter-spacing: 1px;
   border: 0 0 2px 0;
   }
-  
+
   #quick_contact  .send-button {
   margin-top: 15px;
   height: 34px;
@@ -679,32 +706,32 @@ nav ul li ul li a {
   background-color:  rgb(17, 17, 73);
   margin-top: 2rem;
   }
-  
+
   #quick_contact .alt-send-button {
   width: 100%;
   height: 34px;
   transition: all .2s ease-in-out;
   color: white;
-  
+
   }
-  
+
   #quick_contact .send-text {
   display: block;
   margin-top: 10px;
   font: 700 12px 'Lato', sans-serif;
   letter-spacing: 2px;
   color: white;
-  
+
   }
-  
+
   #quick_contact .alt-send-button:hover {
   transform: translate3d(0px, -28px, 0px);
   }
-  
-  
+
+
   /* For Latest BLogs */
-  
-  
+
+
   .latest_blog .card{
    width: 100%;
   }
@@ -713,7 +740,7 @@ nav ul li ul li a {
     object-fit: cover;
     height: 200px;
   }
-  
+
   .blog_date{
     background-color: rgb(17, 17, 73);
     text-align: center;
@@ -721,11 +748,11 @@ nav ul li ul li a {
   .blog_date p{
     color: white;
   }
-  
 
-  
+
+
   /* For Footer */
-  
+
   .footer_serv{
       text-align: right;
      }
@@ -734,7 +761,7 @@ nav ul li ul li a {
      }
      .footer_serv p{
          color: white;
-        
+
      }
    /* FOr Footer */
    ul {
@@ -742,9 +769,11 @@ nav ul li ul li a {
      padding: 0px;
    }
    .footer-section {
-    background-image: linear-gradient(to right top, #0c3c85, #0e3b7f, #103a78, #133972, #16386b);   position: relative;
+    /* background-image: linear-gradient(to right top, #0c3c85, #0e3b7f, #103a78, #133972, #16386b); */
+    background-color: #0b1f6d;
+     position: relative;
    /* box-shadow: rgba(33, 37, 109, 0.15); */
-  
+
    }
    .footer-cta {
    border-bottom: 1px solid #373636;
@@ -847,7 +876,7 @@ nav ul li ul li a {
 
    .footer-widget .quicknepal_link li {
     display: inline-block;
-    
+
     width: 100%;
     margin-bottom: 12px;
     }
@@ -860,8 +889,8 @@ nav ul li ul li a {
    text-decoration: none;
    }
 
-   
- 
+
+
    .copyright-area{
    background: #0c3c85;
    padding: 25px 0;
@@ -885,14 +914,14 @@ nav ul li ul li a {
    font-size: 14px;
    color: #878787;
    }
-   
+
 
 
    /* FOr Single Pages */
 
    /* About Page */
    .about .title{
-   
+
      font-size: 30px;
    }
    .about .image{
@@ -911,7 +940,7 @@ nav ul li ul li a {
      width: 20rem;
      overflow: hidden;
      height: 420px;
-    
+
    }
    .team_card .image{
      height: 300px;
@@ -922,7 +951,7 @@ nav ul li ul li a {
 .team_name{
   font-size: 18px;
   font-weight: 700;
-  
+
 }
 .team_position{
   font-size: 16px;

@@ -26,7 +26,7 @@
             <tr>
                 <th>Type</th>
                 <th>Title</th>
-                <th>Slug</th> 
+                <th>Slug</th>
                 <th>Description</th>
                 <th>Image</th>
                 <th>File</th>
@@ -45,18 +45,18 @@
                       style="width: 100px; height:100px; object-fit:cover;" /></td>
                       <td><iframe src="{{ asset('uploads/other/file/' . $other->file) }}" title="" style="width: 100px; height:100px;"></iframe>
                         <td>
-                        
+
                         {{-- <a href="edit/{{ $other->id }}"> --}}
                             <div style="display: flex; flex-direction:row;">
                                 {{-- <button type="button" class=" btn-block btn-warning btn-sm"><i class="fas fa-edit"></i>
                                     Edit </button> --}}
-                                    <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+                                    <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $other->id }}">
                                         Update
                                       </button>
                         {{-- </a> --}}
-                        
-                        
-                                <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+
+                                <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $other->id }}">
                                     Delete
                                   </button>
                         {{-- </a> --}}
@@ -67,14 +67,14 @@
         </tbody>
         @foreach($others as $other)
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="delete{{ $other->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-             
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                  <a href="{{ url('admin/other/destroy/' .$other->id) }}">
@@ -90,14 +90,14 @@
         {{-- for edit --}}
         @foreach($others as $other)
 
-        <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit{{ $other->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-             
+
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
                  <a href="{{ url('admin/other/edit/' .$other->id) }}">
@@ -118,7 +118,7 @@
         // for delete
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')
-  
+
         myModal.addEventListener('shown.bs.modal', function () {
         myInput.focus()
         })
@@ -126,7 +126,7 @@
         // for edit
         // var myModal = document.getElementById('myModal')
         // var myInput = document.getElementById('myInput')
-  
+
         // myModal.addEventListener('shown.bs.modal', function () {
         // myInput.focus()
         // })

@@ -73,7 +73,7 @@ Route::get('dashboard', [AdminController::class, 'dashboard'])->middleware('auth
 
 
 
-// FOR COVER IMAGES 
+// FOR COVER IMAGES
 Route::get('admin/coverimage/index', [CoverImageController::class, 'index'])->name('admin.coverimage.index');
 
 Route::get('admin/coverimage/create', [CoverImageController::class, 'create'])->name('admin.coverimage.create');
@@ -83,7 +83,7 @@ Route::get('admin/coverimage/edit/{id}', [CoverImageController::class, 'edit'])-
 Route::post('admin/coverimage/update', [CoverImageController::class, 'update'])->name('admin.coverimage.update');
 Route::get('admin/coverimage/destroy/{id}', [CoverImageController::class, 'destroy'])->name('admin.coverimage.destroy');
 
-// FOR ADMIN COMMITTEE DETAILS 
+// FOR ADMIN COMMITTEE DETAILS
 
 Route::get('admin/committeedetails/index', [CommitteeDetailController::class, 'index'])->name('admin.committeedetails.index');
 Route::get('admin/committeedetails/edit/{id}', [CommitteeDetailController::class, 'edit'])->name('admin.committeedetails.edit');
@@ -93,7 +93,7 @@ Route::get('file-import-export', [CommitteeDetailController::class, 'fileImportE
 Route::post('file-import', [CommitteeDetailController::class, 'fileImport'])->name('file-import');
 Route::get('file-export', [CommitteeDetailController::class, 'fileExport'])->name('file-export');
 
-// FOR ADMIN EXECUTIVE DETAILS 
+// FOR ADMIN EXECUTIVE DETAILS
 Route::get('admin/executivedetails/index', [ExecutiveDetailController::class, "index"])->name('admin.executivedetails.index');
 
 Route::get('admin/executivedetails/edit/{id}', [ExecutiveDetailController::class, 'edit'])->name('admin.executivedetails.edit');
@@ -105,7 +105,7 @@ Route::post("file-import-exe", [ExecutiveDetailController::class, "fileImport"])
 Route::get('file-export-exe', [ExecutiveDetailController::class, "fileExport"])->name("file-export-exe");
 
 
-// FOR POSTS 
+// FOR POSTS
 
 Route::get('admin/posts/index', [PostController::class, 'index'])->middleware('auth')->name("admin.posts.index");
 Route::get('admin/posts/create', [PostController::class, 'create'])->middleware('auth')->name("admin.posts.create");
@@ -115,7 +115,7 @@ Route::post('admin/posts/update', [PostController::class, 'update'])->middleware
 Route::get('admin/posts/destroy/{id}', [PostController::class, 'destroy'])->middleware('auth')->name("admin.posts.destroy");
 
 
-// FOR CATEGORIES 
+// FOR CATEGORIES
 
 Route::get('admin/categories/index', [CategoryController::class, "index"])->middleware('auth')->name("admin.categories.index");
 Route::get('admin/categories/create', [CategoryController::class, "create"])->middleware('auth')->name("admin.categories.create");
@@ -203,7 +203,7 @@ Route::post('admin/image/update', [App\Http\Controllers\ImageController::class, 
 Route::get('admin/image/delete/{id}', [App\Http\Controllers\ImageController::class, 'destroy'])->middleware('auth');
 
 
-// FOR DOCUMENTS 
+// FOR DOCUMENTS
 
 Route::get('admin/documents/index', [DocumentController::class, 'index'])->middleware('auth')->name('admin.documents.index');
 Route::get('admin/documents/create', [DocumentController::class, 'create'])->middleware('auth')->name('admin.documents.create');
@@ -213,7 +213,7 @@ Route::get('admin/documents/edit/{id}', [DocumentController::class, 'edit'])->mi
 Route::get('admin/documents/destroy/{id}', [DocumentController::class, 'destroy'])->middleware('auth')->name("admin.documents.destroy");
 
 
-// FOR INFORMATION 
+// FOR INFORMATION
 
 Route::get('admin/information/index', [InformationController::class, 'index'])->middleware('auth')->name('admin.information.index');
 Route::get('admin/information/create', [InformationController::class, 'create'])->middleware('auth')->name('admin.information.create');
@@ -223,7 +223,7 @@ Route::get('admin/information/edit/{id}', [InformationController::class, 'edit']
 Route::get('admin/information/destroy/{id}', [InformationController::class, 'destroy'])->middleware('auth')->name('admin.information.destroy');
 
 
-// FOR OTHER 
+// FOR OTHER
 
 Route::get('admin/other/index', [OtherController::class, "index"])->middleware('auth')->name('admin.other.index');
 Route::get('admin/other/create', [OtherController::class, "create"])->middleware('auth')->name('admin.other.create');
@@ -249,15 +249,17 @@ Route::get('render_committee', [App\Http\Controllers\RenderController::class, 'r
 Route::get('render_administrative', [App\Http\Controllers\RenderController::class, 'render_administrative'])->name('render_administrative');
 Route::get('render_chairperson', [App\Http\Controllers\RenderController::class, 'render_chairperson'])->name('render_chairperson');
 Route::get('render_executive_members', [App\Http\Controllers\RenderController::class, 'render_executive_members'])->name('render_executive_members');
+Route::get('render_posts/{slug}', [App\Http\Controllers\RenderController::class, 'render_posts'])->name('render_posts');
+Route::get('render_all_posts', [App\Http\Controllers\RenderController::class, 'render_all_posts'])->name('render_all_posts');
 
 
 
 Route::get('render_otherpost/{slug}', [App\Http\Controllers\RenderController::class, 'render_otherpost'])->name('render_otherpost');
 Route::get('render_otherpost_news/{id}', [App\Http\Controllers\RenderController::class, 'render_otherpost_news'])->name('render_otherpost_news');
 Route::get('render_info/{slug}', [App\Http\Controllers\RenderController::class, 'render_info'])->name('render_info');
-Route::get('render_other_post/{slug}', [App\Http\Controllers\RenderController::class, 'render_other_post'])->name('render_other_post');
+Route::get('render_other_post', [App\Http\Controllers\RenderController::class, 'render_other_post'])->name('render_other_post');
 
-// FOR MESSAGE 
+// FOR MESSAGE
 
 Route::get('admin/message/index', [MessageController::class, 'index'])->name('admin.message.index');
 Route::get('admin/message/create', [MessageController::class, 'create'])->name('admin.message.create');
@@ -269,7 +271,7 @@ Route::get('admin/message/show/{id}', [MessageController::class, 'show'])->middl
 
 
 
-// FOR CONTACT US 
+// FOR CONTACT US
 
 Route::get('admin/contactus/index', [ContactUsController::class, 'index'])->middleware('auth')->name('admin.contactus.index');
 Route::post('admin/contactus/store', [ContactUsController::class, 'store'])->middleware('auth')->name('admin.contactus.store');

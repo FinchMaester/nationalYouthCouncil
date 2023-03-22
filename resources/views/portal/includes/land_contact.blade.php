@@ -8,7 +8,7 @@
             </h1>
             <div class="row">
                 <div class="col-md-6 cform_left">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.209555774223!2d85.31965705061064!3d27.710815431861946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19067bb29637%3A0x378117e9422c5b79!2sSiddhartha%20Bank!5e0!3m2!1sen!2snp!4v1646237457810!5m2!1sen!2snp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.110886592172!2d85.37060381501485!3d27.682967482802056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bcb8584a51f%3A0x306902437b9fd83a!2sNational%20Youth%20Council%20(NYC)!5e0!3m2!1sen!2snp!4v1679309550445!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div class="col-md-6 cform_right">

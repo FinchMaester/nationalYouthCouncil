@@ -19,7 +19,7 @@
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-      
+
         <form id="quickForm" novalidate="novalidate" method="POST" action="{{ route('admin.other.update') }}"
         enctype="multipart/form-data">
         @csrf
@@ -29,7 +29,7 @@
             <option value="news">News</option>
             <option value="other">Others</option>
         </select>
-        
+
 
         <div class="card-body">
             <div class="form-group">
@@ -49,9 +49,9 @@
                   placeholder="image" value="">
             </div>
             <img id="preview" style="max-width: 500px; max-height:500px" src="{{ asset('uploads/other/image/'.$other->image) }}" />
-            
+
             <div class="form-group">
-              
+
 
                     <label for="file">PDF</label><span style="color:red; font-size:large"> *</span>
                     <input type="file" name="file" class="form-control" id="pdf" placeholder="PDF" value="">

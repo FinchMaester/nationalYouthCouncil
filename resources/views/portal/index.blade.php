@@ -11,12 +11,13 @@
                                 <img class="u-image u-image-1" src="{{ asset('img/National-Youth-Council-Nepal.png') }}"
                                     data-image-width="800" data-image-height="418">
                                 <h2 class="u-text u-text-1" data-animation-name="customAnimationIn"
-                                    data-animation-duration="1500">राष्ट्रिय युवा परिषद्<br>
+                                    data-animation-duration="1500"> <h1 class="sec_title">{{ __("National Youth Council") }}<br>
+
                                 </h2>
-                                <a href="{{ route('render_about') }}"
+                                <a href="{{ route('contact_page') }}"
                                     class="u-active-palette-1-dark-2 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-dark-2 u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-white u-btn-1"
                                     data-animation-name="customAnimationIn" data-animation-duration="1500"
-                                    data-animation-delay="500">read more</a>
+                                    data-animation-delay="500">contact us</a>
                             </div>
                         </div>
                     </div>
@@ -193,12 +194,6 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </div>
 
 
-
-
-
-
-
-
         </div>
     </section>
 
@@ -277,7 +272,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-3">
                                 <div class="u-container-layout u-container-layout-5">
-                                    <h3 class="u-align-center u-text u-text-5"> उपाध्यक्ष</h3>
+                                    <h3 class="u-align-center u-text u-text-1"> उपाध्यक्ष</h3>
                                 </div>
                             </div><span class="u-align-center-xs u-file-icon u-icon u-icon-4"
                                 data-animation-name="customAnimationIn" data-animation-duration="1500"
@@ -286,7 +281,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-4">
                                 <div class="u-container-layout u-container-layout-6">
-                                    <h4 class="u-align-center u-text u-text-6"> श्री सुरेन्द्र बस्नेत</h4>
+                                    <h4 class="u-align-center u-text u-text-6"><br> श्री सुरेन्द्र बस्नेत</h4>
                                     <p class="u-align-center u-text u-text-7"><span class="u-icon"><svg
                                                 class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                                 style="width: 1em; height: 1em;">
@@ -337,7 +332,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
                                 <div class="u-container-layout u-container-layout-8">
-                                    <h3 class="u-align-center u-text u-text-9">{{ $team->role}}</h3>
+                                    <h3 class="u-align-center u-text u-text-1">{{ __("$team->role")}}</h3>
+                                    {{-- {{ __("National Youth Council") }} --}}
                                 </div>
                             </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
                                 data-animation-name="customAnimationIn" data-animation-duration="1500"
@@ -346,7 +342,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                             <div
                                 class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
                                 <div class="u-container-layout u-container-layout-9">
-                                    <h4 class="u-align-center u-text u-text-10"> {{ $team->name}}</h4>
+                                    <h4 class="u-align-center u-text u-text-6"> {{ __("$team->name")}}</h4>
                                     <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
                                                 class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                                 style="width: 1em; height: 1em;">
@@ -1280,16 +1276,20 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                         <div class="u-container-layout u-container-layout-1">
                             <div class="u-absolute-hcenter u-expanded u-grey-light-2 u-map">
                                 <div class="embed-responsive">
-                                    <iframe class="embed-responsive-item"
+                                    {{-- <iframe class="embed-responsive-item"
                                         src="//maps.google.com/maps?output=embed&amp;q=Manhattan%2C%20New%20York&amp;z=10&amp;t=m"
-                                        data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe>
+                                        data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe> --}}
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.110886592172!2d85.37060381501485!3d27.682967482802056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bcb8584a51f%3A0x306902437b9fd83a!2sNational%20Youth%20Council%20(NYC)!5e0!3m2!1sen!2snp!4v1679309550445!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="u-align-left u-container-style u-layout-cell u-shape-rectangle u-size-23-lg u-size-23-xl u-size-30-md u-size-30-sm u-size-30-xs u-white u-layout-cell-2"
                         data-animation-name="customAnimationIn" data-animation-duration="1500"
                         data-animation-delay="500">
+
+
                         <div class="u-container-layout u-container-layout-2">
                             <h3 class="u-text u-text-1">Contact Us</h3>
                             <div class="u-expanded-width u-form u-form-1">
@@ -1345,7 +1345,13 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                     <div class="u-container-style u-image u-image-contain u-layout-cell u-size-15-lg u-size-15-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1"
                         data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"
                         data-image-width="396" data-image-height="768">
-                        <div class="u-container-layout u-container-layout-3"></div>
+                        {{-- Contact us side image --}}
+                        <div class="u-container-layout u-container-layout-3">
+
+                            <img class="u-back-image u-expanded u-back-image-1"
+                            src="{{ asset('uploads/image/' . $img->img) }}">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1361,22 +1367,26 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
             <div class="u-blog u-expanded-width u-blog-1">
                 <div class="u-repeater u-repeater-1">
                     <!--blog_post-->
-                    <div
-                        class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
-                        <div
-                            class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-1">
-                            <a class="u-post-header-link" href="blog/post-5.html">
+                    @foreach ($posts as $post)
+                    <div class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
+                        <div class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-1 ">
+
+                            <a class="u-post-header-link" href="">
                                 <!--blog_post_image-->
                                 <img alt=""
                                     class="u-blog-control u-expanded-width-xs u-image u-image-default u-image-1"
-                                    src="images/8ad73f3c.jpeg" data-image-width="567" data-image-height="696">
+                                    src="{{ asset('uploads/posts/' . $post->image) }}" data-image-width="567" data-image-height="696">
                                 <!--/blog_post_image-->
                             </a>
                             <!--blog_post_header-->
                             <h4 class="u-blog-control u-text u-text-2">
-                                <a class="u-post-header-link" href="blog/post-5.html">
-                                    <!--blog_post_header_content-->Post 6 Headline
+                                {{-- <a class="u-post-header-link">
+                                    <!--blog_post_header_content-->
                                     <!--/blog_post_header_content-->
+                                </a> --}}
+                                <a href="/render_posts/{{ $post->slug }}">
+                                    {{ $post->title }}
+
                                 </a>
                             </h4>
                             <!--/blog_post_header-->
@@ -1396,11 +1406,13 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                 <!--/blog_post_metadata_comments-->
                             </div>
                             <!--/blog_post_metadata-->
+
                         </div>
                     </div>
+                    @endforeach
                     <!--/blog_post-->
                     <!--blog_post-->
-                    <div
+                    {{-- <div
                         class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-2">
                         <div
                             class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-2">
@@ -1436,10 +1448,10 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </div>
                             <!--/blog_post_metadata-->
                         </div>
-                    </div>
+                    </div> --}}
                     <!--/blog_post-->
                     <!--blog_post-->
-                    <div
+                    {{-- <div
                         class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-3">
                         <div
                             class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-3">
@@ -1475,7 +1487,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </div>
                             <!--/blog_post_metadata-->
                         </div>
-                    </div>
+                    </div> --}}
                     <!--/blog_post-->
                 </div>
             </div>

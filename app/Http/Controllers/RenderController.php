@@ -48,7 +48,7 @@ class RenderController extends Controller
         $news = OtherPost::whereType('news')->latest()->get()->take(5);
         $other = OtherPost::whereType('other')->latest()->get()->take(5);
         $videos = Video::latest()->get()->take(3);
-        $images = MyImage::latest()->get()->take(20); 
+        $images = MyImage::latest()->get()->take(20);
 
         return view('portal.render_team', compact('teams','categories','abouts','notice','publication','tender','rules','directot','press','news','other','videos','images', 'sitesetting', 'links'));
 
@@ -82,7 +82,7 @@ class RenderController extends Controller
         $press = OtherPost::whereType('press')->latest()->get()->take(5);
         $news = OtherPost::whereType('news')->latest()->get()->take(5);
         $other = OtherPost::whereType('other')->latest()->get()->take(5);
-       
+
 
         return view('portal.render_videos', compact('videos','notice','publication','links','tender','rules','directot','press','news','other', 'sitesetting'));
 
@@ -165,7 +165,7 @@ class RenderController extends Controller
         $otherpost = Document::where("id", $id)->first();
         $links = Link::latest()->get()->take(6);
 
-        
+
         return view('portal.render_otherpost_news', compact('otherpost','sitesetting', 'links'));
 
     }
@@ -186,7 +186,7 @@ class RenderController extends Controller
 
         return view('portal.includes.render_otherpost', compact('otherpost', 'sitesetting', 'links'));
     }
-    
+
     public function render_committee()
     {
         $sitesetting = SiteSetting::first();
@@ -231,7 +231,7 @@ class RenderController extends Controller
     }
 
     public function contact_page(){
-       
+
         $sitesetting = SiteSetting::first();
         $links = Link::latest()->get()->take(6);
 
@@ -255,5 +255,37 @@ class RenderController extends Controller
             "links" => $links,
         ]);
     }
- 
+
+    public function render_posts($slug='')
+    {
+        # code...
+        $sitesetting = SiteSetting::first();
+        $post = Post::where("slug", $slug)->first();
+        $posts = Post::all();
+        $links = Link::latest()->get()->take(6);
+        $postslist = Post::all()->except($post->id);
+        return view('portal.render_post',[
+            'sitesetting'=>$sitesetting,
+            'posts'=>$posts,
+            'post'=>$post,
+            'links'=>$links,
+            'postslist'=>$postslist
+        ]);
+    }
+
+    public function render_all_posts()
+    {
+        # code...
+        $sitesetting = SiteSetting::first();
+        $posts = Post::all();
+        $links = Link::latest()->get()->take(6);
+        $postslist = Post::latest()->get()->take(6);
+        return view('portal.render_all_posts',[
+            'sitesetting'=>$sitesetting,
+            'posts'=>$posts,
+            'links'=>$links,
+            'postslist'=>$postslist
+        ]);
+    }
+
 }
