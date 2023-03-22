@@ -32,7 +32,7 @@
         <h5 class="title_card">Other Posts</h5>
         @foreach ($postslist as $list )
         <a class="card-wel-title" href="{{ route('render_posts', $list->slug) }}">
-            <li>{{ $list->title }}</li>
+            <li style="list-style: none">{{ $list->title }}</li>
         </a>
         @endforeach
 
