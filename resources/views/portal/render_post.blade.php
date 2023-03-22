@@ -4,7 +4,7 @@
 
 <div class="container">
     <div class="row m-3">
-        <h3 class="sec_title">{{ !empty($post->title) ? $post->title:'' }}</h3>
+            <h1 class="sec_title">{{ __($post->title) }}</h1>
 
         <div class="col-md-6 about" data-animation-name="customAnimationIn" data-animation-duration="1500"
             data-animation-delay="500">
