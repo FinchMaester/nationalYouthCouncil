@@ -159,7 +159,7 @@ $other = App\Models\Other::whereType('other')->latest()->get()->take(4);
                                 @foreach ($news as $news )
                                 <li><a href="{{ route('render_other_post', $news->slug)}}"><span class="events_i"><i class="fa fa-download" aria-hidden="true"></i></span> {{ $news->title }}
                                     </a>
-                                    <p class="events_cal"><i class="fa fa-calendar" aria-hidden="true"></i> {{date('F jS,Y', strtotime($notice->created_at)) }}</p>
+                                    {{-- <p class="events_cal"><i class="fa fa-calendar" aria-hidden="true"></i> {{date('F jS,Y', strtotime($notice->created_at)) }}</p> --}}
                                     <hr>
                                     {{-- <img class="show_image" src=""> --}}
 
