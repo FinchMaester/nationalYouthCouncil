@@ -116,6 +116,12 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                 class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
                                 <li data-u-target="#carousel-f035" data-u-slide-to="2"
                                 class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                                <li data-u-target="#carousel-f035" data-u-slide-to="3"
+                                class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                                <li data-u-target="#carousel-f035" data-u-slide-to="4"
+                                class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
+                                <li data-u-target="#carousel-f035" data-u-slide-to="5"
+                                class="u-grey-70 u-shape-circle" style="width: 10px; height: 10px;"></li>
 
                         </ol>
                         <div class="u-carousel-inner u-gallery-inner" role="listbox">
