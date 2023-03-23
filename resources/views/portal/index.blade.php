@@ -198,118 +198,117 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             <div class="u-repeater u-repeater-1">
 
 
-                <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-1"
-                    data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
-                    <div class="u-container-layout u-similar-container u-container-layout-1">
-                        <div
-                            class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-1">
-                            <div class="u-container-layout u-container-layout-2">
-                                <h3 class="u-align-center u-text u-text-1"> अध्यक्ष</h3>
-                            </div>
-                        </div><span class="u-align-center-xs u-file-icon u-icon u-text-palette-1-base u-icon-1"
-                            data-animation-name="customAnimationIn" data-animation-duration="1500"
-                            data-animation-delay="500"><img src="{{ asset('img/prachanda.PNG') }}" alt=""></span>
-                        <div
-                            class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-2">
-                            <div class="u-container-layout u-container-layout-3">
-
-                                <h4 class="u-align-center u-text u-text-2"><span style="font-size: 13px">सम्माननीय
-                                        प्रधानमन्त्री एवं युवा तथा खेलकुद मन्त्री</span><br> पुष्प कमल दाहाल (प्रचण्ड)
-                                </h4>
-                                <p class="u-align-center u-text u-text-3"><span class="u-icon"><svg
-                                            class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
-                                            style="width: 1em; height: 1em;">
-                                            <g>
-                                                <path d="M56.612,4.569c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c3.736,3.736,3.736,9.815,0,13.552
-                                                        c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
-                                                        C61.128,16.434,61.128,9.085,56.612,4.569z">
-                                                </path>
-                                                <path
-                                                    d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639
-                                                         s-0.681,3.401-1.918,4.638c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
-                                                         c1.615-1.614,2.504-3.764,2.504-6.052S54.017,8.459,52.401,6.845z">
-                                                </path>
-                                                <path d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38
-                                                             c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
-                                                             C1.065,15.799,1.065,9.72,4.802,5.983z">
-                                                </path>
-                                                <path
-                                                    d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053
-                                                         c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
-                                                         c-1.237-1.237-1.918-2.885-1.918-4.639S7.775,9.22,9.013,7.983C9.403,7.593,9.403,6.96,9.013,6.569z">
-                                                </path>
-                                                <circle cx="30" cy="53" r="2"></circle>
-                                                <path d="M42.595,0H17.405C14.976,0,13,1.977,13,4.405v51.189C13,58.023,14.976,60,17.405,60h25.189C45.024,60,47,58.023,47,55.595
-                                                        V4.405C47,1.977,45.024,0,42.595,0z M33,3h1c0.552,0,1,0.447,1,1s-0.448,1-1,1h-1c-0.552,0-1-0.447-1-1S32.448,3,33,3z M26,3h4
-                                                        c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
-                                                        S32.206,57,30,57z M45,46H15V8h30V46z">
-                                                </path>
-                                            </g>
-                                        </svg><img></span>&nbsp;+९७७-०१-४२००५३९
-                                </p>
-                                <p class="u-align-center u-text u-text-4"><span
-                                        class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
-                                            alt=""></span>&nbsp;info@nyc.gov.np
-                                </p>
-                            </div>
+                <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-3"
+                data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
+                <div class="u-container-layout u-similar-container u-container-layout-7">
+                    <div
+                        class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
+                        <div class="u-container-layout u-container-layout-8">
+                            <h3 class="u-align-center u-text u-text-1"> अध्यक्ष</h3>
+                            {{-- {{ __("National Youth Council") }} --}}
+                        </div>
+                    </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
+                        data-animation-name="customAnimationIn" data-animation-duration="1500"
+                        data-animation-delay="500"><img src="{{ asset('img/prachanda.PNG') }}"
+                            alt=""></span>
+                    <div
+                        class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
+                        <div class="u-container-layout u-container-layout-3">
+                            <h4 class="u-align-center u-text u-text-6">पुष्प कमल दाहाल (प्रचण्ड)</h4>
+                            <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
+                                        class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
+                                        style="width: 1em; height: 1em;">
+                                        <g>
+                                            <path d="M56.612,4.569c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c3.736,3.736,3.736,9.815,0,13.552
+c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
+C61.128,16.434,61.128,9.085,56.612,4.569z">
+                                            </path>
+                                            <path d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639
+s-0.681,3.401-1.918,4.638c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
+c1.615-1.614,2.504-3.764,2.504-6.052S54.017,8.459,52.401,6.845z">
+                                            </path>
+                                            <path d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38
+c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
+C1.065,15.799,1.065,9.72,4.802,5.983z">
+                                            </path>
+                                            <path d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053
+c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
+c-1.237-1.237-1.918-2.885-1.918-4.639S7.775,9.22,9.013,7.983C9.403,7.593,9.403,6.96,9.013,6.569z">
+                                            </path>
+                                            <circle cx="30" cy="53" r="2"></circle>
+                                            <path d="M42.595,0H17.405C14.976,0,13,1.977,13,4.405v51.189C13,58.023,14.976,60,17.405,60h25.189C45.024,60,47,58.023,47,55.595
+V4.405C47,1.977,45.024,0,42.595,0z M33,3h1c0.552,0,1,0.447,1,1s-0.448,1-1,1h-1c-0.552,0-1-0.447-1-1S32.448,3,33,3z M26,3h4
+c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
+S32.206,57,30,57z M45,46H15V8h30V46z">
+                                            </path>
+                                        </g>
+                                    </svg><img></span>&nbsp;+९७७-०१-४२००५३९
+                            </p>
+                            <p class="u-align-center u-text u-text-12"><span
+                                    class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
+                                        alt=""></span>&nbsp;info@nyc.gov.np
+                            </p>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
-                <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-2"
-                    data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
-                    <div class="u-container-layout u-similar-container u-container-layout-4">
-                        <div
-                            class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-3">
-                            <div class="u-container-layout u-container-layout-5">
-                                <h3 class="u-align-center u-text u-text-1"> उपाध्यक्ष</h3>
-                            </div>
-                        </div><span class="u-align-center-xs u-file-icon u-icon u-icon-4"
-                            data-animation-name="customAnimationIn" data-animation-duration="1500"
-                            data-animation-delay="500"><img src="{{ asset('img/surendra.jpg') }}" alt=""></span>
-                        <div
-                            class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-4">
-                            <div class="u-container-layout u-container-layout-6">
-                                <h4 class="u-align-center u-text u-text-6"><br> श्री सुरेन्द्र बस्नेत</h4>
-                                <p class="u-align-center u-text u-text-7"><span class="u-icon"><svg
-                                            class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
-                                            style="width: 1em; height: 1em;">
-                                            <g>
-                                                <path d="M56.612,4.569c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c3.736,3.736,3.736,9.815,0,13.552
-    c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
-    C61.128,16.434,61.128,9.085,56.612,4.569z">
-                                                </path>
-                                                <path d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639
-    s-0.681,3.401-1.918,4.638c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
-    c1.615-1.614,2.504-3.764,2.504-6.052S54.017,8.459,52.401,6.845z">
-                                                </path>
-                                                <path d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38
-    c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
-    C1.065,15.799,1.065,9.72,4.802,5.983z">
-                                                </path>
-                                                <path d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053
-    c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
-    c-1.237-1.237-1.918-2.885-1.918-4.639S7.775,9.22,9.013,7.983C9.403,7.593,9.403,6.96,9.013,6.569z">
-                                                </path>
-                                                <circle cx="30" cy="53" r="2"></circle>
-                                                <path d="M42.595,0H17.405C14.976,0,13,1.977,13,4.405v51.189C13,58.023,14.976,60,17.405,60h25.189C45.024,60,47,58.023,47,55.595
-    V4.405C47,1.977,45.024,0,42.595,0z M33,3h1c0.552,0,1,0.447,1,1s-0.448,1-1,1h-1c-0.552,0-1-0.447-1-1S32.448,3,33,3z M26,3h4
-    c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
-    S32.206,57,30,57z M45,46H15V8h30V46z">
-                                                </path>
-                                            </g>
-                                        </svg><img></span> +९७७-०१-६६३८१५२
-                                </p>
-                                <p class="u-align-center u-text u-text-8"><span
-                                        class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
-                                            alt=""></span>&nbsp;surendradamak@gmail.com
-                                </p>
-                            </div>
-                        </div>
+
+            <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-3"
+            data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
+            <div class="u-container-layout u-similar-container u-container-layout-7">
+                <div
+                    class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
+                    <div class="u-container-layout u-container-layout-8">
+                        <h3 class="u-align-center u-text u-text-1"> उपाध्यक्ष</h3>
+                        {{-- {{ __("National Youth Council") }} --}}
+                    </div>
+                </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
+                    data-animation-name="customAnimationIn" data-animation-duration="1500"
+                    data-animation-delay="500"><img src="{{ asset('img/surendra.jpg') }}"
+                        alt=""></span>
+                <div
+                    class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
+                    <div class="u-container-layout u-container-layout-3">
+                        <h4 class="u-align-center u-text u-text-6">श्री सुरेन्द्र बस्नेत</h4>
+                        <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
+                                    class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
+                                    style="width: 1em; height: 1em;">
+                                    <g>
+                                        <path d="M56.612,4.569c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c3.736,3.736,3.736,9.815,0,13.552
+c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
+C61.128,16.434,61.128,9.085,56.612,4.569z">
+                                        </path>
+                                        <path d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639
+s-0.681,3.401-1.918,4.638c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
+c1.615-1.614,2.504-3.764,2.504-6.052S54.017,8.459,52.401,6.845z">
+                                        </path>
+                                        <path d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38
+c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
+C1.065,15.799,1.065,9.72,4.802,5.983z">
+                                        </path>
+                                        <path d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053
+c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
+c-1.237-1.237-1.918-2.885-1.918-4.639S7.775,9.22,9.013,7.983C9.403,7.593,9.403,6.96,9.013,6.569z">
+                                        </path>
+                                        <circle cx="30" cy="53" r="2"></circle>
+                                        <path d="M42.595,0H17.405C14.976,0,13,1.977,13,4.405v51.189C13,58.023,14.976,60,17.405,60h25.189C45.024,60,47,58.023,47,55.595
+V4.405C47,1.977,45.024,0,42.595,0z M33,3h1c0.552,0,1,0.447,1,1s-0.448,1-1,1h-1c-0.552,0-1-0.447-1-1S32.448,3,33,3z M26,3h4
+c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
+S32.206,57,30,57z M45,46H15V8h30V46z">
+                                        </path>
+                                    </g>
+                                </svg><img></span>&nbsp;+९७७-०१-६६३८१५२
+                        </p>
+                        <p class="u-align-center u-text u-text-12"><span
+                                class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
+                                    alt=""></span>&nbsp;surendradamak@gmail.com
+                        </p>
                     </div>
                 </div>
-
+            </div>
+        </div>
                 @foreach ($teams as $team)
                 <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-3"
                     data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
@@ -317,7 +316,7 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         <div
                             class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
                             <div class="u-container-layout u-container-layout-8">
-                                <h3 class="u-align-center u-text u-text-1">{{ __("$team->role")}}</h3>
+                                <h3 class="u-align-center u-text u-text-1">{{ __($team->role)}}</h3>
                                 {{-- {{ __("National Youth Council") }} --}}
                             </div>
                         </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
@@ -326,8 +325,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                                 alt=""></span>
                         <div
                             class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
-                            <div class="u-container-layout u-container-layout-9">
-                                <h4 class="u-align-center u-text u-text-6"> {{ __("$team->name")}}</h4>
+                            <div class="u-container-layout u-container-layout-3">
+                                <h4 class="u-align-center u-text u-text-6"> {{ __($team->name)}}</h4>
                                 <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
                                             class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                             style="width: 1em; height: 1em;">
@@ -534,22 +533,22 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                     <li class="u-tab-item" role="presentation">
                                         <a class="active u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-1"
                                             id="link-tab-0da5" href="#tab-0da5" role="tab" aria-controls="tab-0da5"
-                                            aria-selected="true">News</a>
+                                            aria-selected="true">{{ __("News") }}</a>
                                     </li>
                                     <li class="u-tab-item" role="presentation">
                                         <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-2"
                                             id="link-tab-14b7" href="#tab-14b7" role="tab" aria-controls="tab-14b7"
-                                            aria-selected="false">Notice</a>
+                                            aria-selected="false">{{ __("Notice") }}</a>
                                     </li>
                                     <li class="u-tab-item" role="presentation">
                                         <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-3"
                                             id="link-tab-2917" href="#tab-2917" role="tab" aria-controls="tab-2917"
-                                            aria-selected="false">Publications</a>
+                                            aria-selected="false">{{ __("Publication") }}</a>
                                     </li>
                                     <li class="u-tab-item u-tab-item-4" role="presentation">
                                         <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-4"
                                             id="tab-93fc" href="#link-tab-93fc" role="tab" aria-controls="link-tab-93fc"
-                                            aria-selected="false">Press Releases</a>
+                                            aria-selected="false">{{ __("Press Release") }}</a>
                                     </li>
                                 </ul>
                                 <div class="u-tab-content">
