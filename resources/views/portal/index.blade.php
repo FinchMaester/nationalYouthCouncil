@@ -568,13 +568,12 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                             class="u-container-layout u-similar-container u-container-layout-18">
                                                             <span class="u-file-icon u-icon u-icon-61">
 
-                                                                <i class="fa-solid fa-download fa-lg">
-
-
-                                                                </i>
+                                                                    <a target="_blank" href="{{ asset('uploads/other/file/' . $new->file) }}"><span class="events_i"><i class="fa fa-download" aria-hidden="true"></i></span>
+                                                                    </a>
 
                                                             </span>
-                                                            <span class="u-file-icon u-icon u-icon-62"><i
+                                                                    <span
+                                                                class="u-file-icon u-icon u-icon-62"><i
                                                                     class="fas fa-eye fa-lg"></i></span><span
                                                                 class="u-file-icon u-icon u-icon-63"><img
                                                                     src="{{ asset('uploads/other/image/' . $new->image)   }}"
@@ -582,12 +581,13 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                             <h5 class="u-text u-text-37">{{ $new->title }}</h5>
                                                             <p class="u-text u-text-38"><span
                                                                     class="u-file-icon u-icon"><img
-                                                                        src="images/8110713.png" alt=""></span>&nbsp;
+                                                                        src="images/8110713.png"
+                                                                        alt=""></span>&nbsp;
 
                                                             </p>
                                                             <p class="u-text u-text-39"><i class="fa fa-calendar"
-                                                                    aria-hidden="true"></i> {{date('F jS,Y',
-                                                                strtotime($new->created_at)) }}</p>
+                                                                aria-hidden="true"></i> {{date('F jS,Y',
+                                                            strtotime($new->created_at)) }}</p>
                                                         </div>
                                                     </div>
                                                     @endforeach
@@ -608,13 +608,16 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
                                                             class="u-container-layout u-similar-container u-container-layout-18">
-                                                            <span class="u-file-icon u-icon u-icon-61"><i
-                                                                    class="fa-solid fa-download fa-lg"></i></span><span
-                                                                class="u-file-icon u-icon u-icon-62"><i
+                                                            <span class="u-file-icon u-icon u-icon-61">
+
+                                                                   <a target="_blank" href="{{ asset('uploads/documents/file/' . $notice->file) }}"><span class="events_i"><i class="fa fa-download" aria-hidden="true"></i></span>
+                                                                    </a>
+
+                                                                </span>
+                                                                    <span class="u-file-icon u-icon u-icon-62"><i
                                                                     class="fas fa-eye fa-lg"></i></span><span
                                                                 class="u-file-icon u-icon u-icon-63"><img
-                                                                    src="{{ asset('uploads/documents/image/' . $notice->image) }}"
-                                                                    alt=""></span>
+                                                                src="{{ asset('uploads/documents/image/' . $notice->image) }}" alt=""></span>
                                                             <h5 class="u-text u-text-37">{{ $notice->title }}</h5>
                                                             <p class="u-text u-text-38"><span
                                                                     class="u-file-icon u-icon"><img
@@ -622,8 +625,8 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 
                                                             </p>
                                                             <p class="u-text u-text-39"><i class="fa fa-calendar"
-                                                                    aria-hidden="true"></i> {{date('F jS,Y',
-                                                                strtotime($notice->created_at)) }}</p>
+                                                                aria-hidden="true"></i> {{date('F jS,Y',
+                                                            strtotime($notice->created_at)) }}</p>
 
                                                         </div>
 
@@ -648,22 +651,27 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
                                                             class="u-container-layout u-similar-container u-container-layout-18">
-                                                            <span class="u-file-icon u-icon u-icon-61"><i
-                                                                    class="fa-solid fa-download fa-lg"></i></span><span
+                                                            <span class="u-file-icon u-icon u-icon-61">
+
+                                                                <a target="_blank" href="{{ asset('uploads/documents/file/' . $publication->file) }}"><span class="events_i"><i class="fa fa-download" aria-hidden="true"></i></span>
+                                                                </a>
+
+                                                                </span>
+                                                                    <span
                                                                 class="u-file-icon u-icon u-icon-62"><i
                                                                     class="fas fa-eye fa-lg"></i></span><span
                                                                 class="u-file-icon u-icon u-icon-63"><img
-                                                                    src="{{ asset('uploads/documents/image/' . $publication->image)   }}"
-                                                                    alt=""></span>
+                                                                    src="{{ asset('uploads/documents/image/' . $publication->image)   }}" alt=""></span>
                                                             <h5 class="u-text u-text-37">{{ $publication->title }}
                                                             </h5>
                                                             <p class="u-text u-text-38"><span
                                                                     class="u-file-icon u-icon"><img
-                                                                        src="images/8110713.png" alt=""></span>&nbsp;
+                                                                        src="images/8110713.png"
+                                                                        alt=""></span>&nbsp;
                                                             </p>
                                                             <p class="u-text u-text-39"><i class="fa fa-calendar"
-                                                                    aria-hidden="true"></i> {{date('F jS,Y',
-                                                                strtotime($publication->created_at)) }}</p>
+                                                                aria-hidden="true"></i> {{date('F jS,Y',
+                                                            strtotime($publication->created_at)) }}</p>
                                                         </div>
                                                     </div>
                                                     @endforeach
@@ -684,23 +692,28 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
                                                             class="u-container-layout u-similar-container u-container-layout-18">
-                                                            <span class="u-file-icon u-icon u-icon-61"><i
-                                                                    class="fa-solid fa-download fa-lg"></i></span><span
+                                                            <span class="u-file-icon u-icon u-icon-61">
+
+                                                                <a target="_blank" href="{{ asset('uploads/information/file/' . $pre->file) }}"><span class="events_i"><i class="fa fa-download" aria-hidden="true"></i></span>
+                                                                </a>
+
+                                                                </span>
+                                                                <span
                                                                 class="u-file-icon u-icon u-icon-62"><i
                                                                     class="fas fa-eye fa-lg"></i></span><span
                                                                 class="u-file-icon u-icon u-icon-63"><img
-                                                                    src="{{ asset('uploads/information/image/' . $pre->image)   }}"
-                                                                    alt=""></span>
+                                                                src="{{ asset('uploads/information/image/' . $pre->image)   }}"  alt=""></span>
                                                             <h5 class="u-text u-text-37">{{ $pre->title }}</h5>
                                                             <p class="u-text u-text-38"><span
                                                                     class="u-file-icon u-icon"><img
-                                                                        src="images/8110713.png" alt=""></span>&nbsp;
+                                                                        src="images/8110713.png"
+                                                                        alt=""></span>&nbsp;
 
 
                                                             </p>
                                                             <p class="u-text u-text-39"><i class="fa fa-calendar"
-                                                                    aria-hidden="true"></i> {{date('F jS,Y',
-                                                                strtotime($publication->created_at)) }}</p>
+                                                                aria-hidden="true"></i> {{date('F jS,Y',
+                                                            strtotime($publication->created_at)) }}</p>
                                                         </div>
                                                     </div>
                                                     @endforeach
