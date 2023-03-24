@@ -1261,7 +1261,7 @@
     }
   } .u-section-5 {
     background-image: none;
-    height: 750px;
+    height: 568px;
   }
 
   .u-section-5 .u-sheet-1 {
@@ -2048,6 +2048,7 @@
 
   .u-section-5 .u-container-layout-23 {
     padding: 0;
+    margin-left: 20%;
   }
 
   @media (max-width: 1199px) {
