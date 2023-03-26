@@ -2,9 +2,9 @@
 
 @section('content')
 <section class="u-clearfix u-white u-section-1" id="sec-d388">
-    {{-- <div class="u-clearfix u-sheet u-sheet-1"> --}}
-        {{-- <div class="u-clearfix"> --}}
-            {{-- <div class="u-layout">
+    <div class="u-clearfix">
+        <div class="u-clearfix u-expanded-width-xs u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
                 <div class="u-layout-row">
                     <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
                         <div class="u-container-layout u-container-layout-1">
@@ -21,11 +21,11 @@
                                 class="u-active-palette-1-dark-2 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-dark-2 u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-white u-btn-1"
                                 data-animation-name="customAnimationIn" data-animation-duration="1500"
                                 data-animation-delay="500">contact us</a> --}}
-                        {{-- </div>
+                        </div>
                     </div>
                 </div>
-            </div>  --}}
-        {{-- </div> --}}
+            </div>
+        </div>
         {{-- from here to here --}}
         {{-- <div
             class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
@@ -103,9 +103,9 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
             </a>
         </div> --}}
         {{-- from here --}}
-{{--
+
         <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-            <div class="u-container-fluid u-container-layout-2"> --}}
+            <div class="u-container-fluid u-container-layout-2">
                 <div class="u-carousel u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
                     id="carousel-f035" data-interval="5000" data-u-ride="carousel">
                     <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
@@ -185,10 +185,8 @@ c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,24
                         </span>
                     </a>
                 </div>
-            {{-- </div> --}}
-        {{-- </div> --}}
-        {{-- </div> --}}
-    {{-- </div> --}}
+            </div>
+        </div>
 
 
     </div>

@@ -54,9 +54,12 @@
   }
 
   .u-section-1 .u-gallery-1 {
+
     height: 598px;
-    width: 622px;
+    /* width: 1328px; */
+    width: 1515px;
     margin: -598px 0 3px auto;
+
   }
 
   .u-section-1 .u-carousel-indicators-1 {
