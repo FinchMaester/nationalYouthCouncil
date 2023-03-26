@@ -1,37 +1,197 @@
 @extends('portal.layouts.master')
 
 @section('content')
-<section class="">
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        {{-- border: 3px solid rgb(31, 193, 82); --}}
-
-        <div class="carousel-inner" style=" height:500px;">
-            @foreach($coverimages as $coverimage)
-          <div class="carousel-item active" style="height: 100%; width:100%;">
-
-            <img class="u-back-image u-expanded" style="max-height: 100%; max-width:100%" src="{{ asset('uploads/coverimage/' . $coverimage->image) }}">
-
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-
-        </div>
-        @endforeach
+<section class="u-clearfix u-white u-section-1" id="sec-d388">
+    {{-- <div class="u-clearfix u-sheet u-sheet-1"> --}}
+        {{-- <div class="u-clearfix"> --}}
+            {{-- <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-align-center u-container-style u-layout-cell u-left-cell u-size-60 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-1">
 
 
+                            {{-- <img class="u-image u-image-1" src="{{ asset('img/National-Youth-Council-Nepal.png') }}"
+                                data-image-width="800" data-image-height="418">
+                            <h2 class="u-text u-text-1" data-animation-name="customAnimationIn"
+                                data-animation-duration="1500">
+                                <h1 class="sec_title">{{ __("National Youth Council") }}<br>
+
+                            </h2>
+                            <a href="{{ route('contact_page') }}"
+                                class="u-active-palette-1-dark-2 u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-dark-2 u-radius-50 u-text-active-black u-text-body-alt-color u-text-hover-white u-btn-1"
+                                data-animation-name="customAnimationIn" data-animation-duration="1500"
+                                data-animation-delay="500">contact us</a> --}}
+                        {{-- </div>
+                    </div>
+                </div>
+            </div>  --}}
+        {{-- </div> --}}
+        {{-- from here to here --}}
+        {{-- <div
+            class="u-carousel u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
+            data-interval="5000" data-u-ride="carousel" id="carousel-cd60">
+            <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                <li data-u-target="#carousel-cd60" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle"
+                    style="width: 10px; height: 10px;"></li>
+                <li data-u-target="#carousel-cd60" data-u-slide-to="1" class="u-grey-70 u-shape-circle"
+                    style="width: 10px; height: 10px;"></li>
+                <li data-u-target="#carousel-cd60" data-u-slide-to="2" class="u-grey-70 u-shape-circle"
+                    style="width: 10px; height: 10px;"></li>
+                <li data-u-target="#carousel-cd60" data-u-slide-to="3" class="u-grey-70 u-shape-circle"
+                    style="width: 10px; height: 10px;"></li>
+                <li data-u-target="#carousel-cd60" data-u-slide-to="4" class="u-grey-70 u-shape-circle"
+                    style="width: 10px; height: 10px;"></li>
+                <li data-u-target="#carousel-cd60" data-u-slide-to="5" class="u-grey-70 u-shape-circle"
+                    style="width: 10px; height: 10px;"></li>
+            </ol>
+            <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
+                </div>
+                @foreach ($coverimages as $coverimage)
+                <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
+                    <div class="u-back-slide" data-image-width="1280" data-image-height="853">
+                        <img class="u-back-image u-expanded"
+                            src="{{ asset('uploads/coverimage/' . $coverimage->image) }}" alt="Cover Image">
+                    </div>
+                    <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
+                        <h3 class="u-gallery-heading">{{ $coverimage->title }}</h3>
+
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+
+
+            <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1"
+                href="#carousel-cd60" role="button" data-u-slide="prev">
+                <span aria-hidden="true">
+                    <svg viewBox="0 0 451.847 451.847">
+                        <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="sr-only">
+                    <svg viewBox="0 0 451.847 451.847">
+                        <path d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z">
+                        </path>
+                    </svg>
+                </span>
+            </a>
+            <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2"
+                href="#carousel-cd60" role="button" data-u-slide="next">
+                <span aria-hidden="true">
+                    <svg viewBox="0 0 451.846 451.847">
+                        <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="sr-only">
+                    <svg viewBox="0 0 451.846 451.847">
+                        <path d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z">
+                        </path>
+                    </svg>
+                </span>
+            </a>
+        </div> --}}
+        {{-- from here --}}
+{{--
+        <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+            <div class="u-container-fluid u-container-layout-2"> --}}
+                <div class="u-carousel u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
+                    id="carousel-f035" data-interval="5000" data-u-ride="carousel">
+                    <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                        <li data-u-target="#carousel-f035" data-u-slide-to="0" class="u-active u-grey-70 u-shape-circle"
+                            style="width: 10px; height: 10px;"></li>
+                        <li data-u-target="#carousel-f035" data-u-slide-to="1" class="u-grey-70 u-shape-circle"
+                            style="width: 10px; height: 10px;"></li>
+                        <li data-u-target="#carousel-f035" data-u-slide-to="2" class="u-grey-70 u-shape-circle"
+                            style="width: 10px; height: 10px;"></li>
+
+                    </ol>
+                    <div class="u-carousel-inner u-gallery-inner" role="listbox">
+                        <div class="u-active u-carousel-item u-effect-fade u-gallery-item u-carousel-item-1">
+                            <div class="u-back-slide" data-image-width="1280" data-image-height="853">
+                                <img class="u-back-image u-expanded"
+                                    src="{{ asset('uploads/coverimage/coverimage.jpg') }}">
+                            </div>
+                            <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-1">
+                                <h3 class="u-gallery-heading">Current Default image</h3>
+
+                            </div>
+                        </div>
+
+                        @foreach ($coverimages as $coverimage)
+                        <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
+                            <div class="u-back-slide" data-image-width="1280" data-image-height="853">
+                                <img class="u-back-image u-expanded"
+                                    src="{{ asset('uploads/coverimage/' . $coverimage->image) }}">
+                            </div>
+                            <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
+                                <h3 class="u-gallery-heading">{{ $coverimage->title }}</h3>
+
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-1"
+                        href="#carousel-f035" role="button" data-u-slide="prev">
+                        <span aria-hidden="true">
+                            <svg viewBox="0 0 451.847 451.847">
+                                <path
+                                    d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+                                                c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+                                                c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="sr-only">
+                            <svg viewBox="0 0 451.847 451.847">
+                                <path
+                                    d="M97.141,225.92c0-8.095,3.091-16.192,9.259-22.366L300.689,9.27c12.359-12.359,32.397-12.359,44.751,0
+                                        c12.354,12.354,12.354,32.388,0,44.748L173.525,225.92l171.903,171.909c12.354,12.354,12.354,32.391,0,44.744
+                                        c-12.354,12.365-32.386,12.365-44.745,0l-194.29-194.281C100.226,242.115,97.141,234.018,97.141,225.92z">
+                                </path>
+                            </svg>
+                        </span>
+                    </a>
+                    <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-grey-70 u-icon-circle u-opacity u-opacity-70 u-spacing-10 u-text-white u-carousel-control-2"
+                        href="#carousel-f035" role="button" data-u-slide="next">
+                        <span aria-hidden="true">
+                            <svg viewBox="0 0 451.846 451.847">
+                                <path
+                                    d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                        L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                        c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z">
+                                </path>
+                            </svg>
+                        </span>
+                        <span class="sr-only">
+                            <svg viewBox="0 0 451.846 451.847">
+                                <path
+                                    d="M345.441,248.292L151.154,442.573c-12.359,12.365-32.397,12.365-44.75,0c-12.354-12.354-12.354-32.391,0-44.744
+                                            L278.318,225.92L106.409,54.017c-12.354-12.359-12.354-32.394,0-44.748c12.354-12.359,32.391-12.359,44.75,0l194.287,194.284
+                                            c6.177,6.18,9.262,14.271,9.262,22.366C354.708,234.018,351.617,242.115,345.441,248.292z">
+                                </path>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            {{-- </div> --}}
+        {{-- </div> --}}
+        {{-- </div> --}}
+    {{-- </div> --}}
+
+
+    </div>
 </section>
 
 
@@ -887,9 +1047,8 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                         <div class="u-container-layout u-valign-top-xs u-container-layout-22">
                             <div class="u-container-style u-expanded-width u-group u-image u-image-contain u-image-1"
                                 data-image-width="264" data-image-height="276">
-
+                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnationalyouthcouncilnepal&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
                                 <div class="u-container-layout u-container-layout-23">
-                                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnationalyouthcouncilnepal&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 
 
                                 </div>
@@ -903,7 +1062,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 </section>
 <section class="u-align-center u-clearfix u-palette-5-light-3 u-section-6" id="carousel_f852">
     <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
-        <h3 class="u-text u-text-default u-text-1"> तस्बिरहरु<span style="font-weight: 700;"></span>
+        <h3 class="u-text u-text-default u-text-1"> {{ __("Gallery") }}<span style="font-weight: 700;"></span>
         </h3>
         <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
             <div class="u-gallery-inner u-gallery-inner-1">
@@ -1002,7 +1161,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 </section>
 <section class="u-clearfix u-palette-5-light-2 u-section-7" id="sec-931a">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-text u-text-default u-text-1"> चलचित्रहरु</h3>
+        <h3 class="u-text u-text-default u-text-1"> {{ __("Video") }}</h3>
         <div class="u-clearfix u-expanded-width u-gutter-22 u-layout-wrap u-layout-wrap-1">
             <div class="u-layout">
                 <div class="u-layout-row">
@@ -1156,7 +1315,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 </section>
 <section class="u-align-center u-clearfix u-palette-5-light-1 u-section-9" id="carousel_3ac4">
     <div class="u-clearfix u-sheet u-sheet-1">
-        <h3 class="u-text u-text-1">Latest news</h3>
+        <h3 class="u-text u-text-1">{{ __("Blog") }}</h3>
         <!--blog-->
         <!--blog_options_json-->
         <!--{"type":"Recent","source":"","tags":"","count":""}-->

@@ -28769,8 +28769,8 @@ section.u-palette-4-dark-2:before,
 .u-palette-4-dark-2.u-sidenav:before,
 .u-container-layout.u-container-layout.u-palette-4-dark-2:before,
 .u-table-alt-palette-4-dark-2 tr:nth-child(even) {
-  color: #ffffff;
-  background-color: #242d50;
+  color: black;
+  /* background-color: #242d50; */
 }
 .u-input.u-palette-4-dark-2,
 .u-field-input.u-palette-4-dark-2,
@@ -41600,7 +41600,7 @@ a.u-link.u-text-hover-grey-90:hover {
   font-size: 0.75rem;
   font-weight: 700;
   background-image: none;
-  margin: -33px 28px 0 auto;
+  margin: -33px -183px 2px auto;
   padding: 0 3px 1px;
 }
 

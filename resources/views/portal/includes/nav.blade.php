@@ -3,20 +3,23 @@
         <div class="u-align-center u-palette-4-dark-2 u-section-row" id="sec-b03b">
             <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
                 <div class="u-social-icons u-spacing-10 u-social-icons-1">
-                    <a class="u-social-url" title="facebook" target="_blank" href="{{ $sitesetting->face_link }}">
+                    <img src="{{ asset($sitesetting->main_logo)}}" class="top_image_nav" data-image-width="100">
+
+
+                    {{-- <a class="u-social-url" title="facebook" target="_blank" href="{{ $sitesetting->face_link }}">
                         <span class="u-icon u-social-facebook u-social-icon u-icon-1">
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0914"></use>
-                            </svg>
-                            <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0914">
+                            </svg> --}}
+                            {{-- <svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-0914">
                                 <circle fill="currentColor" cx="56.1" cy="56.1" r="55"></circle>
                                 <path fill="#FFFFFF"
                                     d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2 c0-6.7,3.1-17,17-17h12.5v13.9H73.5z">
                                 </path>
                             </svg>
                         </span>
-                    </a>
-                    <a class="u-social-url" title="twitter" target="_blank" href="{{ $sitesetting->social_link }}">
+                    </a> --}}
+                    {{-- <a class="u-social-url" title="twitter" target="_blank" href="{{ $sitesetting->social_link }}">
                         <span class="u-icon u-social-icon u-social-twitter u-icon-2">
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-2c2d"></use>
@@ -32,8 +35,9 @@
                                 </path>
                             </svg>
                         </span>
-                    </a>
-                    <a class="u-social-url" title="instagram" target="_blank" href="{{ $sitesetting->insta_link }}">
+                    </a> --}}
+                    {{-- <a class="u-social-url" title="instagram" target="_blank"
+                        href="{{ $sitesetting->insta_link }}">
                         <span class="u-icon u-social-icon u-social-instagram u-icon-3">
                             <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-6ca8"></use>
@@ -53,11 +57,17 @@
                                 </path>
                             </svg>
                         </span>
-                    </a>
+                    </a> --}}
                 </div>
-                <div class="u-expanded-width-xs u-list u-list-1">
-                    <div class="u-repeater u-repeater-1">
-                        <div
+                {{-- <div class="u-expanded-width-xs u-list u-list-1">
+                    <div class="u-repeater u-repeater-1"> --}}
+                        <h4 style="color: black"> नेपाल सरकार </h4>
+                        <h5>युवा तथा खेलकुद मन्त्रालय</h5>
+                        <h6>राष्ट्रिय युवा परिषद्</h6>
+                        <h7>
+                            सानोठिमी, भक्तपुर
+                        </h6>
+                        {{-- <div
                             class="u-container-align-left-sm u-container-align-left-xs u-container-style u-list-item u-repeater-item">
                             <div class="u-container-layout u-similar-container u-container-layout-1">
                                 <a href=""
@@ -67,8 +77,8 @@
                                 </a>
 
                             </div>
-                        </div>
-                        <div
+                        </div> --}}
+                        {{-- <div
                             class="u-container-align-left-sm u-container-align-left-xs u-container-style u-list-item u-repeater-item">
                             <div class="u-container-layout u-similar-container u-container-layout-2">
                                 <a href="https://nicepage.review"
@@ -79,8 +89,8 @@
                                 </a>
 
                             </div>
-                        </div>
-                        <div
+                        </div> --}}
+                        {{-- <div
                             class="u-container-align-left-sm u-container-align-left-xs u-container-style u-list-item u-repeater-item">
                             <div class="u-container-layout u-similar-container u-container-layout-3">
                                 <a href="https://nicepage.review"
@@ -90,23 +100,20 @@
                                 </a>
 
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
+                        </div> --}}
+                    {{-- </div>
+                </div> --}}
 
                 {{-- @foreach (config('app.languages') as $langLocale => $langName)
-                <a href="{{ url()->current() }}?change_language={{ $langLocale }}"
-                    class="u-active-palette-4-dark-1 u-border-none u-btn u-button-style u-palette-4-light-1 u-btn-4">
+                <a href="{{ url()->current() }}?change_language={{ $langLocale }} class="lang_icon"
+                    class="u-active-palette-4-dark-1 u-border-none u-btn u-button-style u-palette-4-light-1 u-btn-4 ">
                     {{ strtoupper($langLocale) }}
                 </a>
                 @endforeach --}}
 
 
                 {{-- <a href="#" class="u-border-none u-btn u-button-style u-palette-4-light-1 u-btn-5">NE</a> --}}
-                <form action="#" method="get"
+                {{-- <form action="#" method="get"
                     class="u-border-1 u-border-grey-30 u-search u-search-left u-white u-search-1">
                     <button class="u-search-button" type="submit">
                         <span class="u-search-icon u-spacing-10">
@@ -124,7 +131,7 @@
                         </span>
                     </button>
                     <input class="u-search-input" type="search" name="search" value="" placeholder="Search">
-                </form>
+                </form> --}}
 
                 @foreach (config('app.languages') as $langLocale => $langName)
                 <a href="{{ url()->current() }}?change_language={{ $langLocale }}"
@@ -132,7 +139,10 @@
                     {{ strtoupper($langLocale) }}
                 </a>
                 @endforeach
+
+                <img class="flag_image" src="{{ asset('img/nepal_flag.gif') }}" alt="">
             </div>
+
             {{-- </...........> --}}
             <div class="u-align-center-xs u-palette-4-dark-1 u-section-row u-sticky u-sticky-e2a9" id="sec-71fa">
                 <div
@@ -293,21 +303,21 @@
                                 </li>
 
                                 <li class="u-nav-item"><a
-                                    class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
-                                    href="#" style="padding: 10px 16px;">{{ __("Youth") }}</a>
-                                <div class="u-nav-popup">
-                                    <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
-                                        <li class="u-nav-item"><a href=""
-                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{
-                                                __("Youth Activity") }}</a>
-                                        </li>
-                                        <li class="u-nav-item"><a href="{{ route('render_other') }}"
-                                                class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{
-                                                __("Youth Statistics") }}</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                                        class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                        href="#" style="padding: 10px 16px;">{{ __("Youth") }}</a>
+                                    <div class="u-nav-popup">
+                                        <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
+                                            <li class="u-nav-item"><a href=""
+                                                    class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{
+                                                    __("Youth Activity") }}</a>
+                                            </li>
+                                            <li class="u-nav-item"><a href="{{ route('render_other') }}"
+                                                    class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{
+                                                    __("Youth Statistics") }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
 
                                 <li class="u-nav-item"><a href="{{ route('contact_page') }}"
                                         class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
@@ -445,6 +455,7 @@
 
             </div>
         </div>
+    </div>
 </header>
 
 
