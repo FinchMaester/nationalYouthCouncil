@@ -4,8 +4,10 @@ namespace App\Imports;
 
 use App\Models\CommitteeDetail;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithStartRow;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class UsersImport implements ToModel
+class UsersImport implements ToModel, WithStartRow
 {
     /**
     * @param array $row
@@ -20,5 +22,12 @@ class UsersImport implements ToModel
             'address' => $row[2],
             'phone' => $row[3]
         ]);
+
+    }
+    public function startRow(): int
+    {
+        # code...
+        return 2;
+
     }
 }

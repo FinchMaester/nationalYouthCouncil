@@ -4,8 +4,9 @@ namespace App\Imports;
 
 use App\Models\ExecutiveDetail;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithStartRow;
 
-class ExecutiveDetailImport implements ToModel
+class ExecutiveDetailImport implements ToModel, WithStartRow
 {
     /**
     * @param array $row
@@ -21,5 +22,12 @@ class ExecutiveDetailImport implements ToModel
             'email' => $row[3],
             'position' => $row[4],
         ]);
+    }
+
+    public function startRow():int
+    {
+        # code...
+        return 2;
+
     }
 }

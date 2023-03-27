@@ -10,4 +10,5 @@ class CommitteeDetail extends Model
     use HasFactory;
 
     protected $fillable = ['district', 'name', 'address', 'phone'];
+
 }
