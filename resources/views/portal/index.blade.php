@@ -36,7 +36,7 @@
                             <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
                                 <div class="u-back-slide" data-image-width="1280" data-image-height="853">
                                     <img class="u-back-image u-expanded"
-                                        src="{{ asset('uploads/coverimage/' . $coverimage->image) }}">
+                                        src="{{ asset('uploads/coverimage/' . $coverimage->image) }}" alt="NYC ">
                                 </div>
                                 <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
                                     <h3 class="u-gallery-heading">{{ $coverimage->title }}</h3>
