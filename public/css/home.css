@@ -1,8 +1,11 @@
 *{
   font-family:'Mukta', sans-serif;
 }
+
+
 .nav_text{
     font-weight:bold;
+    font-size: 32px;
 }
 
 .topnav{
@@ -16,7 +19,9 @@
 }
 
 .top_nav_topic{
+
     text-align: center;
+    margin-top: 3px;
 }
 
 .top_nav_mainlogo{
@@ -133,7 +138,7 @@
     /* width: 1515px;
      */
      width: 1508px;
-    margin: 9px  0 3px -105px;
+    margin: 0px  0 3px -105px;
 
   }
 

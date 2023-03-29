@@ -6,12 +6,12 @@
                 <img src="{{ asset($sitesetting->main_logo)}}" class="top_nav_mainlogo">
 
             </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 top_nav_topic">
-                <h4 style="color: black"> नेपाल सरकार </h4>
-                <h5>युवा तथा खेलकुद मन्त्रालय</h5>
-                <h6 class="nav_text">राष्ट्रिय युवा परिषद्</h6>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 top_nav_topic" style="margin-top:3px">
+                <h4 style="color: black"> {{ __("Government of Nepal") }} </h4>
+                <h5>{{ __("Ministry of Youth and Sports") }}</h5>
+                <h6 class="nav_text">{{ __("National Youth Council") }}</h6>
                 <h7>
-                    सानोठिमी, भक्तपुर
+                    {{ __("Sanothimi, Bhaktapur")}}
                 </h7>
 
             </div>
