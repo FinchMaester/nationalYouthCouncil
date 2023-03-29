@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <section class="u-align-center u-clearfix u-palette-5-light-3 u-section-6" id="carousel_f852">
+    <section class="u-align-center u-clearfix u-section-6" id="carousel_f852">
         <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
             <h3 class="u-text u-text-default u-text-1">
                 <h1 class="sec_title">{{ __("Photo Gallery") }}</h1> <span style="font-weight: 700;"></span>
