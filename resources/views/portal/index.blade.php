@@ -36,7 +36,7 @@
                             <div class="u-carousel-item u-effect-fade u-gallery-item u-carousel-item-2">
                                 <div class="u-back-slide" data-image-width="1280" data-image-height="853">
                                     <img class="u-back-image u-expanded"
-                                        src="{{ asset('uploads/coverimage/' . $coverimage->image) }}" alt="NYC ">
+                                        src="{{ asset('uploads/coverimage/' . $coverimage->image) }}" alt="National Youth Council Cover Image">
                                 </div>
                                 <div class="u-align-center u-over-slide u-shading u-valign-bottom u-over-slide-2">
                                     <h3 class="u-gallery-heading">{{ $coverimage->title }}</h3>
@@ -111,7 +111,7 @@
                     <div
                         class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
                         <div class="u-container-layout u-container-layout-8">
-                            <h3 class="u-align-center u-text u-text-1"> अध्यक्ष</h3>
+                            <h3 class="u-align-center u-text u-text-1"> {{ __("Chairperson") }}</h3>
                             {{-- {{ __("National Youth Council") }} --}}
                         </div>
                     </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
@@ -121,7 +121,7 @@
                     <div
                         class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
                         <div class="u-container-layout u-container-layout-3">
-                            <h4 class="u-align-center u-text u-text-6">पुष्प कमल दाहाल (प्रचण्ड)</h4>
+                            <h4 class="u-align-center u-text u-text-6">{{ __("Pushpa Kamal Dahal (Prachanda)") }}</h4>
                             <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
                                         class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                         style="width: 1em; height: 1em;">
@@ -149,7 +149,7 @@ c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c
 S32.206,57,30,57z M45,46H15V8h30V46z">
                                             </path>
                                         </g>
-                                    </svg><img></span>&nbsp;+९७७-०१-४२००५३९
+                                    </svg><img></span>&nbsp;{{ __("+९७७-०१-४२००५३९") }}
                             </p>
                             <p class="u-align-center u-text u-text-12"><span
                                     class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
@@ -168,17 +168,17 @@ S32.206,57,30,57z M45,46H15V8h30V46z">
                 <div
                     class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
                     <div class="u-container-layout u-container-layout-8">
-                        <h3 class="u-align-center u-text u-text-1"> उपाध्यक्ष</h3>
+                        <h3 class="u-align-center u-text u-text-1">{{ __("Vice Chairperson") }}</h3>
                         {{-- {{ __("National Youth Council") }} --}}
                     </div>
                 </div><span class="u-align-center-xs u-file-icon u-icon u-icon-7"
                     data-animation-name="customAnimationIn" data-animation-duration="1500"
                     data-animation-delay="500"><img src="{{ asset('img/surendra.jpg') }}"
-                        alt=""></span>
+                        alt="Surendra Basnet Image"></span>
                 <div
                     class="u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-palette-4-dark-1 u-group-6">
                     <div class="u-container-layout u-container-layout-3">
-                        <h4 class="u-align-center u-text u-text-6">श्री सुरेन्द्र बस्नेत</h4>
+                        <h4 class="u-align-center u-text u-text-6">{{ __("Shree Surendra Basnet") }}</h4>
                         <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
                                     class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
                                     style="width: 1em; height: 1em;">
@@ -206,7 +206,7 @@ c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c
 S32.206,57,30,57z M45,46H15V8h30V46z">
                                         </path>
                                     </g>
-                                </svg><img></span>&nbsp;+९७७-०१-६६३८१५२
+                                </svg><img></span>&nbsp;{{ __("+९७७-०१-६६३८१५२") }}
                         </p>
                         <p class="u-align-center u-text u-text-12"><span
                                 class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
@@ -261,7 +261,7 @@ S32.206,57,30,57z M45,46H15V8h30V46z">
     S32.206,57,30,57z M45,46H15V8h30V46z">
                                                 </path>
                                             </g>
-                                        </svg><img></span>&nbsp;{{ $team->contact_number }}
+                                        </svg><img></span>&nbsp;{{ __($team->contact_number) }}
                                 </p>
                                 <p class="u-align-center u-text u-text-12"><span
                                         class="u-file-icon u-icon u-text-white"><img src="images/542689-e094886c.png"
@@ -376,7 +376,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             class="u-file-icon u-icon u-text-white u-icon-1"><img
                                 src="{{ asset('img/45010-756f759e.png') }}" alt=""></span>
                         <h4 class="u-text u-text-1" data-animation-name="customAnimationIn"
-                            data-animation-duration="1500" data-animation-delay="500"> तस्बिर पुस्तिका</h4>
+                            data-animation-duration="1500" data-animation-delay="500">{{ __("Photo Book") }}</h4>
                     </div>
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-opacity u-opacity-40 u-palette-5-dark-2 u-radius-50 u-repeater-item u-shape-round u-list-item-2"
@@ -386,37 +386,37 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             class="u-file-icon u-icon u-text-white u-icon-2"><img
                                 src="{{ asset('img/711245-1b37bf58.png') }}" alt=""></span>
                         <h4 class="u-text u-text-2" data-animation-name="customAnimationIn"
-                            data-animation-duration="1500" data-animation-delay="500"> भिडियो ग्यालरी</h4>
+                            data-animation-duration="1500" data-animation-delay="500">{{ __("Video Gallery") }}</h4>
                     </div>
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-opacity u-opacity-40 u-palette-5-dark-2 u-radius-50 u-repeater-item u-shape-round u-list-item-3"
                     data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"
-                    data-href="https://nicepage.com">
+                    data-href="#">
                     <div class="u-container-layout u-similar-container u-container-layout-3"><span
                             class="u-file-icon u-icon u-text-white u-icon-3"><img
                                 src="{{ asset('img/681494-3d6f45f5.png') }}" alt=""></span>
                         <h4 class="u-text u-text-3" data-animation-name="customAnimationIn"
-                            data-animation-duration="1500" data-animation-delay="500"> युवा तथ्याङ्क</h4>
+                            data-animation-duration="1500" data-animation-delay="500">{{ __("Youth Statistics") }}</h4>
                     </div>
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-opacity u-opacity-40 u-palette-5-dark-2 u-radius-50 u-repeater-item u-shape-round u-list-item-4"
                     data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"
-                    data-href="https://nicepage.com">
+                    data-href="#">
                     <div class="u-container-layout u-similar-container u-container-layout-4"><span
                             class="u-file-icon u-icon u-text-white u-icon-4"><img
                                 src="{{ asset('img/709699-b940ac92.png') }}" alt=""></span>
                         <h4 class="u-text u-text-4" data-animation-name="customAnimationIn"
-                            data-animation-duration="1500" data-animation-delay="500"> युवा पोर्टल</h4>
+                            data-animation-duration="1500" data-animation-delay="500">{{ __("Youth Portal") }}</h4>
                     </div>
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-opacity u-opacity-40 u-palette-5-dark-2 u-radius-50 u-repeater-item u-shape-round u-list-item-5"
                     data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0"
-                    data-href="https://nicepage.com">
+                    data-href="#">
                     <div class="u-container-layout u-similar-container u-container-layout-5"><span
                             class="u-file-icon u-icon u-text-white u-icon-5"><img
                                 src="{{ asset('img/542689-e094886c.png') }}" alt=""></span>
                         <h4 class="u-text u-text-5" data-animation-name="customAnimationIn"
-                            data-animation-duration="1500" data-animation-delay="500"> इमेल लगइन</h4>
+                            data-animation-duration="1500" data-animation-delay="500">{{ __("Email Login") }}</h4>
                     </div>
                 </div>
             </div>
@@ -468,7 +468,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                             <div class="u-expanded-width u-list u-list-4">
                                                 <div class="u-repeater u-repeater-4">
                                                     @if(count($news)===0)
-                                                    <p>There are no files to Display</p>
+                                                    <p>{{ __("There are no files to Display") }}</p>
                                                     @else
                                                     @foreach ($news as $new)
                                                     <div class="u-container-style u-list-item u-repeater-item">
@@ -514,7 +514,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                 <div class="u-repeater u-repeater-4">
 
                                                     @if(count($notices)=== 0)
-                                                    <p>There are no Files to Display</p>
+                                                    <p>{{ __("There are no files to Display") }}</p>
 
                                                     @else
                                                     @foreach ($notices as $notice)
@@ -563,7 +563,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                 <div class="u-repeater u-repeater-4">
 
                                                     @if(count($publications)=== 0)
-                                                    <p>There are no Files to Display</p>
+                                                    <p>{{ __("There are no files to Display") }}</p>
 
                                                     @else
                                                     @foreach ($publications as $publication)
@@ -609,7 +609,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                 <div class="u-repeater u-repeater-4">
 
                                                     @if(count($press)===0)
-                                                    <p>There are no files to Display</p>
+                                                    <p>{{ __("There are no files to Display") }}</p>
                                                     @else
                                                     @foreach ($press as $pre)
                                                     <div class="u-container-style u-list-item u-repeater-item">
