@@ -944,7 +944,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="u-align-justify u-container-style u-layout-cell u-size-24 u-layout-cell-2"
+                     <div class="u-align-justify u-container-style u-layout-cell u-size-24 u-layout-cell-2"
                         data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
                         <div class="u-container-layout u-valign-top-xs u-container-layout-22">
                             <div class="u-container-style u-expanded-width u-group u-image u-image-contain"
@@ -955,7 +955,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
