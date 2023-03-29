@@ -1,8 +1,12 @@
 *{
   font-family:'Mukta', sans-serif;
 }
+
+
 .nav_text{
     font-weight:bold;
+    font-size: 32px;
+    color: #0b1f6d;
 }
 
 .topnav{
@@ -16,7 +20,9 @@
 }
 
 .top_nav_topic{
+
     text-align: center;
+    margin-top: 3px;
 }
 
 .top_nav_mainlogo{
@@ -132,8 +138,8 @@
     /* width: 1328px; */
     /* width: 1515px;
      */
-     width: 1401px;
-    margin: 9px  0 3px auto;
+     width: 1515px;
+    margin: 0px  0 3px -110px;
 
   }
 

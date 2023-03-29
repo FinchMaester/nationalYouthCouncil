@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
 
-            <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+            <div class="u-align-left u-container-style u-layout-cell u-size-35 u-layout-cell-2">
                 <div class="u-container-fluid u-container-layout-2">
                     <div class="u-carousel u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
                         id="carousel-f035" data-interval="5000" data-u-ride="carousel">
@@ -376,7 +376,9 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             class="u-file-icon u-icon u-text-white u-icon-1"><img
                                 src="{{ asset('img/45010-756f759e.png') }}" alt=""></span>
                         <h4 class="u-text u-text-1" data-animation-name="customAnimationIn"
+
                             data-animation-duration="1500" data-animation-delay="500">{{ __("Photo Gallery") }}</h4>
+
                     </div>
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-opacity u-opacity-40 u-palette-5-dark-2 u-radius-50 u-repeater-item u-shape-round u-list-item-2"
@@ -963,7 +965,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="u-align-justify u-container-style u-layout-cell u-size-24 u-layout-cell-2"
+                     <div class="u-align-justify u-container-style u-layout-cell u-size-24 u-layout-cell-2"
                         data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="0">
                         <div class="u-container-layout u-valign-top-xs u-container-layout-22">
                             <div class="u-container-style u-expanded-width u-group u-image u-image-contain"
@@ -974,7 +976,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                 </div>
             </div>
         </div>
