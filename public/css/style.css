@@ -17,7 +17,7 @@ body{
   overflow-x: none;
 
 }
-/*  */
+/* Other posts(post list) */
 
 
 
@@ -63,11 +63,18 @@ body{
 .card-wel{
     position: absolute;
     top: 15%;
-    right: 0px;
+    right:31px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    color: #0c3c85;
     /* bottom: 2px; */
 }
 
-/*  */
+.card-wel-title{
+    text-decoration: none;
+}
+
+/* Other posts(post list) */
 
 .other_posts{
     border: black solid 1px;
