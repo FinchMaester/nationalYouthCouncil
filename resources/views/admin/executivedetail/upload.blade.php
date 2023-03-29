@@ -33,10 +33,10 @@
         <button class="btn-primary">Import data</button>
         <a class="btn-success" href="{{ route('file-export-exe') }}">Export data</a>
     </form>
-
-    <h5> Format </h5>
-    <span> Name, Image, Phone, Email, Position </span>
-
+    <div class="mt-4">
+        <h5> Format </h5>
+        <span> Name, Image, Phone, Email, Position </span>
+    </div>
 
 
 @endsection

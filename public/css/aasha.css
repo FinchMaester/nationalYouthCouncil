@@ -689,7 +689,7 @@ ol {
           user-select: none;
   vertical-align: middle;
   text-align: center;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
   border-radius: 0;
   align-self: flex-start;
 }
@@ -12151,7 +12151,7 @@ section.u-image:not(.u-hover-box),
 }
 .u-layout-cell {
   position: relative;
-  display: flex;
+  /* display: flex; */
   background-clip: padding-box;
   background-origin: padding-box;
 }
@@ -41764,6 +41764,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
   .u-header .u-menu-1 {
     margin-right: 0;
+
   }
 }
 @media (max-width: 991px) {
@@ -41916,7 +41917,8 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-btn-4 {
-    margin-right: 7px;
+    /* margin-right: 7px; */
+    /* margin-right: -37px; */
   }
 
   .u-header .u-btn-5 {

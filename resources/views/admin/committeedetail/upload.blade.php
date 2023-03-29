@@ -29,7 +29,9 @@
                 <label class="custom-file-label" for="customFile">Choose file</label>
             </div>
         </div>
+
         <button class="btn-primary">Import data</button>
+
         <a class="btn-success" href="{{ route('file-export') }}">Export data</a>
     </form>
     <div class="mt-4">

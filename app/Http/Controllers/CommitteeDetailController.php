@@ -17,11 +17,11 @@ class CommitteeDetailController extends Controller
         "page_title" => "Import Committee Members"
        ]);
     }
-   
+
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function fileImport(Request $request) 
+    public function fileImport(Request $request)
     {
         Excel::import(new UsersImport, $request->file('file')->store('temp'));
         return back();
@@ -29,10 +29,10 @@ class CommitteeDetailController extends Controller
     /**
     * @return \Illuminate\Support\Collection
     */
-    public function fileExport() 
+    public function fileExport()
     {
         return Excel::download(new UsersExport, 'users-collection.xlsx');
-    }    
+    }
 
 
 
@@ -139,4 +139,11 @@ class CommitteeDetailController extends Controller
 
         return redirect('admin/committeedetails/index');
     }
+
+    // public function error()
+    // {
+    //     # code...
+    //     return view('admin.committeedetail.error');
+    // }
+
 }
