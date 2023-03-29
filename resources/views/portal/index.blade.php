@@ -376,7 +376,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                             class="u-file-icon u-icon u-text-white u-icon-1"><img
                                 src="{{ asset('img/45010-756f759e.png') }}" alt=""></span>
                         <h4 class="u-text u-text-1" data-animation-name="customAnimationIn"
-                            data-animation-duration="1500" data-animation-delay="500"> तस्बिर पुस्तिका</h4>
+                            data-animation-duration="1500" data-animation-delay="500"> तस्बिर पुस्तिका </h4>
                     </div>
                 </div>
                 <div class="u-align-center u-container-style u-list-item u-opacity u-opacity-40 u-palette-5-dark-2 u-radius-50 u-repeater-item u-shape-round u-list-item-2"
