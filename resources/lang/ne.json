@@ -7,6 +7,7 @@
     "Council Members" : "परिषद् सदस्य",
     "Message from the Administrative Head" : "प्रशासकीय प्रमुखको सन्देश",
     "Message from Chairperson" : "अध्यक्षको सन्देश",
+    "Message from Vice Chairperson" : "उपाध्यक्ष",
     "Documents" : "दस्तावेज",
     "Notice" : "सुचना",
     "Publication" : "प्रकाशन",
@@ -22,6 +23,7 @@
     "Gallery" : "ग्यालेरी",
     "Photo Gallery" : "फाेटाे ग्यालेरी",
     "Video Gallery" : "भिडियाे ग्यालेरी",
+    "Video" :"भिडियाे",
     "Contact" : "सम्पर्क",
     "Read more" : "पुरा पढ्नुहाेस ",
     "Highlights" : "ताजा अपडेट" ,
@@ -76,6 +78,9 @@
     "Laxmi Rai" : "लक्ष्मी राई",
     "Office Helper" : "कार्यालय सहयोगी",
     "Prem Kumari Khatri" : "प्रेमकुमारी खत्री",
-    "Sarita Karki" : "सारीता कार्की"
+    "Sarita Karki" : "सारीता कार्की",
+    "Youth Activity" : "युवा गतिविधि",
+    "Youth Statistics" : "युवा तथ्याङ्क",
+    "Youth" : "युवा"
 
 }

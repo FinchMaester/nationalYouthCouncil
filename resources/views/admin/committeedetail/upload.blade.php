@@ -29,11 +29,14 @@
                 <label class="custom-file-label" for="customFile">Choose file</label>
             </div>
         </div>
+
         <button class="btn-primary">Import data</button>
+
         <a class="btn-success" href="{{ route('file-export') }}">Export data</a>
     </form>
-
-    <h5> Format </h5>
-    <span> District, Name, Address, Phone </span>
+    <div class="mt-4">
+        <h5> Format </h5>
+        <span> District, Name, Address, Phone </span>
+    </div>
 
 @endsection

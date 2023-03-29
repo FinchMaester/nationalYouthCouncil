@@ -3,6 +3,8 @@
 *{
   font-family: 'Mukta', sans-serif;
 
+
+
 }
 /* For GLobal */
 
@@ -12,9 +14,51 @@ body{
   background: url("../img/bg.png") fixed ;
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  overflow-x: none;
 
 }
 /* Other posts(post list) */
+
+
+
+
+.top_image_nav{
+    height: 100px;
+    width: auto;
+    margin-top: 60px;
+}
+
+@media (max-width: 575px) {
+    .top-info{
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    }
+  }
+
+@media (max-width: 575px) {
+    .top_nav_flag {
+        /* margin-left:  19%; */
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+
+    }
+  }
+
+
+
+@media (max-width: 575px) {
+    .top_image_nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 162px;
+
+    }
+  }
 
 .card-wel{
     position: absolute;
