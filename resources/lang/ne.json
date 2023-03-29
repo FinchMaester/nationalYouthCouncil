@@ -25,6 +25,7 @@
     "Video Gallery" : "भिडियाे ग्यालेरी",
     "Video" :"भिडियाे",
     "Contact" : "सम्पर्क",
+    "Contact Us" : "सम्पर्क",
     "Read more" : "पुरा पढ्नुहाेस ",
     "Highlights" : "ताजा अपडेट" ,
     "Blog" : "ब्लग",
@@ -42,13 +43,15 @@
     "Sanothimi, Bhaktapur" : "सानोठिमी, भक्तपुर",
     "National Youth Council": "राष्ट्रिय युवा परिषद्",
     "Useful Links": "उपयोगी लिङ्कहरू",
-    "Chairman" : "अध्यक्ष",
-    "Vice Chairman" : "उपाध्यक्ष",
+    "Chairperson" : "अध्यक्ष",
+    "Vice Chairperson" : "उपाध्यक्ष",
     "Member Secretary" : "सदस्य–सचिव",
     "Information Officer" : "सूचना अधिकारी",
     "Board Members" : "बोर्ड सदस्य",
     "Chief of Department" : "विभाग प्रमुख",
     "************team***************" : "Starts Here",
+    "Pushpa Kamal Dahal (Prachanda)":"पुष्प कमल दाहाल (प्रचण्ड)",
+    "Shree Surendra Basnet" :"श्री सुरेन्द्र बस्नेत",
     "Ramakant Sharma"   : "रमाकान्त शर्मा",
     "Administrative Chief" : "प्रशासकीय प्रमुख",
     "Dinesh Ghimire" : "दिनेश घिमिरे",
@@ -81,6 +84,8 @@
     "Sarita Karki" : "सारीता कार्की",
     "Youth Activity" : "युवा गतिविधि",
     "Youth Statistics" : "युवा तथ्याङ्क",
-    "Youth" : "युवा"
+    "Youth" : "युवा",
+    "Youth Portal" : "युवा पाेर्टल",
+    "Email Login" : "इमेल लगीन"
 
 }
