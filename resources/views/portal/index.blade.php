@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-12">
 
-            <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+            <div class="u-align-left u-container-style u-layout-cell u-size-35 u-layout-cell-2">
                 <div class="u-container-fluid u-container-layout-2">
                     <div class="u-carousel u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
                         id="carousel-f035" data-interval="5000" data-u-ride="carousel">
