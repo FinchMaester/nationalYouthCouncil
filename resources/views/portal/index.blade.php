@@ -6,7 +6,6 @@
         <div class="row">
             <div class="col-md-12">
 
-
             <div class="u-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-2">
                 <div class="u-container-fluid u-container-layout-2">
                     <div class="u-carousel u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gallery u-gallery-slider u-layout-carousel u-lightbox u-no-transition u-show-text-on-hover u-gallery-1"
@@ -98,9 +97,6 @@
 
 
 </section>
-
-
-
 
 <section class="u-align-center u-clearfix u-white u-section-2" id="carousel_8e8e">
     <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">

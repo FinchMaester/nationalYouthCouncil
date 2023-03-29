@@ -9,7 +9,7 @@
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 top_nav_topic">
                 <h4 style="color: black"> नेपाल सरकार </h4>
                 <h5>युवा तथा खेलकुद मन्त्रालय</h5>
-                <h6>राष्ट्रिय युवा परिषद्</h6>
+                <h6 class="nav_text">राष्ट्रिय युवा परिषद्</h6>
                 <h7>
                     सानोठिमी, भक्तपुर
                 </h7>
