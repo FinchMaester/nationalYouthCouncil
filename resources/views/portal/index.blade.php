@@ -467,7 +467,9 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                             class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-17">
                                             <div class="u-expanded-width u-list u-list-4">
                                                 <div class="u-repeater u-repeater-4">
-
+                                                    @if(count($news)===0)
+                                                    <p>There are no files to Display</p>
+                                                    @else
                                                     @foreach ($news as $new)
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
@@ -497,6 +499,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                         </div>
                                                     </div>
                                                     @endforeach
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -510,6 +513,10 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                             <div class="u-expanded-width u-list u-list-4">
                                                 <div class="u-repeater u-repeater-4">
 
+                                                    @if(count($notices)=== 0)
+                                                    <p>There are no Files to Display</p>
+
+                                                    @else
                                                     @foreach ($notices as $notice)
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
@@ -540,6 +547,8 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
 
 
                                                     @endforeach
+
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -553,6 +562,10 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                             <div class="u-expanded-width u-list u-list-4">
                                                 <div class="u-repeater u-repeater-4">
 
+                                                    @if(count($publications)=== 0)
+                                                    <p>There are no Files to Display</p>
+
+                                                    @else
                                                     @foreach ($publications as $publication)
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
@@ -581,6 +594,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                         </div>
                                                     </div>
                                                     @endforeach
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
@@ -594,6 +608,9 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                             <div class="u-expanded-width u-list u-list-4">
                                                 <div class="u-repeater u-repeater-4">
 
+                                                    @if(count($press)===0)
+                                                    <p>There are no files to Display</p>
+                                                    @else
                                                     @foreach ($press as $pre)
                                                     <div class="u-container-style u-list-item u-repeater-item">
                                                         <div
@@ -623,6 +640,7 @@ s80-35.8,80-80S124.2,0,80,0L80,0z">
                                                         </div>
                                                     </div>
                                                     @endforeach
+                                                    @endif
                                                 </div>
                                             </div>
                                         </div>
