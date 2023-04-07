@@ -9,9 +9,9 @@
 
 <section class="latest_blog wid_mar">
     <div class="container">
-        <h1 class="sec_title">
+        <h3 class="sec_title">
             {{ __($page_title) }}
-        </h1>
+        </h3>
         <div class="row">
 
             @foreach ($chairperson as $ad )

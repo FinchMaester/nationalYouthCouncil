@@ -8,12 +8,12 @@
     <div class="container">
 
         <div class="row mt-3">
-            <h1 class="sec_title">{{ __("Council Members") }}</h1>
+            <h3 class="sec_title">{{ __("Council Members") }}</h3>
            
         @foreach ($executivedetail as $ex)
             <div class="col-md-4">
                 <div class="card team_card mt-2 mb-2">
-                    <img src="{{ asset($ex->image) }}" class="card-img-top image">
+                    <img src="{{ asset('uploads/executivedetail/' . $ex->image) }}" class="card-img-top image">
                     <div class="card-body">
                     <p>
                         <span class="exe_name">{{ $ex->name }}</span><br>

@@ -14,16 +14,17 @@ class DocumentController extends Controller
     //
     public function index(){
 
-        $publications = Document::whereType('publication')->latest()->get()->take(5);
-        $notices = Document::whereType('notice')->latest()->get()->take(5);
-        $tenders = Document::whereType('tender')->latest()->get()->take(5);
-        $documents = Document::all();
+        // $publications = Document::whereType('publication')->latest()->get()->take(5);
+        // $policies = Document::whereType("policy")->latest()->get()->take(5);
+        // $directives = Document::whereType("directive")->latest()->get()->take(5);
+
+        $documents = Document::latest()->get()->all();
 
         return view('admin.documents.index', [
             "page_title" => "Documents",
-            "publications" => $publications,
-            "notices" => $notices,
-            "tenders" => $tenders,
+            // "publications" => $publications,
+            // "policies" => $policies,
+            // "directives" => $directives,
             "documents" => $documents
         ]);
 
@@ -46,9 +47,12 @@ class DocumentController extends Controller
             "file" => "required|file|max:4000"
         ]); 
         
-        $newImage = time() . "-" . $request->title . "-" . $request->image->extension();
+        if($request->hasFile('image')){
+        $newImage = time() . "-" . $request->title . "." . $request->image->extension();
         $request->image->move(public_path('uploads/documents/image/'), $newImage);
-
+    }else{
+        $newImage= null;
+    }
 
         if ($request->hasFile('file')){
             $postPath = $request->title . '.' .$request->file->extension();
@@ -115,6 +119,9 @@ class DocumentController extends Controller
             $request->image->move(public_path('uploads/documents/image/'), $newImageName );
             Storage::delete('uploads/documents/image/' . $document->image);
             $document->image = $newImageName;
+        }else{
+            unset($request['file']);
+            $newImageName= null;
         }
        
 

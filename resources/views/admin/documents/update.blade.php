@@ -29,9 +29,9 @@
         <input name="id" id="" value = "{{ $document->id }}" hidden>
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Type --</option>
-            <option value="notice">Notice</option>
+            <option value="directive">Directives</option>  
+            <option value="policy">Policies & Acts</option>
             <option value="publication">Publication</option>
-            <option value="tender">Tender</option>
         </select>
         
 

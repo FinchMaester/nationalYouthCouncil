@@ -17,18 +17,32 @@ use App\Models\Post;
 use App\Models\Video;
 use App\Models\MyImage;
 use App\Models\Other;
+use App\Models\Mvc;
 use App\Models\SiteSetting;
+use App\Models\Orgchart;
 
 class RenderController extends Controller
 {
     //
     public function render_about(){
         $sitesetting = SiteSetting::first();
+        $mvcs = Mvc::latest()->get()->take(4);
         $links = Link::latest()->get()->take(6);
         $categories = Category::all();
         $abouts = About::first();
         $teams = Team::latest()->get()->take(3);
-        return view('portal.render_about', compact('abouts','teams','categories', 'sitesetting', 'links'));
+        return view('portal.render_about', compact('abouts','teams','categories', 'sitesetting', 'links', 'mvcs'));
+
+    }
+    public function render_orgchart(){
+        $orgchart = Orgchart::first();
+        $sitesetting = SiteSetting::first();
+        $mvcs = Mvc::latest()->get()->take(4);
+        $links = Link::latest()->get()->take(6);
+        $categories = Category::all();
+        $abouts = About::first();
+        $teams = Team::latest()->get()->take(3);
+        return view('portal.render_orgchart', compact('orgchart','abouts','teams','categories', 'sitesetting', 'links', 'mvcs'));
 
     }
 
@@ -190,7 +204,7 @@ class RenderController extends Controller
     public function render_committee()
     {
         $sitesetting = SiteSetting::first();
-        $committee = CommitteeDetail::all();
+        $committee = CommitteeDetail::latest()->get();
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_committee', [

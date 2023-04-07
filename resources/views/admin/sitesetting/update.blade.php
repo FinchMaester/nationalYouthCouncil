@@ -76,6 +76,12 @@
                 <input type="file" name="side_logo" class="form-control" value="{{ $sitesetting->side_logo ?? '' }}"
                     placeholder="Side Logo">
             </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Flag Logo</label>
+                <input type="file" name="flag_logo" class="form-control" value="{{ $sitesetting->flag_logo ?? '' }}"
+                    placeholder="Flag Logo">
+            </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Facebook URL</label>
                 <input type="url" name="face_link" class="form-control" value="{{ $sitesetting->face_link ?? '' }}"
@@ -90,6 +96,16 @@
                 <label for="exampleInputEmail1">Social URL</label>
                 <input type="url" name="social_link" class="form-control" value="{{ $sitesetting->social_link ?? '' }}"
                     placeholder="LinkedIN URL (https://)">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Facebook Page</label>
+                <input type="url" name="face_page" class="form-control" value="{{ $sitesetting->face_page ?? '' }}"
+                    placeholder="Facebook Page Embed (https://)">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Google Map</label>
+                <input type="url" name="google_map" class="form-control" value="{{ $sitesetting->google_map ?? '' }}"
+                    placeholder="Google Map Embed (https://)">
             </div>
         </div>
         <!-- /.card-body -->

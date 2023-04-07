@@ -10,7 +10,11 @@
                 <div class="col-sm-6">
                     <h1 class="m-0">{{ $page_title }}</h1>
                     <a href="{{ route('committee.file') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
+                            Import</button></a>
+                    <a href="{{ route('admin.committeedetails.create') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
                             Add New</button></a>
+                    <a href="{{ route('file-export') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
+                            Export</button></a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">

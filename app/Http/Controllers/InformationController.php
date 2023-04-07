@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Information;
 use Illuminate\Http\Request;
 use Cviebrock\EloquentSluggable\Services\SlugService;
+use Illuminate\Support\Facades\Storage;
 
 class InformationController extends Controller
 {
@@ -15,18 +16,23 @@ class InformationController extends Controller
      */
     public function index()
     {
-        $policies = Information::whereType("policy")->latest()->get()->take(5);
-        $directives = Information::whereType("directive")->latest()->get()->take(5);
-        $pressreleases = Information::whereType("pressrelease")->latest()->get()->take(5);
+        // $pressreleases = Information::whereType("pressrelease")->latest()->get()->take(5);
+        // $news = Information::whereType("news")->latest()->get()->take(5);
+        // $otheropt = Information::whereType("other")->latest()->get()->take(5);
+        // $notices = Information::whereType('notice')->latest()->get()->take(5);
+        // $tenders = Information::whereType('tender')->latest()->get()->take(5);
 
-        $information = Information::all();
+        $information = Information::latest()->get()->all();
 
         return view('admin.information.index', [
             "page_title" => "Information",
-            "policies" => $policies,
-            "directives" => $directives,
-            "pressreleases" => $pressreleases,
-            "information" => $information
+            "information" => $information,
+        //    "notices" => $notices,
+        //    "tenders" => $tenders,
+        //     "pressreleases" => $pressreleases,
+          
+        //     "news" => $news,
+        //     "otheropt" => $otheropt,
         ]);
     }
 
@@ -58,9 +64,13 @@ class InformationController extends Controller
             "file" => "required|file|max:4000"
         ]); 
 
+        if ($request->hasFile('image')){
         $newImage = time() . "-" . $request->title . "-" . $request->image->extension();
         $request->image->move(public_path('uploads/information/image'), $newImage);
-
+    }
+    else{
+        $newImage = null;
+    }
         if ($request->hasFile('file')){
             $postPath = $request->title . '.' .$request->file->extension();
             $request->file->move(public_path('uploads/information/file'), $postPath );
@@ -132,14 +142,20 @@ class InformationController extends Controller
         if ($request->hasFile('file')){
             $postPath = $request->title . '.' .$request->file->extension();
             $request->file->move(public_path('uploads/information/file'), $postPath );
+            Storage::delete('uploads/information/' . $information->file);
         }else {
-                $postPath = "NoFile";
+            unset($request['file']);
         }
         
 
         if ($request->hasFile('image')) {
             $newImageName = time() . '-' . $request->image->extension();
             $request->image->move(public_path('uploads/information/image'), $newImageName );
+            Storage::delete('uploads/other/image/' . $information->image);
+
+        }else{
+            unset($request['image']);
+            // $newImageName = null;
         }
 
         $information->image = $newImageName;

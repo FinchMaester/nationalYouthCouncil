@@ -25,6 +25,9 @@
         @csrf
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Type --</option>
+            <option value="policy">Policies & Acts</option>
+            <option value="directive">Directives</option>
+            <option value="pressrelease">Press Releases</option>
             <option value="news">News</option>
             <option value="other">Others</option>
         </select>

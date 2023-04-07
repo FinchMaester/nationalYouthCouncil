@@ -4,7 +4,7 @@
     <div class="container">
 
         <div class="row mt-3">
-            <h1 class="sec_title">{{ __("Tender") }}</h1>
+            <h3 class="sec_title">{{ __("Tender") }}</h3>
            
             @foreach ($tender as $tender ) 
            <div class="col-md-4">

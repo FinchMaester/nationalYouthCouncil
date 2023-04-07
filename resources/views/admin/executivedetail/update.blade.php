@@ -19,7 +19,17 @@
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-
+            @if(session('successMessage'))
+            <div class="alert alert-success">
+              {!! session('successMessage') !!}
+            </div>
+            @endif
+            
+            @if(session('error'))
+            <div class="alert alert-danger">
+              {!! session('error') !!}
+            </div>
+            @endif
 
       
         <form id="quickForm" novalidate="novalidate" method="POST" action="{{ route('admin.executivedetails.update') }}"
@@ -34,9 +44,13 @@
                 <input style="width:auto;" type="text" name="name" class="form-control" id="name" value="{{ $executivedetail->name }}" autocomplete="off">
             </div>
             <div class="form-group">
-                <label for="image">Image</label>
-                <input style="width:auto;" type="text" name="image" class="form-control" id="image" value="{{ $executivedetail->image }}">
-            </div>
+                <label for="image">Image</label><span style="color:red; font-size:large"> *</span>
+                <input type="file" name="image" class="form-control" id="image" onchange="previewImage(event)"
+                    placeholder="image" value="">
+              </div>
+              <img id="preview" style="max-width: 500px; max-height:500px" src="{{ asset('uploads/executivedetail/' . $executivedetail->image) }}" />
+              
+
             <div class="form-group">
                 <label for="phone">Phone</label>
                 <input style="width:auto;" type="text" name="phone" class="form-control" id="phone" value="{{ $executivedetail->phone }}">

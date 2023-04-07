@@ -7,7 +7,7 @@
     "Council Members" : "परिषद् सदस्य",
     "Message from the Administrative Head" : "प्रशासकीय प्रमुखको सन्देश",
     "Message from Chairperson" : "अध्यक्षको सन्देश",
-    "Message from Vice Chairperson" : "उपाध्यक्ष",
+    "Message from Vice Chairperson" : "उपाध्यक्षकाे सन्देश",
     "Documents" : "दस्तावेज",
     "Notice" : "सुचना",
     "Publication" : "प्रकाशन",
@@ -26,7 +26,7 @@
     "Video" :"भिडियाे",
     "Contact" : "सम्पर्क",
     "Contact Us" : "सम्पर्क",
-    "Read more" : "पुरा पढ्नुहाेस ",
+    "Read More" : "पुरा पढ्नुहाेस ",
     "Highlights" : "ताजा अपडेट" ,
     "Blog" : "ब्लग",
     "S.N." : "सि. न.",
@@ -86,6 +86,13 @@
     "Youth Statistics" : "युवा तथ्याङ्क",
     "Youth" : "युवा",
     "Youth Portal" : "युवा पाेर्टल",
-    "Email Login" : "इमेल लगीन"
+    "Email Login" : "इमेल लगीन",
+    "Mission" : "उद्देश्य",
+    "Vision" : "दूरदृष्टि",
+    "Values" : "मान्यता",
+    "Goal" : "दीर्घकालीन लक्ष्य",
+    "National Youth Council Office" : "राष्ट्रिय युवा परिषद्को कार्यालय",
+    "Organizational Chart" : "सङगठन तालिका"
+   
 
 }
