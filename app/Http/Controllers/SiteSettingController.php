@@ -58,17 +58,23 @@ class SiteSettingController extends Controller
             'office_mail'=>'required|string',
             'main_logo'=>'required|image|mimes:jpg,png,jpeg,gif,svg|max:1536',
             'side_logo'=>'image|mimes:jpg,png,jpeg,gif,svg|max:1536',
+            'flag_logo'=>'image|mimes:jpg,png,jpeg,gif,svg|max:1536',
             'face_link'=>'url',
             'insta_link'=>'url',
             'social_link'=>'url',
+            'face_page'=>'url',
+            'google_map' => 'url',
         ]);
 
-        $newMainLogo = time() . '-' . $request->office_name . '.' .$request->main_logo->extension();
+        $newMainLogo = time() . '-mainlogo' . $request->office_name . '.' .$request->main_logo->extension();
         $request->main_logo->move(public_path('uploads/sitesetting/'), $newMainLogo );
 
        
-        $newSideLogo = time() . '-' . $request->department_name . '.' .$request->side_logo->extension();
+        $newSideLogo = time() . '-sidelogo' . $request->office_name . '.' .$request->side_logo->extension();
         $request->side_logo->move(public_path('uploads/sitesetting/'), $newSideLogo );
+     
+        $newFlagLogo = time() . '-flaglogo' . $request->office_name . '.' .$request->flag_logo->extension();
+        $request->flag_logo->move(public_path('uploads/sitesetting/'), $newFlagLogo );
      
 
         $sitesetting = new SiteSetting;
@@ -82,9 +88,12 @@ class SiteSettingController extends Controller
             $sitesetting->office_mail=$request->office_mail;
             $sitesetting->main_logo=$newMainLogo;
             $sitesetting->side_logo=$newSideLogo;
+            $sitesetting->flag_logo=$newFlagLogo;
             $sitesetting->face_link=$request->face_link;
             $sitesetting->insta_link=$request->insta_link;
             $sitesetting->social_link=$request->social_link;
+            $sitesetting->face_page=$request->face_page;
+            $sitesetting->google_map=$request->google_map;
             $sitesetting->save(); 
 
 
@@ -137,9 +146,12 @@ class SiteSettingController extends Controller
             'office_mail'=>'required|string',
             'main_logo'=>'image|mimes:jpg,png,jpeg,gif,svg|max:1536',
             'side_logo'=>'image|mimes:jpg,png,jpeg,gif,svg|max:1536',
+            'flag_logo'=>'image|mimes:jpg,png,jpeg,gif,svg|max:1536',
             'face_link'=>'url',
             'insta_link'=>'url',
             'social_link'=>'url',
+            'face_page'=>'url',
+            'google_map'=>'url',
         ]);
        
         $sitesetting = SiteSetting::find(1);
@@ -164,6 +176,17 @@ class SiteSettingController extends Controller
             Storage::delete('public/uploads/sitesetting/' . $newSideLogo);
                  $sitesetting->side_logo =  $newSideLogo;
             }
+
+
+        if ($request->hasFile('flag_logo')) {
+            // $imagePath = $request->file('image')->storeAs('images/team', Carbon::now()  . '.' . $request->file('image')->getClientOriginalExtension(), 'public');
+            $newFlagLogo = time() . '-' . $request->office_name . '.' .$request->flag_logo->extension();
+            $request->flag_logo->move(public_path('uploads/sitesetting/'), $newFlagLogo );
+    
+          
+            Storage::delete('public/uploads/sitesetting/' . $newFlagLogo);
+                 $sitesetting->flag_logo =  $newFlagLogo;
+            }
             $sitesetting->govn_name=$request->govn_name;
             $sitesetting->ministry_name=$request->ministry_name;
             $sitesetting->department_name=$request->department_name;
@@ -176,6 +199,8 @@ class SiteSettingController extends Controller
             $sitesetting->face_link=$request->face_link;
             $sitesetting->insta_link=$request->insta_link;
             $sitesetting->social_link=$request->social_link;
+            $sitesetting->face_page=$request->face_page;
+            $sitesetting->google_map=$request->google_map;
 
 
             $sitesetting->save();

@@ -11,6 +11,12 @@
                     <h1 class="m-0">{{ $page_title }}</h1>
                     <a href="{{ route('executive.file') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
                       Import</button></a>
+                    <a href="{{ route('admin.executivedetails.create') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
+                      Add New</button></a>
+                    <a href="{{ route('file-export-exe') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
+                      Export</button></a>
+
+                      
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -21,17 +27,17 @@
             </div><!-- /.row -->
 
 
-@if(session('successMessage'))
-<div class="alert alert-success">
-  {!! session('successMessage') !!}
-</div>
-@endif
+            @if(session('success'))
+            <div class="alert alert-success">
+              {!! session('success') !!}
+            </div>
+            @endif
 
-@if(session('error'))
-<div class="alert alert-danger">
-  {!! session('error') !!}
-</div>
-@endif
+            @if(session('error'))
+            <div class="alert alert-danger">
+              {!! session('error') !!}
+            </div>
+            @endif
 
  
 
@@ -53,7 +59,10 @@
                 <tr data-widget="expandable-table" aria-expanded="false">
                     <td>{{ $loop->iteration}}</td>
                     <td>{{ $ed->name ?? '' }}</td>
-                    <td>{{ $ed->image ?? '' }}</td>
+                    <td>
+                      <img id="preview" src="{{ url('uploads/executivedetail/' . $ed->image) }}"
+                        style="width: 100px; height:100px; object-fit:cover;" />
+                    </td>
                     <td>{{ $ed->phone }}</td>
                     <td>{{ $ed->email ?? '' }}</td>
                     <td>{{ $ed->position ?? '' }}</td>

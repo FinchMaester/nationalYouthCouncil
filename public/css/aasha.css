@@ -2,6 +2,7 @@
 .u-hidden-block {
   visibility: hidden!important;
 }
+
 .u-locked-block {
   pointer-events: none!important;
 }
@@ -20351,7 +20352,7 @@ a.pswp__share--download:hover {
 .u-back-image {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 .u-show-text-none .u-over-slide {
@@ -20526,6 +20527,7 @@ a.pswp__share--download:hover {
 .u-tabs .u-tab-content > .u-tab-active {
   display: flex;
 }
+
 .u-tabs.u-tab-links-align-left .u-tab-list {
   justify-content: flex-start;
 }
@@ -28197,7 +28199,7 @@ section.u-palette-2-base:before,
 .u-button-style.u-palette-2-base,
 .u-button-style.u-palette-2-base[class*="u-border-"] {
   color: #ffffff !important;
-  background-color: #1754ca !important;
+  background-color: #0b1f6d !important;
 }
 .u-button-style.u-palette-2-base:hover,
 .u-button-style.u-palette-2-base[class*="u-border-"]:hover,
@@ -28951,7 +28953,9 @@ section.u-palette-4-light-1:before,
 .u-button-style.u-palette-4-light-1,
 .u-button-style.u-palette-4-light-1[class*="u-border-"] {
   color: #ffffff !important;
-  background-color: #748dee !important;
+  background-color: #0b1f6d !important;
+  font-size: 10px;
+  padding: 3px;
 }
 .u-button-style.u-palette-4-light-1:hover,
 .u-button-style.u-palette-4-light-1[class*="u-border-"]:hover,
@@ -28963,8 +28967,8 @@ section.u-palette-4-light-1:before,
 .u-button-style.u-button-style.u-palette-4-light-1[class*="u-border-"].active,
 li.active > .u-button-style.u-button-style.u-palette-4-light-1,
 li.active > .u-button-style.u-button-style.u-palette-4-light-1[class*="u-border-"] {
-  color: #ffffff !important;
-  background-color: #5473ea !important;
+  color: #0b1f6d !important;
+  background-color: #fff !important;
 }
 .u-hover-palette-4-light-1:hover,
 .u-hover-palette-4-light-1[class*="u-border-"]:hover,
@@ -28989,9 +28993,11 @@ li.active > a.u-button-style.u-button-style.u-active-palette-4-light-1[class*="u
 input.u-field-input.u-field-input.u-active-palette-4-light-1:checked {
   color: #ffffff !important;
   background-color: #748dee !important;
+  
 }
 a.u-link.u-hover-palette-4-light-1:hover {
   color: #748dee !important;
+  
 }
 .u-palette-4-light-2,
 .u-body.u-palette-4-light-2,
@@ -41630,12 +41636,13 @@ a.u-link.u-text-hover-grey-90:hover {
 
 .u-header .u-logo-image-1 {
   /* width: 100%; */
-  width: 117px;
-  height: 100%;
+  width: auto;
+  height: 90px;
+
 }
 
 .u-header .u-menu-1 {
-  margin: -46px 0 20px auto;
+  margin: -60px 0 30px auto;
 }
 
 .u-header .u-nav-1 {
@@ -41796,10 +41803,19 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 @media (max-width: 991px) {
   .u-header .u-menu-1 {
-    margin-top: 20px;
+    float:right;
   }
 }
+
+@media (max-width: 768px){
+  .u-header .u-menu-1 {
+    margin: -130px 0px 0 641px;
+  }
+}
+
 @media (max-width: 767px) {
+
+  
   .u-header .u-sheet-1 {
     min-height: 285px;
   }
@@ -41855,8 +41871,14 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 }
 @media (max-width: 575px) {
+
   .u-header .u-sheet-1 {
+    width: 200px;
     min-height: 129px;
+  }
+
+  .u-header .u-menu-1 {
+    margin: -0px 0px 0 0px;
   }
 
   .u-header .u-list-1 {
@@ -41941,7 +41963,7 @@ a.u-link.u-text-hover-grey-90:hover {
   }
 
   .u-header .u-menu-1 {
-    margin-top: -49px;
+    margin-top: -36px;
     margin-right: 10px;
     margin-bottom: 19px;
   }

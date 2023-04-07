@@ -4,7 +4,7 @@
     <div class="container">
 
         <div class="row mt-3">
-            <h1 class="sec_title">{{ $otherpost->title }}</h1>
+            <h3 class="sec_title">{{ $otherpost->title }}</h3>
 
 
            <div class="col-md-12">

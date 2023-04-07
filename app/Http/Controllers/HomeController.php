@@ -34,10 +34,11 @@ class HomeController extends Controller
         $videos = Video::latest()->get()->take(4);
         $posts = Post::latest()->get()->take(6);
         $sitesetting = SiteSetting::first();
-        $notices = Document::whereType('notice')->latest()->get()->take(5);
+        $notices = Information::whereType('notice')->latest()->get()->take(5);
         $publications = Document::whereType('publication')->latest()->get()->take(5);
         $press = Information::whereType('pressrelease')->latest()->get()->take(5);
-        $news = Other::whereType('news')->latest()->get()->take(5);
+        $news = Information::whereType('news')->latest()->get()->take(5);
+        $noticepop = Information::whereType('notice')->latest()->first();
 
         return view('portal.index', [
             'coverimages' => $coverimages,
@@ -51,7 +52,8 @@ class HomeController extends Controller
             'notices' => $notices,
             'publications' => $publications,
             'press' => $press,
-            'news' => $news
+            'news' => $news,
+            'noticepop' => $noticepop,
 
         ]);
 

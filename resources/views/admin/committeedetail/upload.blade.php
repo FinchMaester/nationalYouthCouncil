@@ -20,10 +20,13 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-
+            <div class="mt-4 mb-4">
+                <h5> Format </h5>
+                <span> District, Name, Address, Phone </span>
+            </div>
     <form action="{{ route('file-import') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="form-group mb-4" style="max-width: 500px; margin: 0 auto;">
+        <div class="form-group mb-4">
             <div class="custom-file text-left">
                 <input type="file" name="file" class="custom-file-input" id="customFile">
                 <label class="custom-file-label" for="customFile">Choose file</label>
@@ -32,11 +35,8 @@
 
         <button class="btn-primary">Import data</button>
 
-        <a class="btn-success" href="{{ route('file-export') }}">Export data</a>
+      
     </form>
-    <div class="mt-4">
-        <h5> Format </h5>
-        <span> District, Name, Address, Phone </span>
-    </div>
+  
 
 @endsection

@@ -28,6 +28,8 @@ class CreateSiteSettingsTable extends Migration
             $table->string('face_link')->nullable();
             $table->string('insta_link')->nullable();
             $table->string('social_link')->nullable();
+            $table->string('face_page', 1000)->nullable();
+            $table->string('google_map', 1000)->nullable();
             $table->timestamps();
         });
     } 

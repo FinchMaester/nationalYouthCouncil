@@ -21,10 +21,25 @@
             </div><!-- /.row -->
 
 
+            @if(session('success'))
+<div class="alert alert-success">
+  {!! session('success') !!}
+</div>
+@endif
+
+@if(session('error'))
+<div class="alert alert-danger">
+  {!! session('error') !!}
+</div>
+@endif
+            <div class="mt-4 mb-4">
+                <h5> Format </h5>
+                <span> Name, Image, Phone, Email, Position </span>
+            </div>
 
     <form action="{{ route('file-import-exe') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="form-group mb-4" style="max-width: 500px; margin: 0 auto;">
+        <div class="form-group mb-4">
             <div class="custom-file text-left">
                 <input type="file" name="file" class="custom-file-input" id="customFile">
                 <label class="custom-file-label" for="customFile">Choose file</label>
@@ -32,12 +47,9 @@
         </div>
 
         <button class="btn-primary">Import data</button>
-        <a class="btn-success" href="{{ route('file-export-exe') }}">Export data</a>
+        {{-- <a class="btn-success" href="{{ route('file-export-exe') }}">Export data</a> --}}
     </form>
-    <div class="mt-4">
-        <h5> Format </h5>
-        <span> Name, Image, Phone, Email, Position </span>
-    </div>
+   
 
 
 @endsection

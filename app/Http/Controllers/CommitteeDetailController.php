@@ -57,7 +57,9 @@ class CommitteeDetailController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.committeedetail.create',[
+            'page_title' => 'Create Committee Detail'
+        ]);
     }
 
     /**
@@ -68,10 +70,25 @@ class CommitteeDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "district" => "required|string",
+            "name" => "required|string",
+            "address" => 'required|string',
+            "phone" => 'required|string'
+        ]);
+
+        $committeedetail = new CommitteeDetail;
+        $committeedetail->district = $request->district;
+        $committeedetail->name = $request->name;
+        $committeedetail->address = $request->address;
+        $committeedetail->phone = $request->phone;
+
+
+        $committeedetail->save();
+        return redirect('admin/committeedetails/index')->with("message", "Committee Member Updated!");
     }
 
-    /**
+    /** 
      * Display the specified resource.
      *
      * @param  \App\Models\CommitteeDetail  $committeeDetail
@@ -123,7 +140,7 @@ class CommitteeDetailController extends Controller
 
         $committeedetail->save();
 
-        return redirect("admin/committeedetails/index");
+        return redirect("admin/committeedetail/index");
     }
 
     /**
@@ -137,7 +154,7 @@ class CommitteeDetailController extends Controller
         $committeeDetail = CommitteeDetail::find($id);
         $committeeDetail->delete();
 
-        return redirect('admin/committeedetails/index');
+        return redirect('admin/committeedetail/index');
     }
 
     // public function error()

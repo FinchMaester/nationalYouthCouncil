@@ -16,11 +16,13 @@ class ExecutiveDetailImport implements ToModel, WithStartRow
     public function model(array $row)
     {
         return new ExecutiveDetail([
+            
             'name' => $row[0],
             'image' => $row[1],
             'phone' => $row[2],
             'email' => $row[3],
             'position' => $row[4],
+
         ]);
     }
 

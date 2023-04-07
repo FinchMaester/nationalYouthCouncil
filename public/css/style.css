@@ -4,7 +4,6 @@
   font-family: 'Mukta', sans-serif;
 
 
-
 }
 /* For GLobal */
 
@@ -130,6 +129,7 @@ body{
     color: rgb(17, 17, 73);
     font-weight: 800;
     margin: 20px;
+    font-family: 'Mukta' , sans-serif;
   }
 
   /* For margin and width of the section */
@@ -824,6 +824,7 @@ nav ul li ul li a {
     background-color: #0b1f6d;
      position: relative;
    /* box-shadow: rgba(33, 37, 109, 0.15); */
+   font-family:'Mukta', sans-serif;
 
    }
    .footer-cta {
@@ -838,12 +839,14 @@ nav ul li ul li a {
    .cta-text {
    padding-left: 15px;
    display: inline-block;
+   font-family:'Mukta', sans-serif;
    }
    .cta-text h4 {
    color: #fff;
    font-size: 20px;
    font-weight: 600;
    margin-bottom: 2px;
+   font-family:'Mukta', sans-serif;
    }
    .cta-text span {
    color: #b5b4bb;
@@ -908,6 +911,7 @@ nav ul li ul li a {
    font-weight: 600;
    margin-bottom: 40px;
    position: relative;
+   font-family:'Mukta', sans-serif;
    }
    .footer-widget-heading h3::before {
    content: "";

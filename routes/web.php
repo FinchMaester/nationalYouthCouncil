@@ -31,6 +31,7 @@ use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\CommitteeDetailController;
 use App\Http\Controllers\ExecutiveDetailController;
+use App\Http\Controllers\OrgchartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,6 +88,8 @@ Route::get('admin/coverimage/destroy/{id}', [CoverImageController::class, 'destr
 
 Route::get('admin/committeedetails/index', [CommitteeDetailController::class, 'index'])->name('admin.committeedetails.index');
 Route::get('admin/committeedetails/edit/{id}', [CommitteeDetailController::class, 'edit'])->name('admin.committeedetails.edit');
+Route::get('admin/committeedetails/create', [CommitteeDetailController::class, 'create'])->name('admin.committeedetails.create');
+Route::post('admin/committeedetails/store', [CommitteeDetailController::class, 'store'])->name('admin.committeedetails.store');
 Route::post('admin/committeedetails/update', [CommitteeDetailController::class, 'update'])->name('admin.committeedetails.update');
 Route::get('admin/committeedetails/destroy/{id}', [CommitteeDetailController::class, 'destroy'])->name('admin.committeedetails.destroy');
 Route::get('file-import-export', [CommitteeDetailController::class, 'fileImportExport'])->name('committee.file');
@@ -95,6 +98,8 @@ Route::get('file-export', [CommitteeDetailController::class, 'fileExport'])->nam
 
 // FOR ADMIN EXECUTIVE DETAILS
 Route::get('admin/executivedetails/index', [ExecutiveDetailController::class, "index"])->name('admin.executivedetails.index');
+Route::get('admin/executivedetails/create', [ExecutiveDetailController::class, "create"])->name('admin.executivedetails.create');
+Route::post('admin/executivedetails/store', [ExecutiveDetailController::class, "store"])->name('admin.executivedetails.store');
 
 Route::get('admin/executivedetails/edit/{id}', [ExecutiveDetailController::class, 'edit'])->name('admin.executivedetails.edit');
 Route::post('admin/executivedetails/update', [ExecutiveDetailController::class, 'update'])->name('admin.executivedetails.update');
@@ -113,6 +118,14 @@ Route::post('admin/posts/store', [PostController::class, 'store'])->middleware('
 Route::get('admin/posts/edit/{id}', [PostController::class, 'edit'])->middleware('auth')->name("admin.posts.edit");
 Route::post('admin/posts/update', [PostController::class, 'update'])->middleware('auth')->name("admin.posts.update");
 Route::get('admin/posts/destroy/{id}', [PostController::class, 'destroy'])->middleware('auth')->name("admin.posts.destroy");
+// FOR POSTS
+
+Route::get('admin/orgchart/index', [OrgchartController::class, 'index'])->middleware('auth')->name("admin.orgchart.index");
+Route::get('admin/orgchart/create', [OrgchartController::class, 'create'])->middleware('auth')->name("admin.orgchart.create");
+Route::post('admin/orgchart/store', [OrgchartController::class, 'store'])->middleware('auth')->name("admin.orgchart.store");
+Route::get('admin/orgchart/edit/{id}', [OrgchartController::class, 'edit'])->middleware('auth')->name("admin.orgchart.edit");
+Route::post('admin/orgchart/update', [OrgchartController::class, 'update'])->middleware('auth')->name("admin.orgchart.update");
+Route::get('admin/orgchart/destroy/{id}', [OrgchartController::class, 'destroy'])->middleware('auth')->name("admin.orgchart.destroy");
 
 
 // FOR CATEGORIES
@@ -166,6 +179,17 @@ Route::get('admin/about/delete/{id}', [App\Http\Controllers\AboutController::cla
 
 
 
+
+// For Mission, Values and Vision
+Route::get('admin/mvc', [App\Http\Controllers\MvcController::class, 'index'])->name('Mvc.index');
+Route::get('admin/mvc/index', [App\Http\Controllers\MvcController::class, 'index'])->name('Mvc.index');
+
+Route::get('admin/mvc/create', [App\Http\Controllers\MvcController::class, 'create'])->name('Mvc.create');
+Route::post('admin/mvc/store', [App\Http\Controllers\MvcController::class, 'store'])->name('Mvc.store');
+
+Route::get('admin/mvc/edit/{id}', [App\Http\Controllers\MvcController::class, 'edit'])->name('Mvc.edit');
+Route::post('admin/mvc/update', [App\Http\Controllers\MvcController::class, 'update'])->name('Mvc.update');
+Route::get('admin/mvc/delete/{id}', [App\Http\Controllers\MvcController::class, 'destroy'])->name('Mvc.destroy');
 
 
 
@@ -251,6 +275,7 @@ Route::get('render_chairperson', [App\Http\Controllers\RenderController::class, 
 Route::get('render_executive_members', [App\Http\Controllers\RenderController::class, 'render_executive_members'])->name('render_executive_members');
 Route::get('render_posts/{slug}', [App\Http\Controllers\RenderController::class, 'render_posts'])->name('render_posts');
 Route::get('render_all_posts', [App\Http\Controllers\RenderController::class, 'render_all_posts'])->name('render_all_posts');
+Route::get('orgnazationchart', [App\Http\Controllers\RenderController::class, 'render_orgchart'])->name('render_orgchart');
 
 
 

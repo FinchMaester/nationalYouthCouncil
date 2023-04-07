@@ -57,8 +57,14 @@ class OtherController extends Controller
             "file" => "required|file|max:4000"
         ]); 
 
-        $newImage = time() . "-" . $request->title . "-" . $request->image->extension();
-        $request->image->move(public_path('uploads/other/image'), $newImage);
+        if ($request->hasFile('image')){
+            $newImage = time() . "-" . $request->title . "-" . $request->image->extension();
+            $request->image->move(public_path('uploads/other/image'), $newImage);
+        }
+        else{
+            $newImage = null;
+        }
+        
 
         if ($request->hasFile('file')){
             $postPath = $request->title . '.' .$request->file->extension();
@@ -143,6 +149,7 @@ class OtherController extends Controller
             $other->image = $newImageName;
         }else{
             unset($request['image']);
+            // $newImageName = null;
         }
 
     

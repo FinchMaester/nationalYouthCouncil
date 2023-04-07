@@ -6,9 +6,9 @@
 
 @section('content')
 
-<div class="p-5">
+<div class="container">
 
-    <h1 class="sec_title">{{ __($page_title) }}</h1>
+    <h3 class="sec_title">{{ __($page_title) }}</h3>
 
     <table class="table table-striped">
         <thead>

@@ -5,6 +5,13 @@
         content="​Learn to Cook French Classics, Online Cooking Classes, ​Сooking Сlasses, ​A simple &amp;amp; delicious traditional cooking, Why Us">
     <meta name="description" content="">
     <title>National Youth Council </title>
+{{-- For Favicon --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
+
+
     <link rel="stylesheet" href="{{ asset('css/aasha.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" media="screen">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -40,4 +47,3 @@
     <meta property="og:type" content="website">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
-

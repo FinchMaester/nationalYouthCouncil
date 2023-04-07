@@ -49,7 +49,17 @@
                                 <div class="d-flex align-items-center"><span class="nav-link-text ps-1">About Us</span>
                                 </div>
                             </a><!-- more inner pages-->
-
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('Mvc.index') }}">
+                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Mission, Vision, Values</span>
+                                </div>
+                            </a><!-- more inner pages-->
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('admin.orgchart.index') }}">
+                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Organizational Chart</span>
+                                </div>
+                            </a><!-- more inner pages-->
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -202,12 +212,7 @@
 
 
 
-                    <a class="nav-link" href="{{ route('admin.documents.index') }}" role="button">
-                        <div class="d-flex align-items-center"><span class="nav-link-icon">
-                            <i class="fas fa-print"></i>
-                                <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
-                                class="nav-link-text ps-1">Documents</span></div>
-                    </a>
+                   
 
                     <a class="nav-link" href="{{ route('admin.information.index') }}" role="button">
                         <div class="d-flex align-items-center"><span class="nav-link-icon">
@@ -217,14 +222,20 @@
                                 class="nav-link-text ps-1">Information</span></div>
                     </a>
 
+                    <a class="nav-link" href="{{ route('admin.documents.index') }}" role="button">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon">
+                            <i class="fas fa-print"></i>
+                                <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
+                                class="nav-link-text ps-1">Documents</span></div>
+                    </a>
 
 
-                    <a class="nav-link" href="{{ route('admin.other.index') }}" role="button">
+                    {{-- <a class="nav-link" href="{{ route('admin.other.index') }}" role="button">
                         <div class="d-flex align-items-center"><span class="nav-link-icon">
                             <i class="fas fa-paste"></i>
                                 <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
-                                class="nav-link-text ps-1">Other</span></div>
-                    </a>
+                                class="nav-link-text ps-1">News, Other</span></div>
+                    </a> --}}
 
                     <a class="nav-link" href="{{ route('admin.contactus.index') }}" role="button">
                         <div class="d-flex align-items-center"><span class="nav-link-icon">

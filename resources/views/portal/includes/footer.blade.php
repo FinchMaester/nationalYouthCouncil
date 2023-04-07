@@ -1,9 +1,9 @@
 {{-- For Footer --}}
 <footer class="footer-section">
     <div class="container">
-        <div class="footer-cta pt-5 pb-5">
+        <div class="footer-cta pt-5">
             <div class="row">
-                <div class="col-xl-4 col-md-4 mb-5">
+                <div class="col-xl-4 col-md-4 mb-3">
                     <div class="single-cta">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="cta-text">
@@ -12,7 +12,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 mb-30">
+                <div class="col-xl-4 col-md-4 mb-3">
                     <div class="single-cta">
                         <i class="fas fa-phone"></i>
                         <div class="cta-text">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-4 mb-30">
+                <div class="col-xl-4 col-md-4 mb-3">
                     <div class="single-cta">
                         <i class="far fa-envelope-open"></i>
                         <div class="cta-text">
@@ -34,11 +34,11 @@
         </div>
         <div class="footer-content pt-5 pb-5">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 mb-50">
+                <div class="col-xl-4 col-lg-4 mb-3">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                                <img class="side_logo" src="{{ asset($sitesetting->side_logo) }}" alt="logo">
-                            <a href="{{ url('/') }}"><img src="{{ asset($sitesetting->main_logo) }}" class="img-fluid"
+                                <img class="side_logo" src="{{ asset('uploads/sitesetting/' . $sitesetting->side_logo) }}" alt="logo">
+                            <a href="{{ url('/') }}"><img src="{{ asset('uploads/sitesetting/' . $sitesetting->main_logo) }}" class="img-fluid"
                                     alt="logo"></a>
 
 
@@ -107,8 +107,10 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 text-center text-lg-left">
                     <div class="copyright-text">
-                        <p>Copyright &copy; 2021, All Right Reserved <a href="https:aashatech.com">Aasha Tech Pvt.
-                                Ltd.</a></p>
+                        <p>Copyright &copy; {{ $sitesetting->office_name }}, All Right Reserved.<br>
+                            Developed by: <a href="https:aashatech.com">
+                            <img src="{{ asset('img/whitelogo.png') }}" alt="Aasha Tech Pvt. Ltd." style="height:40px; width:auto;">
+                                </a></p>
                     </div>
                 </div>
                 {{-- <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">

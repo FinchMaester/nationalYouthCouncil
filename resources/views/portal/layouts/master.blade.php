@@ -6,7 +6,9 @@
 <body class="u-body u-xl-mode" data-lang="en">
     @include('portal.includes.nav')
 
+    
     @yield('content')
+
 
     @include("portal.includes.footer")
 

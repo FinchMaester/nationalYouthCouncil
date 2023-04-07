@@ -4,7 +4,7 @@
     <div class="container">
 
         <div class="row mt-3">
-            <h1 class="sec_title">{{ __("Employee Details") }}</h1>
+            <h3 class="sec_title">{{ __("Employee Details") }}</h3>
            
         @foreach ($teams as $team)
             <div class="col-md-4">
@@ -29,8 +29,8 @@
 
     </div>
 
-    @include('portal.includes.all_in_one')
+    {{-- @include('portal.includes.all_in_one')
     @include('portal.includes.small_gallery')
-  
+   --}}
 
 @endsection
