@@ -13,6 +13,8 @@
     @include("portal.includes.footer")
 
     <script src="{{ asset('css/bootstrapjs/bootstrap.min.js') }}"></script>
+ 
+ 
 
 </body>
 

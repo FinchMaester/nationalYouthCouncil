@@ -2735,6 +2735,7 @@ background-size: cover;
 
   .u-section-6 .u-back-image-1 {
     object-position: 50% 77.85%;
+    object-fit: cover;
   }
 
   .u-section-6 .u-over-slide-1 {

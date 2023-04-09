@@ -42,14 +42,27 @@
 
                             <div class="g-recaptcha" data-sitekey="your_site_key"></div>
 
-                        <button class="btn send-button" id="submit" type="submit" value="SEND">
+
+
+                 
+                        <button class="btn send-button g-recaptcha" id="submit" type="submit" value="SEND" data-sitekey="{{ config('services.recaptcha.site_key') }}" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>
                             <div class="alt-send-button">
                                 <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
                             </div>
 
                         </button>
 
+                      
+                        
+
                     </form>
+                    <script>
+                        function onSubmit(token) {
+                          document.getElementById("quick_contact").submit();
+                        }
+                      </script>
                 </div>
             </div>
         </div>
