@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ContactUs;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
+use Closure;
 
 class ContactUsController extends Controller
 {
@@ -38,11 +40,25 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
+
+        dd($request);
         $request->validate([
             'name' => "required|string",
             'email' => "required|string",
             'phone' => "required|integer",
             'message' => "required|string",
+            'g-recaptcha-response' => ['required', function(string $attribute, mixed $value, Closure $fail){
+               $g_response = Http::asForm()->post("https://www.google.com/recaptcha/api/siteverify",[
+                    'secret' => config('services.recaptcha.secret_key'),
+                    'response' => $value,
+                    'remoteip' => \request()->ip()
+               ]);
+             
+
+                if (!$g_response->json('success')) {
+                    $fail('The '.$attribute.' is invalid.');
+                }
+            }]
             
         ]);
 
@@ -53,7 +69,7 @@ class ContactUsController extends Controller
         $contact->message = $request->message;
 
         $contact->save();
-        return redirect('/');
+        return redirect('contactpage')->with("message", "Document Stored!");
     }
 
 

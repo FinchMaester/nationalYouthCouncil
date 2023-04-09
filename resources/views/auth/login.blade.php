@@ -106,7 +106,7 @@
                 <div class="position-relative p-4 pt-md-5 pb-md-7 light">
                   <div class="bg-holder bg-auth-card-shape" style="background-image:url(adminassets/assets/img/icons/spot-illustrations/half-circle.png);"></div>
                   <!--/.bg-holder-->
-                  <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="#">{{ $appName }}</a>
+                  <div class="z-index-1 position-relative"><a class="link-light mb-4 font-sans-serif fs-4 d-inline-block fw-bolder" href="#">{{ $appName }}</a><br>
 					<img height="200" width="200" src="{{ asset('uploads/sitesetting/' . $sitesetting->main_logo) }}">
                     {{-- <p class="opacity-75 text-white">With the power of Falcon, you can now focus only on functionaries for your digital products, while leaving the UI design on us!</p> --}}
                   </div>

@@ -275,7 +275,7 @@ Route::get('render_chairperson', [App\Http\Controllers\RenderController::class, 
 Route::get('render_executive_members', [App\Http\Controllers\RenderController::class, 'render_executive_members'])->name('render_executive_members');
 Route::get('render_posts/{slug}', [App\Http\Controllers\RenderController::class, 'render_posts'])->name('render_posts');
 Route::get('render_all_posts', [App\Http\Controllers\RenderController::class, 'render_all_posts'])->name('render_all_posts');
-Route::get('orgnazationchart', [App\Http\Controllers\RenderController::class, 'render_orgchart'])->name('render_orgchart');
+Route::get('orgnizationchart', [App\Http\Controllers\RenderController::class, 'render_orgchart'])->name('render_orgchart');
 
 
 

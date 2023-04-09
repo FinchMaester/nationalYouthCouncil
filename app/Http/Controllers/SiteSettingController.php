@@ -158,7 +158,10 @@ class SiteSettingController extends Controller
         
         if ($request->hasFile('main_logo')) {
             // $imagePath = $request->file('image')->storeAs('images/team', Carbon::now()  . '.' . $request->file('image')->getClientOriginalExtension(), 'public');
-            $newMainLogo = time() . '-' . $request->office_name . '.' .$request->main_logo->extension();
+
+
+            $newMainLogo = time() . '-mainlogo' . $request->office_name . '.' .$request->main_logo->extension();
+
             $request->main_logo->move(public_path('uploads/sitesetting/'), $newMainLogo );
     
           
@@ -169,7 +172,7 @@ class SiteSettingController extends Controller
  
         if ($request->hasFile('side_logo')) {
             // $imagePath = $request->file('image')->storeAs('images/team', Carbon::now()  . '.' . $request->file('image')->getClientOriginalExtension(), 'public');
-            $newSideLogo = time() . '-' . $request->office_name . '.' .$request->side_logo->extension();
+            $newSideLogo = time() . '-sidelogo' . $request->office_name . '.' .$request->side_logo->extension();
             $request->side_logo->move(public_path('uploads/sitesetting/'), $newSideLogo );
     
           
@@ -180,7 +183,7 @@ class SiteSettingController extends Controller
 
         if ($request->hasFile('flag_logo')) {
             // $imagePath = $request->file('image')->storeAs('images/team', Carbon::now()  . '.' . $request->file('image')->getClientOriginalExtension(), 'public');
-            $newFlagLogo = time() . '-' . $request->office_name . '.' .$request->flag_logo->extension();
+            $newFlagLogo = time() . '-flaglogo' . $request->office_name . '.' .$request->flag_logo->extension();
             $request->flag_logo->move(public_path('uploads/sitesetting/'), $newFlagLogo );
     
           

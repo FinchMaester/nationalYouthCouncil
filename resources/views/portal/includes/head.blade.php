@@ -38,6 +38,8 @@
 		]
     }
     </script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeNCWklAAAAAOPLw_xrAeYCzSOzDzu8aUabkTYD"></script>
     <meta name="theme-color" content="#47b8c9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
