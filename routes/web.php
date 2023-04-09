@@ -149,9 +149,9 @@ Route::get('admin/team/index', [App\Http\Controllers\TeamController::class, 'ind
 Route::get('admin/team/create', [App\Http\Controllers\TeamController::class, 'create'])->middleware('auth')->name('admin.team.create');
 Route::post('admin/team/store', [App\Http\Controllers\TeamController::class, 'store'])->name('Team.store');
 
-Route::get('admin/team/edit/{id}', [App\Http\Controllers\TeamController::class, 'edit'])->middleware('auth');
+Route::get('admin/team/edit/{id}', [App\Http\Controllers\TeamController::class, 'edit'])->middleware('auth')->name('admin.team.edit');
 Route::post('admin/team/update', [App\Http\Controllers\TeamController::class, 'update'])->name('Team.update');
-Route::get('admin/team/delete/{id}', [App\Http\Controllers\TeamController::class, 'destroy'])->middleware('auth');
+Route::get('admin/team/delete/{id}', [App\Http\Controllers\TeamController::class, 'destroy'])->middleware('auth')->name('admin.team.destroy');
 
 
 

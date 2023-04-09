@@ -56,7 +56,7 @@
           {{-- <button type="button" class="btn-block btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal">
             Update
           </button> --}}
-          <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $sitesetting->id }}">
             Update
           </button>
         </div>
@@ -68,7 +68,7 @@
   </tbody>
   @foreach($sitesettings as $sitesetting)
   {{-- modal --}}
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="edit{{ $sitesetting->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -100,6 +100,7 @@
               preview.src = reader.result;
           };
       };
+      
   var myModal = document.getElementById('myModal')
   var myInput = document.getElementById('myInput')
 

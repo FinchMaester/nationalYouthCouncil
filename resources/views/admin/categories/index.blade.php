@@ -40,13 +40,13 @@
                     <td>
                         
                         {{-- <a href="edit/{{ $categories->id }}"> --}}
-                            <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+                            <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $categories->id }}">
                                 Update
                               </button>
                         {{-- </a> --}}
                         
                         {{-- <a href="{{ url('admin/categories/destroy/'.$categories->id) }}"> --}}
-                            <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $categories->id }}">
                                 Delete
                               </button>
                         {{-- </a> --}}
@@ -56,8 +56,8 @@
             @endforeach
         </tbody>
 
-        @foreach ($categories as $cat )
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        @foreach ($categories as $categories )
+        <div class="modal fade" id="delete{{ $categories->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -78,8 +78,8 @@
           
         @endforeach
 
-        @foreach ($categories as $cat )
-        <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        @foreach ($categories as $categories )
+        <div class="modal fade" id="edit{{ $categories->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">

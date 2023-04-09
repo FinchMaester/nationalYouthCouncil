@@ -52,6 +52,7 @@
                               <button type="button" class="btn-danger button-size" data-bs-toggle="modal"  data-bs-target="#delete{{ $coverimage->id }}">
                                 Delete
                               </button>
+                            </div>
                               {{-- </a> --}}
 
                     </td>

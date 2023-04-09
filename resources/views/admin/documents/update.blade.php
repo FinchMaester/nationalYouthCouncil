@@ -28,10 +28,10 @@
         @csrf
         <input name="id" id="" value = "{{ $document->id }}" hidden>
         <select name="type" id="type">
-            <option value="0" disabled selected>--Select Type --</option>
-            <option value="directive">Directives</option>  
-            <option value="policy">Policies & Acts</option>
-            <option value="publication">Publication</option>
+            {{-- <option value="0" disabled selected>--Select Type --</option> --}}
+            <option value="directive" {{ $document->type == 'directive' ? 'selected' : '' }}>Directives</option>  
+            <option value="policy" {{ $document->type == 'policy' ? 'selected' : '' }}>Policies & Acts</option>
+            <option value="publication" {{ $document->type == 'publication' ? 'selected' : '' }}>Publication</option>
         </select>
         
 

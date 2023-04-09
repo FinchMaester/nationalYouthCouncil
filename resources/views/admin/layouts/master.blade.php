@@ -238,7 +238,8 @@
           </div>
         </div>
       </div>
-    </div><a class="card setting-toggle" href="#settings-offcanvas" data-bs-toggle="offcanvas">
+    </div>
+    <a class="card setting-toggle" href="#settings-offcanvas" data-bs-toggle="offcanvas">
       <div class="card-body d-flex align-items-center py-md-2 px-2 py-1">
         <div class="bg-soft-primary position-relative rounded-start" style="height:34px;width:28px">
           <div class="settings-popover"><span class="ripple"><span class="fa-spin position-absolute all-0 d-flex flex-center"><span class="icon-spin position-absolute all-0 d-flex flex-center">

@@ -46,24 +46,75 @@
                     <td>{{ $cd->phone ?? '' }}</td>
                     <td>
                         
-                        <a href="edit/{{ $cd->id }}">
-                            <div style="display: flex; flex-direction:row;">
-                                <button type="button" class="btn-block btn-warning btn-sm"><i class="fas fa-edit"></i>
-                                    Edit </button>
-                        </a>
+                        <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $cd->id }}">
+                            Update
+                          </button>
                         
-                        <a href="{{ url('admin/committeedetails/destroy/'.$cd->id) }}">
-                            <button type="button" class="btn-block btn-danger btn-sm" data-toggle="modal"
-                                data-target="#modal-default" style="width:auto;"
-                                onclick="replaceLinkFunction">Delete</button>
-                        </a>
+                          <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $cd->id }}">
+                            Delete
+                          </button>
 
                     </td>
                 </tr>
             @endforeach
         </tbody>
+        @foreach ($committeedetails as $cd )
+        <div class="modal fade" id="delete{{ $cd->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+             
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                 <a href="{{ url('admin/committeedetail/destroy/'.$cd->id) }}">
+                  <button type="button" class="btn btn-danger">Yes
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        @endforeach
+
+        @foreach ($committeedetails as $cd )
+        <div class="modal fade" id="edit{{ $cd->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+             
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+                 <a href="{{ url('admin/committeedetail/edit/'.$cd->id) }}">
+                  <button type="button" class="btn btn-danger">Yes
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+        @endforeach
+
+
     </table>
     <div class="d-flex justify-content-center">
         {!! $committeedetails->links() !!}
     </div>
+
+
+    <script>
+        var myModal = document.getElementById('myModal')
+        var myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+        })
+    </script>
 @endsection

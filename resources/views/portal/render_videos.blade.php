@@ -27,6 +27,6 @@
 
     </div>
 
-    @include('portal.includes.all_in_one')
+   
 
 @endsection

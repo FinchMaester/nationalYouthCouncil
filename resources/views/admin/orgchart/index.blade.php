@@ -54,23 +54,23 @@
         style="width: 100px; height:100px; object-fit:cover;" /></td>
 
       <td>
-        {{-- <a href="/admin/image/edit/{{ $image->id }}">
-          <div style="display: flex; flex-direction:row;">
-            <button type="button" class="btn btn-block btn-warning btn-sm"><i class="fas fa-edit"></i> Update </button>
-        </a> --}}
-        {{-- <a href="{{ url('admin/image/delete/'.$image->id) }}"> --}}
-          {{-- <button type="button" class="btn-danger button-size" data-bs-toggle="modal"  data-bs-target="#delete{{ $orgchart->id }}">
-            Delete
-          </button> --}}
-        </div>
-        {{-- </a> --}}
+        <div style="display: flex; flex-direction:row;">
+          <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $orgchart->id }}">
+            Update
+          </button>
+
+    
+      <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $orgchart->id }}">
+        Delete
+      </button>
+    </div>
       </td>
     </tr>
     @endforeach
   </tbody>
 
 
-  {{-- @foreach($orgchart as $orgchart)
+  @foreach($orgchart as $orgchart)
 
   <div class="modal fade" id="delete{{ $orgchart->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -90,7 +90,29 @@
       </div>
     </div>
   </div>
-  @endforeach --}}
+  @endforeach
+
+  @foreach($orgchart as $orgchart)
+
+  <div class="modal fade" id="edit{{ $orgchart->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">This can't be undone. Are you sure?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
+          <a href="{{ route('admin.orgchart.edit', $orgchart->id) }}">
+            <button type="button" class="btn btn-danger">Yes
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  @endforeach
 
 </table>
 
