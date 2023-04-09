@@ -26,11 +26,11 @@
         <input name="id" id="" value = "{{ $information->id }}" hidden>
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Type --</option>
-            <option value="notice">Notice</option>
-            <option value="pressrelease">Press Releases</option>
-             <option value="news">News</option>
-             <option value="tender">Tender</option>
-            <option value="other">Others</option>
+            <option value="notice" {{ $information->type == 'notice' ? 'selected' : '' }}>Notice</option>
+            <option value="pressrelease" {{ $information->type == 'pressrelease' ? 'selected' : '' }}>Press Releases</option>
+             <option value="news" {{ $information->type == 'news' ? 'selected' : '' }}>News</option>
+             <option value="tender" {{ $information->type == 'tender' ? 'selected' : '' }}>Tender</option>
+            <option value="other" {{ $information->type == 'other' ? 'selected' : '' }}>Others</option>
         </select>
         
 

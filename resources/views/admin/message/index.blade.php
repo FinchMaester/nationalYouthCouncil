@@ -44,14 +44,14 @@
                         <div style="display: flex; flex-direction:row;">
                             {{-- <a href="edit/{{ $msg->id }}"> --}}
                                 
-                                     <button type="button" class="btn-block btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+                                     <button type="button" class="btn-block btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $msg->id }}">
                                 Update
                               </button>
                                 
                             {{-- </a> --}}
                         
                         {{-- <a href="{{ url('admin/message/destroy/'.$msg->id) }}"> --}}
-                            <button type="button" class="btn-block btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button type="button" class="btn-block btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $msg->id }}">
                                 Delete
                               </button>
                         {{-- </a> --}}
@@ -68,8 +68,8 @@
             @endforeach
         </tbody>
 
-        @foreach($messages as $message)
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        @foreach($messages as $msg)
+        <div class="modal fade" id="delete{{ $msg->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
@@ -91,8 +91,8 @@
         @endforeach
 
         {{-- for edit --}}
-        @foreach($messages as $message)
-        <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        @foreach($messages as $msg)
+        <div class="modal fade" id="edit{{ $msg->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">

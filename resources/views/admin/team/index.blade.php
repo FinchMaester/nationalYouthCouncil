@@ -43,22 +43,35 @@
           <td>
             {{-- <a href="/admin/team/edit/{{ $team->id }}"> --}}
               <div style="display: flex; flex-direction:row;">
-                <button type="button" class="btn-block btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+               
+             
+                <button type="button" class="btn-block btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $team->id }}">
                   Update
                 </button>
             {{-- </a> --}}
             {{-- <a href="{{ url('admin/team/delete/'.$team->id) }}"> --}}
-              <button type="button" class="btn-block btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn-block btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $team->id }}">
                 Delete
               </button>
             {{-- </a> --}}
+          </div>
           </td>
         </tr>
+
+
+
+
+  
+
+
+
+
+
         @endforeach
       </tbody>
 
       @foreach($teams as $team)
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="delete{{ $team->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -82,7 +95,7 @@
       {{-- update --}}
 
       @foreach($teams as $team)
-      <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="edit{{ $team->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -128,7 +141,16 @@
     @endif
 
 
+        <script>
 
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+myInput.focus()
+})
+
+</script>
 
 <script>
   const previewImage = e => {
@@ -139,16 +161,8 @@
                 preview.src = reader.result;
             };
         };
-        <script>
+      </script>
 
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', function () {
-myInput.focus()
-})
-</script>
-</script>
 
 
 

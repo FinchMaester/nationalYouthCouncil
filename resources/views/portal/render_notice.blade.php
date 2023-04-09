@@ -8,7 +8,7 @@
            
             @foreach ($notices as $notice ) 
            <div class="col-md-4">
-                <iframe src="{{ asset('uploads/documents/file/' . $notice->file) }}" width="100%" height="300px">
+                <iframe src="{{ asset('uploads/information/file/' . $notice->file) }}" width="100%" height="300px">
                 </iframe>
                 <p class="oth_title"><span class="events_i"><i class="fa fa-download" aria-hidden="true"></i></span> {{ $notice->title }} </p>
                <p class="events_cal"><i class="fa fa-calendar" aria-hidden="true"></i> {{date('F jS,Y', strtotime($notice->created_at)) }}</p> 

@@ -35,7 +35,7 @@
                     <td> 
                       <div style="display: flex; flex-direction:row;">
                         {{-- <a href="/admin/about/edit/{{ $about->id }}"> --}}
-                          <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $about->id }}">
                             Update
                           </button>
                       </div>
@@ -51,7 +51,7 @@
         </tbody>
         @foreach($abouts as $about)
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit{{ $about->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">

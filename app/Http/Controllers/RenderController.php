@@ -104,7 +104,7 @@ class RenderController extends Controller
 
     public function render_notice(){
         $sitesetting = SiteSetting::first();
-        $notices = Document::whereType('notice')->latest()->get()->take(20);
+        $notices = Information::whereType('notice')->latest()->get()->take(20);
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_notice', compact('notices', 'sitesetting', 'links'));
@@ -120,7 +120,7 @@ class RenderController extends Controller
     }
     public function render_tender(){
         $sitesetting = SiteSetting::first();
-        $tender = Document::whereType('tender')->latest()->get()->take(20);
+        $tender = Information::whereType('tender')->latest()->get()->take(20);
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_tender', compact('tender', 'sitesetting', 'links'));
@@ -130,13 +130,13 @@ class RenderController extends Controller
         $sitesetting = SiteSetting::first();
         $links = Link::latest()->get()->take(6);
 
-        $rules = Information::whereType('policy')->latest()->get()->take(20);
+        $rules = Document::whereType('policy')->latest()->get()->take(20);
         return view('portal.render_rules', compact('rules', 'sitesetting', 'links'));
 
     }
     public function render_directot(){
         $sitesetting = SiteSetting::first();
-        $directot =Information::whereType('directive')->latest()->get()->take(20);
+        $directot =Document::whereType('directive')->latest()->get()->take(20);
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_directot', compact('directot', 'sitesetting', 'links'));
@@ -152,7 +152,7 @@ class RenderController extends Controller
     }
     public function render_news(){
         $sitesetting = SiteSetting::first();
-        $news = Other::whereType('news')->latest()->get()->take(20);
+        $news = Information::whereType('news')->latest()->get()->take(20);
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_news', compact('news', 'sitesetting', 'links'));
@@ -160,7 +160,7 @@ class RenderController extends Controller
     }
     public function render_other(){
         $sitesetting = SiteSetting::first();
-        $other = Other::whereType('other')->latest()->get()->take(20);
+        $other = Information::whereType('other')->latest()->get()->take(20);
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_other', compact('other', 'sitesetting', 'links'));

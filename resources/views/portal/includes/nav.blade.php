@@ -151,9 +151,10 @@
                                     <li class="u-nav-item"><a href="{{ route('render_directot') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Directory') }}</a>
                                     </li>
-                                    <li class="u-nav-item"><a href="{{ route('render_press') }}"
-                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Press Release') }}</a>
-                                    </li>
+                                    <li class="u-nav-item"><a href="{{ route('render_publication') }}"
+                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Publication') }}</a>
+                                </li>
+                                   
                                 </ul>
                             </div>
                         </li>
@@ -184,8 +185,8 @@
                                     <li class="u-nav-item"><a href="{{ route('render_notice') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Notice') }}</a>
                                     </li>
-                                    <li class="u-nav-item"><a href="{{ route('render_publication') }}"
-                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Publication') }}</a>
+                                    <li class="u-nav-item"><a href="{{ route('render_press') }}"
+                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Press Release') }}</a>
                                     </li>
                                     <li class="u-nav-item"><a href="{{ route('render_tender') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Tender') }}</a>
@@ -295,9 +296,10 @@
                                             <li class="u-nav-item"><a href="{{ route('render_directot') }}"
                                                     class="u-button-style u-nav-link">{{ __('Directory') }}</a>
                                             </li>
-                                            <li class="u-nav-item"><a href="{{ route('render_press') }}"
-                                                    class="u-button-style u-nav-link">{{ __('Press Release') }}</a>
-                                            </li>
+                                            
+                                            <li class="u-nav-item"><a href="{{ route('render_publication') }}"
+                                                class="u-button-style u-nav-link">{{ __('Publication') }}</a>
+                                        </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -309,9 +311,9 @@
                                             <li class="u-nav-item"><a href="{{ route('render_news') }}"
                                                     class="u-button-style u-nav-link">{{ __('Notice') }}</a>
                                             </li>
-                                            <li class="u-nav-item"><a href="{{ route('render_publication') }}"
-                                                    class="u-button-style u-nav-link">{{ __('Publication') }}</a>
-                                            </li>
+                                            <li class="u-nav-item"><a href="{{ route('render_press') }}"
+                                                class="u-button-style u-nav-link">{{ __('Press Release') }}</a>
+                                        </li>
                                             <li class="u-nav-item"><a href="{{ route('render_tender') }}"
                                                     class="u-button-style u-nav-link">{{ __('Tender') }}</a>
                                             </li>

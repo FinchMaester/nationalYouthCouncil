@@ -70,13 +70,13 @@
                         
                         {{-- <a href="edit/{{ $ed->id }}"> --}}
                             <div style="display: flex; flex-direction:row;">
-                              <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#exampleModals">
+                              <button type="button" class="btn-warning button-size" data-bs-toggle="modal" data-bs-target="#edit{{ $ed->id }}">
                                 Update
                               </button>
                         {{-- </a> --}}
                         
                         {{-- <a href="{{ url('admin/executivedetails/destroy/'.$ed->id) }}"> --}}
-                          <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <button type="button" class="btn-danger button-size" data-bs-toggle="modal" data-bs-target="#delete{{ $ed->id }}">
                             Delete
                           </button>
                         {{-- </a> --}}
@@ -88,7 +88,7 @@
 {{-- destroy --}}
         @foreach($executivedetails as $ed)
 
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="delete{{ $ed->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -113,7 +113,7 @@
 
         @foreach($executivedetails as $ed)
 
-        <div class="modal fade" id="exampleModals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="edit{{ $ed->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
