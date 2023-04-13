@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\ContactUs;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
+// use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
+
 use Closure;
 
 class ContactUsController extends Controller
@@ -16,7 +18,7 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-        $contacts = ContactUs::all();
+        $contacts = ContactUs::latest()->get();
         return view('admin.contactus.index', [
             "contacts" => $contacts,
             "page_title" => "Contact Us"
@@ -41,35 +43,76 @@ class ContactUsController extends Controller
     public function store(Request $request)
     {
 
-        dd($request);
-        $request->validate([
-            'name' => "required|string",
-            'email' => "required|string",
-            'phone' => "required|integer",
-            'message' => "required|string",
-            'g-recaptcha-response' => ['required', function(string $attribute, mixed $value, Closure $fail){
-               $g_response = Http::asForm()->post("https://www.google.com/recaptcha/api/siteverify",[
-                    'secret' => config('services.recaptcha.secret_key'),
-                    'response' => $value,
-                    'remoteip' => \request()->ip()
-               ]);
-             
+    // Validate reCAPTCHA response
+    // $recaptcha_secret = "6LeNCWklAAAAAGJ-1BZn7ANBvgzXv0vkki2ElCAb";
+    // $recaptcha_response = $request->input('g-recaptcha-response');
+    // $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+    // $recaptcha_data = [
+    //     'secret' => $recaptcha_secret,
+    //     'response' => $recaptcha_response,
+    //     'remoteip' => $_SERVER['REMOTE_ADDR']
+    // ];
 
-                if (!$g_response->json('success')) {
-                    $fail('The '.$attribute.' is invalid.');
-                }
-            }]
-            
-        ]);
+    // $options = [
+    //     'http' => [
+    //         'header' => 'Content-type: application/x-www-form-urlencoded',
+    //         'method' => 'POST',
+    //         'content' => http_build_query($recaptcha_data)
+    //     ]
+    // ];
 
-        $contact = new ContactUs();
-        $contact->name = $request->name;
-        $contact->email = $request->email;
-        $contact->phone = $request->phone;
-        $contact->message = $request->message;
+    // $context = stream_context_create($options);
+    // $result = file_get_contents($recaptcha_url, false, $context);
+    // $response = json_decode($result);
 
-        $contact->save();
-        return redirect('contactpage')->with("message", "Document Stored!");
+    // if ($response->success !== true) {
+    //     // reCAPTCHA validation failed
+    //     return redirect()->back()->withErrors(['captcha' => 'reCAPTCHA validation failed']);
+    // }
+
+    // Process the form data
+
+
+$this->validate($request, [
+    'name' => 'required|string',
+    'email' => 'required|string',
+    'phone' => 'required|string',
+    'message' => 'required|string',
+    'g-recaptcha-response' => 'required', function($attribute, $value, $fail) {
+       
+       $g_response = Http::asForm()->post("https://www.google.com/recaptcha/api/siteverify", [
+        'secret' => config('services.recaptcha.secret_key'),
+        'response' => $value,
+        'remoteip' => \request()->ip()
+       ]);
+
+    //    dd($g_response->json());
+
+
+        if (!$g_response->json('success')) {
+            $fail('The '.$attribute.' is invalid.');
+        }
+    },
+
+]);
+
+
+
+    $contact = new ContactUs;
+    $contact->name = $request->name;
+    $contact->email = $request->email;
+    $contact->phone = $request->phone;
+    $contact->message = $request->message;
+    // ...
+
+   if ($contact->save()){
+
+    // Save the data to the database
+    // ...
+
+    return redirect()->back()->with('success', 'Your message has been sent successfully.');
+}
+
     }
 
 

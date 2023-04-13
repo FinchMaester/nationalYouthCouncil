@@ -9,7 +9,7 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">{{ $page_title }}</h1>
-                    <a href="{{ route('admin.other.create') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
+                    <a href="{{ route('admin.youth.create') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
                       Add New</button></a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
@@ -24,26 +24,26 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
+              <th>S.N.</th>
                 <th>Type</th>
                 <th>Title</th>
                 <th>Slug</th>
-                <th>Description</th>
-                <th>Image</th>
+              
                 <th>File</th>
                 <th>Action</th>
 
             </tr>
         </thead>
         <tbody>
-            @foreach ($others as $other)
+            @foreach ($youths as $other)
                 <tr data-widget="expandable-table" aria-expanded="false">
+                  <td>{{ $loop->iteration }}</td>
                     <td>{{ $other->type ?? '' }}</td>
                     <td>{{ $other->title ?? '' }}</td>
                     <td>{{ $other->slug ?? '' }}</td>
-                    <td>{{ $other->description ?? '' }}</td>
-                    <td><img id="preview" src="{{ url('uploads/other/image/' . $other->image) }}"
-                      style="width: 100px; height:100px; object-fit:cover;" /></td>
-                      <td><iframe src="{{ asset('uploads/other/file/' . $other->file) }}" title="" style="width: 100px; height:100px;"></iframe>
+                    
+                
+                      <td><iframe src="{{ asset('uploads/youth/' . $other->file) }}" title="" style="width: 100px; height:100px;"></iframe>
                         <td>
 
                         {{-- <a href="edit/{{ $other->id }}"> --}}
@@ -65,7 +65,7 @@
                 </tr>
             @endforeach
         </tbody>
-        @foreach($others as $other)
+        @foreach($youths as $other)
 
         <div class="modal fade" id="delete{{ $other->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -77,7 +77,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-                 <a href="{{ url('admin/other/destroy/' .$other->id) }}">
+                 <a href="{{ url('admin/youth/destroy/' .$other->id) }}">
                   <button type="button" class="btn btn-danger">Yes
                   </button>
                 </a>
@@ -88,7 +88,7 @@
 
         @endforeach
         {{-- for edit --}}
-        @foreach($others as $other)
+        @foreach($youths as $other)
 
         <div class="modal fade" id="edit{{ $other->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
@@ -100,7 +100,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-                 <a href="{{ url('admin/other/edit/' .$other->id) }}">
+                 <a href="{{ url('admin/youth/edit/' .$other->id) }}">
                   <button type="button" class="btn btn-danger">Yes
                   </button>
                 </a>

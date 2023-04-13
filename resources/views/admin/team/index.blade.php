@@ -20,11 +20,14 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover" id="teams-table">
       <thead>
         <tr>
+        
+          <th>S.N.</th>
           <th>Name</th>
           <th>Position</th>
+          {{-- <th>Order</th> --}}
           <th>Image</th>
           <th>Contact No.</th>
           <th>Email</th>
@@ -33,9 +36,11 @@
       </thead>
       <tbody>
         @foreach ($teams as $team)
-        <tr data-widget="expandable-table" aria-expanded="false">
+        <tr data-widget="expandable-table" aria-expanded="false" data-id="{{ $team->id }}">
+        <td>{{ $loop->iteration}}</td>
           <td>{{ $team->name ?? '' }}</td>
           <td>{{ $team->position ?? '' }}</td>
+          {{-- <td>{{ $team->order}}</td> --}}
           <td><img src="{{ asset('uploads/team/' . $team->image) ?? '' }}" id="preview"
               style="max-width: 100px; max-height:100px; object-fit: cover" /></td>
           <td>{{ $team->contact_number ?? '' }}</td>
@@ -163,7 +168,29 @@ myInput.focus()
         };
       </script>
 
-
+{{-- 
+  $(function () {
+      $('#teams-table tbody').sortable({
+          update: function (event, ui) {
+              var positions = [];
+              $('#teams-table tbody tr').each(function (index) {
+                  positions.push({
+                      id: $(this).data('id'),
+                      position: index + 1
+                  });
+              });
+              $.ajax({
+                  url: '{{ route('teams.updatePositions') }}',
+                  method: 'POST',
+                  data: {
+                      _token: '{{ csrf_token() }}',
+                      positions: JSON.stringify(positions)
+                  },
+                  success: function () {
+                      alert('Team positions updated!');
+                  }
+              });
+               --}}
 
 
 

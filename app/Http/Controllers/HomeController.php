@@ -29,7 +29,10 @@ class HomeController extends Controller
         $coverimages = CoverImage::latest()->get()->take(5);
         $links = Link::latest()->get()->take(5);
         $images = MyImage::latest()->get()->take(6);
-        $teams = Team::get()->take(2);
+        $teams = Team::where('role', 'Administrative Chief')
+                        ->orWhere('role', 'Information Officer')->get()->take(2);
+        
+        // $suchana = Team::where('position', 'Information Officer')->get()->take(1);
         $about = About::first();
         $videos = Video::latest()->get()->take(4);
         $posts = Post::latest()->get()->take(6);
@@ -52,6 +55,7 @@ class HomeController extends Controller
             'notices' => $notices,
             'publications' => $publications,
             'press' => $press,
+            // 'suchana'=> $suchana,
             'news' => $news,
             'noticepop' => $noticepop,
 

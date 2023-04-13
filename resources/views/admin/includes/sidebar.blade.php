@@ -1,3 +1,9 @@
+
+<?php
+use App\Models\SiteSetting;
+    $sitesetting = SiteSetting::first();
+?>
+
 <nav class="navbar navbar-light navbar-vertical navbar-expand-xl">
     <script>
         var navbarStyle = localStorage.getItem("navbarStyle");
@@ -12,7 +18,7 @@
                     class="navbar-toggle-icon"><span class="toggle-line"></span></span></button>
         </div><a class="navbar-brand" href="{{ route('admin.index') }}">
             <div class="d-flex align-items-center py-3"><img class="me-2"
-                    src="{{ asset('adminassets/assets/img/icons/spot-illustrations/falcon.png') }}" alt=""
+                    src="{{ asset('uploads/sitesetting/' . $sitesetting->side_logo) }}" alt="Admin Logo"
                     width="40"><span class="font-sans-serif">Admin</span></div>
         </a>
     </div>
@@ -213,6 +219,14 @@
 
 
                    
+
+                    <a class="nav-link" href="{{ route('admin.youth.index') }}" role="button">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon">
+                            <i class="fas fa-sitemap"></i>
+                            
+                                <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
+                                class="nav-link-text ps-1">Youth Activity/Stats</span></div>
+                    </a>
 
                     <a class="nav-link" href="{{ route('admin.information.index') }}" role="button">
                         <div class="d-flex align-items-center"><span class="nav-link-icon">

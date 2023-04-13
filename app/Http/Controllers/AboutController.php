@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Exception;
 use Carbon\Carbon;
 use App\Models\About;
+use App\Models\Sitesetting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Gate;
@@ -19,8 +20,9 @@ class AboutController extends Controller
     {
         
         $abouts = About::paginate(50);
+        $sitesetting = Sitesetting::first();
 
-        return view('admin.about.index', ['abouts' => $abouts, 'page_title' =>'About']);
+        return view('admin.about.index', ['abouts' => $abouts, 'page_title' =>'About', 'sitesetting' => $sitesetting]);
     }
 
     /**
@@ -42,9 +44,6 @@ class AboutController extends Controller
      */
     public function store(Request $request)
     {
-    
-
-
         $this->validate($request, [
             'title' => 'required|string',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:1536',
@@ -57,11 +56,9 @@ class AboutController extends Controller
      
 
         $about = new About;
-
-    
-            $about->title = $request->title;
-            $about->image = $newImageName;
-            $about->content = $request->content;
+        $about->title = $request->title;
+        $about->image = $newImageName;
+        $about->content = $request->content;
         $about->save();
 
         return redirect('admin/about/index')->with(['successMessage' => 'Success !! About Page created']);

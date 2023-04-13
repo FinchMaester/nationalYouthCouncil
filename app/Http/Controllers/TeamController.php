@@ -152,7 +152,7 @@ class TeamController extends Controller
             $team->role = $request->role;
             $team->name = $request->name;
             $team->position = $request->position;
-            $team->image = $newImageName;
+            // $team->image = $newImageName;
             $team->contact_number = $request->contact_number;
             $team->email = $request->email;
 

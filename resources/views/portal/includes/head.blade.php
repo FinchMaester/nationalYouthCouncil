@@ -39,7 +39,34 @@
     }
     </script>
 
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeNCWklAAAAAOPLw_xrAeYCzSOzDzu8aUabkTYD"></script>
+    
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    {{-- For Contact Form Recaptcha --}}
+    {{-- <script>
+        functon callbackThen(response){
+            response.json().then(function(data){
+                console.log(data);
+                if(data.success && data.score > 0.5){
+                    console.log('valid source');
+                }else{
+                    document.getElementById('quick_contact').addEventListener('submit', function(event){
+                        event.preventDefault();
+                        alert('recaptcha error. Stop Form Submission.');
+                    });
+                }
+            });
+        }
+        function callbackCatch(error){
+            console.log('Error: ' +error);
+        }
+    </script> --}}
+
+    {!!htmlScriptTagJsApi([
+        'callback_then' => 'callbackThen',
+        'callback_catch' => 'callbackCatch'
+    ]) !!}
+
     <meta name="theme-color" content="#47b8c9">
     <meta name="twitter:site" content="@">
     <meta name="twitter:card" content="summary_large_image">
@@ -48,4 +75,7 @@
     <meta property="og:title" content="Home">
     <meta property="og:type" content="website">
     <meta data-intl-tel-input-cdn-path="intlTelInput/">
+    {{-- For Contact Form Recaptcha --}}
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>

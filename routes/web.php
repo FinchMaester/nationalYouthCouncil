@@ -32,6 +32,7 @@ use App\Http\Controllers\SiteSettingController;
 use App\Http\Controllers\CommitteeDetailController;
 use App\Http\Controllers\ExecutiveDetailController;
 use App\Http\Controllers\OrgchartController;
+use App\Http\Controllers\YouthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -180,7 +181,7 @@ Route::get('admin/about/delete/{id}', [App\Http\Controllers\AboutController::cla
 
 
 
-// For Mission, Values and Vision
+// For Mission, Values and Vision 
 Route::get('admin/mvc', [App\Http\Controllers\MvcController::class, 'index'])->name('Mvc.index');
 Route::get('admin/mvc/index', [App\Http\Controllers\MvcController::class, 'index'])->name('Mvc.index');
 
@@ -249,12 +250,12 @@ Route::get('admin/information/destroy/{id}', [InformationController::class, 'des
 
 // FOR OTHER
 
-Route::get('admin/other/index', [OtherController::class, "index"])->middleware('auth')->name('admin.other.index');
-Route::get('admin/other/create', [OtherController::class, "create"])->middleware('auth')->name('admin.other.create');
-Route::post('admin/other/store', [OtherController::class, "store"])->middleware('auth')->name('admin.other.store');
-Route::post('admin/other/update', [OtherController::class, "update"])->middleware('auth')->name('admin.other.update');
-Route::get('admin/other/edit/{id}', [OtherController::class, "edit"])->middleware('auth')->name('admin.other.edit');
-Route::get('admin/other/destroy/{id}', [OtherController::class, "destroy"])->middleware('auth')->name('admin.other.destroy');
+Route::get('admin/youth/index', [YouthController::class, "index"])->middleware('auth')->name('admin.youth.index');
+Route::get('admin/youth/create', [YouthController::class, "create"])->middleware('auth')->name('admin.youth.create');
+Route::post('admin/youth/store', [YouthController::class, "store"])->middleware('auth')->name('admin.youth.store');
+Route::post('admin/youth/update', [YouthController::class, "update"])->middleware('auth')->name('admin.youth.update');
+Route::get('admin/youth/edit/{id}', [YouthController::class, "edit"])->middleware('auth')->name('admin.youth.edit');
+Route::get('admin/youth/destroy/{id}', [YouthController::class, "destroy"])->middleware('auth')->name('admin.youth.destroy');
 
 
 Route::get('render_about', [App\Http\Controllers\RenderController::class, 'render_about'])->name('render_about');
@@ -284,6 +285,11 @@ Route::get('render_otherpost_news/{id}', [App\Http\Controllers\RenderController:
 Route::get('render_info/{slug}', [App\Http\Controllers\RenderController::class, 'render_info'])->name('render_info');
 Route::get('render_other_post', [App\Http\Controllers\RenderController::class, 'render_other_post'])->name('render_other_post');
 
+
+// For Youth
+Route::get('render_youthstats', [App\Http\Controllers\RenderController::class, 'render_youthstats'])->name('render_youthstats');
+Route::get('render_youthactivity', [App\Http\Controllers\RenderController::class, 'render_youthactivity'])->name('render_youthactivity');
+
 // FOR MESSAGE
 
 Route::get('admin/message/index', [MessageController::class, 'index'])->name('admin.message.index');
@@ -299,7 +305,7 @@ Route::get('admin/message/show/{id}', [MessageController::class, 'show'])->middl
 // FOR CONTACT US
 
 Route::get('admin/contactus/index', [ContactUsController::class, 'index'])->middleware('auth')->name('admin.contactus.index');
-Route::post('admin/contactus/store', [ContactUsController::class, 'store'])->middleware('auth')->name('admin.contactus.store');
+Route::post('admin/contactus/store', [ContactUsController::class, 'store'])->name('admin.contactus.store');
 Route::get('admin/contactus/destroy/{id}', [ContactUsController::class, 'destroy'])->middleware('auth')->name('admin.contactus.destroy');
 Route::get('admin/contactus/show/{id}', [ContactUsController::class, 'show'])->middleware('auth')->name('admin.contactus.show');
 

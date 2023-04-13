@@ -20,6 +20,7 @@
                         <span class="exe_position">{{ $ex->post }}</span><br>
                         <span class="exe_email">{{ $ex->email }}</span><br>
                         <span class="exe_contact">{{ $ex->phone }}</span>
+                        <span class="">{{ $ex->phone }}</span>
                     </p>
                     </div>
                 </div>

@@ -23,6 +23,7 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
+                <th>S.N.</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -34,6 +35,7 @@
         <tbody>
             @foreach ($contacts as $contact)
                 <tr data-widget="expandable-table" aria-expanded="false">
+                    <td>{{ $loop->iteration}}</td>
                     <td>{{ $contact->name ?? '' }}</td>
                     <td>{{ $contact->email ?? '' }}</td>
                     <td>{{ $contact->phone ?? '' }}</td>

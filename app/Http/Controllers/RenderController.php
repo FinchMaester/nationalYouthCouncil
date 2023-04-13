@@ -20,6 +20,7 @@ use App\Models\Other;
 use App\Models\Mvc;
 use App\Models\SiteSetting;
 use App\Models\Orgchart;
+use App\Models\Youth;
 
 class RenderController extends Controller
 {
@@ -156,6 +157,22 @@ class RenderController extends Controller
         $links = Link::latest()->get()->take(6);
 
         return view('portal.render_news', compact('news', 'sitesetting', 'links'));
+
+    }
+    public function render_youthstats(){
+        $sitesetting = SiteSetting::first();
+        $youth = Youth::whereType('youthstats')->latest()->get()->take(20);
+        $links = Link::latest()->get()->take(6);
+
+        return view('portal.render_youthstats', compact('youth', 'sitesetting', 'links'));
+
+    }
+    public function render_youthactivity(){
+        $sitesetting = SiteSetting::first();
+        $youthactivity = Youth::whereType('youthactivity')->latest()->get()->take(20);
+        $links = Link::latest()->get()->take(6);
+
+        return view('portal.render_youthactivity', compact('youthactivity', 'sitesetting', 'links'));
 
     }
     public function render_other(){

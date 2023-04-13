@@ -154,7 +154,7 @@ class CommitteeDetailController extends Controller
         $committeeDetail = CommitteeDetail::find($id);
         $committeeDetail->delete();
 
-        return redirect('admin/committeedetail/index');
+        return redirect('admin/committeedetails/index');
     }
 
     // public function error()

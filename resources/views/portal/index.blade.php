@@ -323,6 +323,7 @@
                     @endforeach
 
 
+                   
             
 
                 </div>
@@ -827,7 +828,7 @@
                                     <div class="u-align-left u-expanded u-uploaded-video u-video">
                                         <div class="embed-responsive embed-responsive-1">
                                             <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"
-                                                class="embed-responsive-item" src="{{ $vid->vid_url }}" frameborder="0"
+                                                class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $vid->vid_url }}" frameborder="0"
                                                 allowfullscreen=""></iframe>
                                         </div>
                                     </div>
@@ -872,9 +873,10 @@
                         <div class="u-container-layout u-container-layout-2">
                             <h3 class="u-text u-text-1">{{ __('Contact Us') }}</h3>
                             <div class="u-expanded-width u-form u-form-1">
-                                <form action="https://forms.nicepagesrv.com/v2/form/process"
+                                {{-- <form id="quick_contact" action="{{ route('admin.contactus.store') }}" method="POST" role="form"
                                     class="u-clearfix u-form-spacing-27 u-form-vertical u-inner-form"
-                                    style="padding: 0px;" source="email" name="form">
+                                    style="padding: 0px;">
+                                    @csrf
                                     <div class="u-form-group u-form-name u-label-none u-form-group-1">
                                         <label for="name-319a"
                                             class="u-label u-text-body-alt-color u-label-1">{{ __('Name') }}</label>
@@ -893,9 +895,9 @@
                                     </div>
                                     <div class="u-form-address u-form-group u-label-none u-form-group-3">
                                         <label for="address-452f"
-                                            class="u-label u-text-body-alt-color u-label-3">{{ __('Address') }}</label>
+                                            class="u-label u-text-body-alt-color u-label-3">{{ __('Phone') }}</label>
                                         <input type="text" placeholder="Enter your phone number" id="address-452f"
-                                            name="address"
+                                            name="phone"
                                             class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle"
                                             required="">
                                     </div>
@@ -906,18 +908,93 @@
                                             class="u-border-2 u-border-no-left u-border-no-right u-border-no-top u-border-white u-input u-input-rectangle"
                                             required=""></textarea>
                                     </div>
+                                    
                                     <div class="u-align-left u-form-group u-form-submit u-label-none">
-                                        <a href="#"
-                                            class="u-active-white u-border-none u-btn u-btn-round u-btn-submit u-button-style u-hover-white u-palette-2-base u-radius-10 u-btn-1">Submit</a>
-                                        <input type="submit" value="submit" class="u-form-control-hidden">
+                                        {!! htmlFormSnippet() !!}
+                                        <button class="btn send-button" id="submit" type="submit" value="SEND">
+                                            <div class="alt-send-button">
+                                                <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
+                                            </div>
+                
+                                        </button>
+                
                                     </div>
-                                    <div class="u-form-send-message u-form-send-success"> Thank you! Your message has
-                                        been sent. </div>
-                                    <div class="u-form-send-error u-form-send-message"> Unable to send your message.
-                                        Please fix errors then try again. </div>
-                                    <input type="hidden" value="" name="recaptchaResponse">
-                                    <input type="hidden" name="formServices" value="77c86aa9d6613065f293770d84430279">
-                                </form>
+                                    
+
+                                </form> --}}
+                                <form id="quick_contactindex" class="form-horizontal" method="POST" role="form"
+                                action="{{ route('admin.contactus.store') }}">
+                                @csrf
+                                <div class="form-group">
+            
+                                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name"
+                                        value="" required>
+            
+                                </div>
+            
+                                <div class="form-group">
+            
+                                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
+                                        value="" required>
+            
+                                </div>
+            
+                                <div class="form-group">
+            
+            
+                                    <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone No."
+                                        required>
+            
+            
+                                </div>
+            
+                                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+            
+            
+            
+            
+            
+                                {{-- <div class="g-recaptcha" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"></div>
+            
+            
+            
+                             
+                                    <button class="btn send-button g-recaptcha" id="submit" type="submit" value="SEND" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}" 
+                                    data-callback='onSubmit' 
+                                    data-action='submit'>
+                                        <div class="alt-send-button">
+                                            <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
+                                        </div>
+            
+                                    </button> --}}
+            
+                                {{-- {!! htmlFormSnippet() !!} --}}
+                                {{-- <div class="g-recaptcha" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"></div>
+                                <button class="btn send-button" id="submit" type="submit" value="SEND">
+                                    <div class="alt-send-button">
+                                        <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
+                                    </div>
+            
+                                </button> --}}
+            
+            
+                        <button class="btn btn-primary p-2 mt-2 mx-auto g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}" 
+                        data-callback='onSubmit' 
+                        data-action='submit' style="background: #0b1f6d">
+                            <div class="alt-send-button">
+                                <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
+                            </div>
+
+                        </button> 
+            
+            
+                            </form>
+                            <script>
+                                function onSubmit(token) {
+                                    document.getElementById("quick_contactindex").submit();
+                                }
+            
+                            </script>
                             </div>
                         </div>
                     </div>
