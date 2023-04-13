@@ -123,18 +123,20 @@
                                     <li class="u-nav-item"><a href="{{ route('render_team') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Employee Details') }}</a>
                                     </li>
+                                    <li class="u-nav-item"><a href="{{ route('render_executive_members') }}"
+                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Council Members') }}</a>
+                                </li>
                                     <li class="u-nav-item"><a href="{{ route('render_committee') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('District Committees') }}</a>
                                     </li>
-                                    <li class="u-nav-item"><a href="{{ route('render_executive_members') }}"
-                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Council Members') }}</a>
-                                    </li>
-                                    <li class="u-nav-item"><a href="{{ route('render_administrative') }}"
-                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Message from the Administrative Head') }}</a>
-                                    </li>
+                                  
+                                    
                                     <li class="u-nav-item"><a href="{{ 'render_chairperson' }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Message from Vice Chairperson') }}</a>
                                     </li>
+                                    <li class="u-nav-item"><a href="{{ route('render_administrative') }}"
+                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Message from the Administrative Head') }}</a>
+                                </li>
                                 </ul>
                             </div>
                         </li>
@@ -219,10 +221,10 @@
                             href="#" style="padding: 10px 16px;">{{ __('Youth') }}</a>
                         <div class="u-nav-popup">
                             <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
-                                <li class="u-nav-item"><a href=""
+                                <li class="u-nav-item"><a href="{{ route('render_youthactivity') }}"
                                         class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Youth Activity') }}</a>
                                 </li>
-                                <li class="u-nav-item"><a href="{{ route('render_other') }}"
+                                <li class="u-nav-item"><a href="{{ route('render_youthstats') }}"
                                         class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Youth Statistics') }}</a>
                                 </li>
                             </ul>
@@ -270,18 +272,20 @@
                                             <li class="u-nav-item"><a href="{{ route('render_team') }}"
                                                     class="u-button-style u-nav-link">{{ __('Employee Details') }}</a>
                                             </li>
-                                            <li class="u-nav-item"><a href="{{ route('render_committee') }}"
-                                                    class="u-button-style u-nav-link">{{ __('District Committees') }}</a>
-                                            </li>
+                                          
                                             <li class="u-nav-item"><a href="{{ route('render_executive_members') }}"
                                                     class="u-button-style u-nav-link">{{ __('Council Members') }}</a>
                                             </li>
+                                            <li class="u-nav-item"><a href="{{ route('render_committee') }}"
+                                                class="u-button-style u-nav-link">{{ __('District Committees') }}</a>
+                                        </li>
+                                            <li class="u-nav-item"><a href="{{ route('render_chairperson') }}"
+                                                class="u-button-style u-nav-link">{{ __('Message from Vice Chairperson') }}</a>
+                                        </li>
                                             <li class="u-nav-item"><a href="{{ route('render_administrative') }}"
                                                     class="u-button-style u-nav-link">{{ __('Message from the Administrative Head') }}</a>
                                             </li>
-                                            <li class="u-nav-item"><a href="{{ route('render_chairperson') }}"
-                                                    class="u-button-style u-nav-link">{{ __('Message from Vice Chairperson') }}</a>
-                                            </li>
+                                           
                                         </ul>
                                     </div>
                                 </li>
@@ -355,12 +359,12 @@
                                     href="#">{{ __('Youth') }}</a>
                                 <div class="u-nav-popup">
                                     <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12">
-                                        <li class="u-nav-item"><a href="#"
+                                        <li class="u-nav-item"><a href="{{ route('render_youthactivity') }}"
                                                 class="u-button-style u-nav-link">
                                                 {{ __('Youth Activity') }}
                                             </a>
                                         </li>
-                                        <li class="u-nav-item"><a href="#"
+                                        <li class="u-nav-item"><a href="{{ route('render_youthstats') }}"
                                                 class="u-button-style u-nav-link">
                                                 {{ __('Youth Statistics') }}
                                             </a>

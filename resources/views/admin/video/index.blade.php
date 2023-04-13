@@ -34,7 +34,7 @@
             @foreach ($videos as $video)
                 <tr data-widget="expandable-table" aria-expanded="false">
                     <td>{{ $video->vid_desc ?? '' }}</td>
-                    <td>{{ $video->vid_url ?? '' }}</td>
+                    <td>https://www.youtube.com/embed/{{ $video->vid_url ?? '' }}</td>
 
                     <td>
                         {{-- <a href="/admin/video/edit/{{ $video->id }}"> --}}

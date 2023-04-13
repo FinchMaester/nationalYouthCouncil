@@ -19,46 +19,33 @@
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-      
-        <form id="quickForm" novalidate="novalidate" method="POST" action="{{ route('admin.other.store') }}"
+
+        <form id="quickForm" novalidate="novalidate" method="POST" action="{{ route('admin.youth.update') }}"
         enctype="multipart/form-data">
         @csrf
+        <input name="id" id="" value ="{{ $youth->id }}" hidden>
         <select name="type" id="type">
-            <option value="0" disabled selected>--Select Type --</option>
-            <option value="policy">Policies & Acts</option>
-            <option value="directive">Directives</option>
-            <option value="pressrelease">Press Releases</option>
-            <option value="news">News</option>
-            <option value="other">Others</option>
+            <option value="youthstats" {{ $youth->type == 'youthstats' ? 'selected' : '' }}>Youth Statistics</option>
+            <option value="youthactivity" {{ $youth->type == 'youthactivity' ? 'selected' : '' }}>Youth Activities</option>
         </select>
-        
+
 
         <div class="card-body">
             <div class="form-group">
                 <label for="title">Title</label><span style="color:red; font-size:large"> *</span>
-                <input style="width:auto;" type="text" name="title" class="form-control" id="title" placeholder="Title">
+                <input style="width:auto;" type="text" name="title" class="form-control" id="title" placeholder="Title" value="{{ $youth->title }}">
             </div>
-            <div>
-                <label for="description">Description</label><span style="color:red; font-size:large">
-                    *</span>
-                <textarea style="max-width: 30%;" type="text" class="form-control" name="description" id="description"
-                    placeholder="Add Description"></textarea>
-            </div>
+           
 
+          
             <div class="form-group">
-              <label for="image">Image</label><span style="color:red; font-size:large"> *</span>
-              <input type="file" name="image" class="form-control" id="image" onchange="previewImage(event)"
-                  placeholder="image" required>
-            </div>
-            <img id="preview" style="max-width: 500px; max-height:500px" />
-            
-            <div class="form-group">
-              
+
 
                     <label for="file">PDF</label><span style="color:red; font-size:large"> *</span>
-                    <input type="file" name="file" class="form-control" id="pdf" placeholder="PDF" required>
+                    <input type="file" name="file" class="form-control" id="pdf" placeholder="PDF" value="">
 
             </div>
+            <iframe src="{{ asset('uploads/youth/' . $youth->file) }}" title="" style="max-width: 300px; max-height:300px;"></iframe>
 
         </div>
         <!-- /.card-body -->
@@ -68,6 +55,17 @@
     </form>
 
 
+
+    <script>
+        const previewImage = e => {
+            const reader = new FileReader();
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                const preview = document.getElementById('preview');
+                preview.src = reader.result;
+            };
+        };
+    </script>
 
 
 

@@ -33,7 +33,7 @@
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Video URL</label>
-                <input type="url" name="vid_url" class="form-control" placeholder="URL"
+                <input type="text" name="vid_url" class="form-control" placeholder="URL"
                     required>
             </div>
 

@@ -10,7 +10,7 @@ class CategoryController extends Controller
     //
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::latest()->get();
         return view('admin.categories.index', [
             'categories' => $categories,
             "page_title" => "Categories"
@@ -34,7 +34,7 @@ class CategoryController extends Controller
         $category->title = $request->title;
         $category->save();
         
-        return redirect(route('admin.categories.index'));
+        return redirect('admin/categories/index')->with("success", "Category is Created!");
         
     }
 

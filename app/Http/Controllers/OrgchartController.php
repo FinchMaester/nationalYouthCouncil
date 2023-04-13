@@ -43,7 +43,7 @@ class OrgchartController extends Controller
             'image' => 'required|image|mimes:png,jpg,jpeg,gif,svg|max:1536'
         ]);
 
-        $newImageName = time() . '.' .$request->image->extension();
+        $newImageName = time() . 'chart' . '.' .$request->image->extension();
         $request->image->move(public_path('uploads/orgchart/'), $newImageName );
 
         $orgchart = new Orgchart;

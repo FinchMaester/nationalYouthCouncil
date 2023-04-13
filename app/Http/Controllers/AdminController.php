@@ -20,6 +20,7 @@ class AdminController extends Controller
 {
     //
     public function index(Request $req){
+   
         return view('admin.index',  ['page_title' =>'Dashboard']);
 
     }
@@ -29,6 +30,7 @@ class AdminController extends Controller
         # code...
         $totalTeam = Team::count();
         $totalDocument = Document::where('type','notice')->count();
+       
         return view('admin.dashboard',compact('totalTeam','totalDocument'));
     }
 

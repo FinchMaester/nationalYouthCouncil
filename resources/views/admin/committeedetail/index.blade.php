@@ -69,7 +69,7 @@
              
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-                 <a href="{{ url('admin/committeedetail/destroy/'.$cd->id) }}">
+                 <a href="{{ url('admin/committeedetails/destroy/'. $cd->id) }}">
                   <button type="button" class="btn btn-danger">Yes
                   </button>
                 </a>
@@ -91,7 +91,7 @@
              
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">No</button>
-                 <a href="{{ url('admin/committeedetail/edit/'.$cd->id) }}">
+                 <a href="{{ url('admin/committeedetails/edit/'. $cd->id) }}">
                   <button type="button" class="btn btn-danger">Yes
                   </button>
                 </a>

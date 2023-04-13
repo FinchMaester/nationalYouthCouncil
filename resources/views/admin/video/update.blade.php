@@ -34,7 +34,7 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">Video URL</label>
-            <input type="url" value="{{ $video->vid_url }}" name="vid_url" class="form-control">
+            <input type="text" value="https://www.youtube.com/embed/{{ $video->vid_url }}" name="vid_url" class="form-control">
         </div>
 
 

@@ -48,20 +48,20 @@ class DocumentController extends Controller
         ]); 
         
         if($request->hasFile('image')){
-        $newImage = time() . "-" . $request->title . "." . $request->image->extension();
+        $newImage = time() . "-image" . $request->title . '.' . $request->image->extension();
         $request->image->move(public_path('uploads/documents/image/'), $newImage);
     }else{
         $newImage= null;
     }
 
         if ($request->hasFile('file')){
-            $postPath = $request->title . '.' .$request->file->extension();
+            $postPath = time() . '-file' . $request->title . '.' .$request->file->extension();
             $request->file->move(public_path('uploads/documents/file/'), $postPath );
         }else{
                 $postPath = "NoFile";
         }
 
-        $document = new Document();
+        $document = new Document;
 
         $document->type = $request->type;
         $document->title = $request->title;
@@ -74,10 +74,12 @@ class DocumentController extends Controller
         $document->image = $newImage;
         $document->file = $postPath;
 
-        $document->save();
+        if($document->save()){
 
-        return redirect('admin/documents/index')->with("message", "Document Stored!");
+        return redirect('admin/documents/index')->with("success", "Document Stored!");
+    }
 
+ 
 
     }
 
@@ -105,28 +107,26 @@ class DocumentController extends Controller
         $document = Document::find($request->id);
 
         if ($request->hasFile('file')){
-            $postPath = $request->title . '.' .$request->file->extension();
+            $postPath = time(). '-file' . $request->title . '.' .$request->file->extension();
             $request->file->move(public_path('uploads/documents/file/'), $postPath );
             Storage::delete('uploads/documents/file/' . $document->file);
             $document->file = $postPath;
         }else {
+
                 $postPath = "NoFile";
+
         }
         
 
         if ($request->hasFile('image')) {
-            $newImageName = time() . '-' . $request->image->extension();
+            $newImageName = time() . '-image' . $request->title . $request->image->extension();
             $request->image->move(public_path('uploads/documents/image/'), $newImageName );
             Storage::delete('uploads/documents/image/' . $document->image);
             $document->image = $newImageName;
         }else{
             unset($request['file']);
-            $newImageName= null;
+            
         }
-       
-
-        
-       
 
         $document->type = $request->type;
         $document->title = $request->title;
@@ -135,8 +135,7 @@ class DocumentController extends Controller
 
         $document->save();
 
-        return redirect("admin/documents/index");
-
+        return redirect("admin/documents/index")->with('success', "Document Stored!");
 
     }
 
@@ -146,7 +145,7 @@ class DocumentController extends Controller
         $document = Document::find($id);
         $document->delete();
 
-        return redirect("admin/documents/index");
+        return redirect("admin/documents/index")->with('success', "Document Deleted!");
     }
 
 }

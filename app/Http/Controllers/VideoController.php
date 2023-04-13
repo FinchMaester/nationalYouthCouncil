@@ -36,7 +36,7 @@ class VideoController extends Controller
 
         $this->validate($request, [
             'vid_desc' => 'required|string',
-            'vid_url' => 'required|url',
+            'vid_url' => 'required',
         ]);
 
 
@@ -67,11 +67,12 @@ class VideoController extends Controller
 
         $this->validate($request, [
             'vid_desc' => 'required|string',
-            'vid_url' => 'required|url',
+            'vid_url' => 'required',
         ]);
 
         $video = Video::find($request->id);
 
+        
         $video->vid_desc = $request->vid_desc;
         $video->slug = SlugService::createSlug(Video::class, 'slug', $request->vid_desc);
 

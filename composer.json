@@ -8,6 +8,7 @@
         "php": "^8.0.13|^8.1.6",
         "anhskohbo/no-captcha": "^3.4",
         "astrotomic/laravel-translatable": "^11.11",
+        "biscolab/laravel-recaptcha": "^6.0",
         "cviebrock/eloquent-sluggable": "^9.0",
         "cyrildewit/eloquent-viewable": "^6.1",
         "guzzlehttp/guzzle": "^7.2",

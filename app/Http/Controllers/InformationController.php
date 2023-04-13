@@ -65,20 +65,20 @@ class InformationController extends Controller
         ]); 
 
         if ($request->hasFile('image')){
-        $newImage = time() . "-" . $request->title . "-" . $request->image->extension();
+        $newImage = time() . "-image" . $request->title . "-" . $request->image->extension();
         $request->image->move(public_path('uploads/information/image'), $newImage);
     }
     else{
         $newImage = null;
     }
         if ($request->hasFile('file')){
-            $postPath = $request->title . '.' .$request->file->extension();
+            $postPath = time() . "-file" . $request->title . '.' .$request->file->extension();
             $request->file->move(public_path('uploads/information/file'), $postPath );
         }else{
                 $postPath = "NoFile";
         }
 
-        $information = new Information();
+        $information = new Information;
         $information->type = $request->type;
         $information->title = $request->title;
         $information->slug = SlugService::createSlug(Information::class, 'slug', $request->title);
@@ -140,26 +140,27 @@ class InformationController extends Controller
         $information = Information::find($request->id);
 
         if ($request->hasFile('file')){
-            $postPath = $request->title . '.' .$request->file->extension();
+            $postPath = time() . '-file' . $request->title . '.' .$request->file->extension();
             $request->file->move(public_path('uploads/information/file'), $postPath );
             Storage::delete('uploads/information/' . $information->file);
+            $information->file = $postPath;
         }else {
             unset($request['file']);
         }
         
 
         if ($request->hasFile('image')) {
-            $newImageName = time() . '-' . $request->image->extension();
+            $newImageName = time() . '-image' . $request->title . '.' .$request->image->extension();
             $request->image->move(public_path('uploads/information/image'), $newImageName );
             Storage::delete('uploads/other/image/' . $information->image);
-
+            $information->image = $newImageName;
         }else{
             unset($request['image']);
             // $newImageName = null;
         }
 
-        $information->image = $newImageName;
-        $information->file = $postPath;
+      
+       
         $information->type = $request->type;
         $information->title = $request->title;
         $information->slug = SlugService::createSlug(Information::class, 'slug', $request->title);
