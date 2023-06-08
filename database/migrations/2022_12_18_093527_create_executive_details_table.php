@@ -15,7 +15,7 @@ class CreateExecutiveDetailsTable extends Migration
     {
         Schema::create('executive_details', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('image')->nullable();
             $table->string('phone')->nullable();
             $table->string('email')->nullable();

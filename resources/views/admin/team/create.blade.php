@@ -27,9 +27,18 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="exampleInputEmail1">Role</label>
-                <input type="text" name="role" class="form-control" placeholder="Role">
+                <label for="exampleInputEmail1">Role</label><br>
+                <select name="role" id="">
+                    <option value="Staffs" selected>Members</option>
+                  
+                        <option value="Chairperson">Chairperson</option>
+                        <option value="Vice Chairperson">Vice Chairperson</option>
+                        <option value="Administrative Chief">Administrative Chief</option>
+                        <option value="Information Officer">Information Officer</option>
+                  
+                </select>
             </div>
+            
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 <input type="text" name="name" class="form-control" placeholder="Name" required>

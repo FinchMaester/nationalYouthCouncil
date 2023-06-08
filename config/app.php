@@ -86,7 +86,7 @@ return [
         'ne' => 'Nepali',
     ],
 
-    'locale' => 'en',
+    'locale' => 'ne',
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +99,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'ne',
 
     /*
     |--------------------------------------------------------------------------
@@ -183,6 +183,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -239,6 +241,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         'ReCaptcha' => Biscolab\ReCaptcha\Facades\ReCaptcha::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

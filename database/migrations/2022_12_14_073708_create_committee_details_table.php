@@ -15,10 +15,11 @@ class CreateCommitteeDetailsTable extends Migration
     {
         Schema::create('committee_details', function (Blueprint $table) {
             $table->id();
-            $table->string('district');
-            $table->string('name');
-            $table->string('address');
-            $table->string('phone');            
+            $table->string('district')->nullable();
+            $table->string('name')->nullable();
+            $table->string('address')->nullable();
+            $table->string('phone')->nullable();            
+            $table->string('email')->nullable();            
             $table->timestamps();
         });
     }

@@ -1,5 +1,5 @@
 @php
-   $executivedetail = App\Models\ExecutiveDetail::all();
+    $executivedetail = App\Models\ExecutiveDetail::all();
 @endphp
 
 @extends('portal.layouts.master')
@@ -8,24 +8,30 @@
     <div class="container">
 
         <div class="row mt-3">
-            <h3 class="sec_title">{{ __("Council Members") }}</h3>
-           
-        @foreach ($executivedetail as $ex)
-            <div class="col-md-4">
-                <div class="card team_card mt-2 mb-2">
-                    <img src="{{ asset('uploads/executivedetail/' . $ex->image) }}" class="card-img-top image">
-                    <div class="card-body">
-                    <p>
-                        <span class="exe_name">{{ $ex->name }}</span><br>
-                        <span class="exe_position">{{ $ex->post }}</span><br>
-                        <span class="exe_email">{{ $ex->email }}</span><br>
-                        <span class="exe_contact">{{ $ex->phone }}</span>
-                        <span class="">{{ $ex->phone }}</span>
-                    </p>
+            <h3 class="sec_title">{{ __('Council Members') }}</h3>
+
+            @foreach ($executivedetail as $ex)
+                <div class="col-md-3">
+                    <div class="card team_card mt-2 mb-2">
+
+                        @if (isset($ex->image))
+                        <img src="{{ asset('uploads/executivedetail/' . $ex->image) }}" class="card-img-top image">                        
+                        @else
+                            <img src="{{ url('img/logo.png') }}" class="card-img-top image">
+                        @endif
+                       
+                        <div class="card-body">
+
+                            <span class="team_name">{{ $ex->name }}</span><br>
+                            <span class="team_position">{{ $ex->position }}</span><br>
+                            <span class="team_email">{{ $ex->email }}</span><br>
+                            <span class="team_contact">{{ $ex->phone }}</span>
+
+
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
 
         </div>
 
@@ -33,7 +39,4 @@
 
 
     </div>
-
-    
-
 @endsection

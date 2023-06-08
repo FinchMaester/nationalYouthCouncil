@@ -27,6 +27,7 @@
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Type --</option>
             <option value="notice" {{ $information->type == 'notice' ? 'selected' : '' }}>Notice</option>
+            <option value="notice" {{ $information->type == 'oppurtunity' ? 'selected' : '' }}>Oppurtunity</option>
             <option value="pressrelease" {{ $information->type == 'pressrelease' ? 'selected' : '' }}>Press Releases</option>
              <option value="news" {{ $information->type == 'news' ? 'selected' : '' }}>News</option>
              <option value="tender" {{ $information->type == 'tender' ? 'selected' : '' }}>Tender</option>
@@ -44,6 +45,11 @@
                     *</span>
                 <textarea style="max-width: 30%;" type="text" class="form-control" name="description" id="description"
                     placeholder="Add Description">{{ $information->description }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="gdocs">Google Docs URL</label>
+                <input style="width:auto;" type="text" name="gdocs" class="form-control" id="gdocs" placeholder="Google Docs apply form URL" value="{{ $information->gdocs }}">
             </div>
 
             <div class="form-group">

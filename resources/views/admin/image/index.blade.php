@@ -50,8 +50,14 @@
     @foreach ($images as $image)
     <tr data-widget="expandable-table" aria-expanded="false">
       <td>{{ $image->img_desc ?? '' }}</td>
-      <td><img id="preview1" src="{{ url('uploads/image/' . $image->img) }}"
-        style="width: 100px; height:100px; object-fit:cover;" /></td>
+      <td>
+        {{-- <img id="preview1" src="{{ url('uploads/image/' . $image->img) }}"
+        style="width: 100px; height:100px; object-fit:cover;" /> --}}
+        @foreach ($image->img as $imgUrl )
+        <img src="{{ asset($imgUrl) }}" alt="multiple image"
+        class="w-20 h-20 border border-blue-600" style="width:30px;height:30px;object-fit:cover;">
+        @endforeach
+      </td>
 
       <td>
         {{-- <a href="/admin/image/edit/{{ $image->id }}">

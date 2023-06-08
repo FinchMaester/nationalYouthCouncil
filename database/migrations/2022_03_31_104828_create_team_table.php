@@ -24,6 +24,7 @@ class CreateTeamTable extends Migration
             $table->string('contact_number')->nullable();
             $table->string('comment')->nullable();
             $table->string('facebook')->nullable();
+            $table->integer('order')->nullable();
             $table->timestamps();
         });
     }

@@ -21,29 +21,23 @@
             </div><!-- /.row -->
 
 
-        <form id="quickForm"  method="POST" action="{{ route('Image.store') }}"
+        <form id="quickForm"  method="POST" action="{{ route('admin.insta.store') }}"
         enctype="multipart/form-data">
         @csrf
         <div class="card-body">
             
             <div class="form-group">
-                <label for="exampleInputEmail1">Image Description</label>
-                <input type="text" name="img_desc" class="form-control" placeholder="Title" required>
+                <label for="exampleInputEmail1">Embedded Insta Post</label>
+                <input type="text" name="url" class="form-control" placeholder="Title" required>
             </div>
 
-            <div class="form-group">
-                <label for="exampleInputEmail1">Image</label>
-                <input type="file" name="img[]" class="form-control" onchange="previewImage(event)"
-                    required multiple>
-            </div>
-            <img id="preview" style="max-width: 500px; max-height:500px" />
-
+         
         
 
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-            <button type="submit" class="btn-primary">Create Gallery</button>
+            <button type="submit" class="btn-primary">Create</button>
         </div>
     </form>
 
@@ -61,9 +55,18 @@
     </div>
 
     @endif
-     
+      
 
-
+    <script>
+        const previewImage = e => {
+            const reader = new FileReader();
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                const preview = document.getElementById('preview');
+                preview.src = reader.result;
+            };
+        };
+    </script>
 
 
 

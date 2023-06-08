@@ -27,6 +27,7 @@
             <option value="0" disabled selected>--Select Type --</option>
             <option value="youthstats">Youth Statistics</option>
             <option value="youthactivity">Youth Activities</option>
+            <option value="youthactivity">Youth Activities</option>
            
         </select>
         

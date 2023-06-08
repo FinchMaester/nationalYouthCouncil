@@ -32,6 +32,7 @@
             <option value="directive" {{ $document->type == 'directive' ? 'selected' : '' }}>Directives</option>  
             <option value="policy" {{ $document->type == 'policy' ? 'selected' : '' }}>Policies & Acts</option>
             <option value="publication" {{ $document->type == 'publication' ? 'selected' : '' }}>Publication</option>
+            <option value="programbudget" {{ $document->type == 'programbudget' ? 'selected' : '' }}>Program Budget</option>
         </select>
         
 

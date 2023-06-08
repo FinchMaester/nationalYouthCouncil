@@ -20,23 +20,34 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-            <div class="mt-4 mb-4">
-                <h5> Format </h5>
-                <span> District, Name, Address, Phone, Email </span>
-            </div>
-    <form action="{{ route('file-import') }}" method="POST" enctype="multipart/form-data">
+
+        <form id="quickForm" method="POST" action="{{ route('admin.insta.update') }}"
+        enctype="multipart/form-data">
         @csrf
-        <div class="form-group mb-4">
-            <div class="custom-file text-left">
-                <input type="file" name="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Choose file</label>
-            </div>
+        <input type="hidden" name="id" value="{{ $insta->id }}">
+        {{-- <input type="hidden" name="id" value="{{ $about->id }}"> --}}
+        <div class="form-group">
+            <label for="exampleInputEmail1">Embedded Insta Post</label>
+            <input type="text" value="{{ $insta->url }}" name="url" class="form-control" placeholder="URL" required>
         </div>
 
-        <button class="btn-primary">Import data</button>
+       
 
-      
+
+        <!-- /.card-body -->
+        <div class="card-footer">
+            <button type="submit" class="btn-primary">Update</button>
+        </div>
     </form>
-  
 
-@endsection
+
+
+
+
+
+
+
+
+  @stop
+
+

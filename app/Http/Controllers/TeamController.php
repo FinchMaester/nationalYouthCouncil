@@ -22,7 +22,7 @@ class TeamController extends Controller
     public function index()
     {
         
-        $teams = Team::paginate(10);
+        $teams = Team::paginate(20);
 
         return view('admin.team.index', ['teams' => $teams, 'page_title' =>'Team']);
     }
@@ -32,6 +32,52 @@ class TeamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    //  public function reorder(Request $request)
+    //  {
+    //     $teamOrders = $request->input('teamOrders');
+
+    //     foreach ($teamOrders as $order => $teamId) {
+    //         $team = Team::find($teamId);
+    //         $team->setOrder($order);
+    //     }
+
+    //     return response()->json(['message' => 'Teams reordered successfully']);     
+    // }
+public function orderIndex(){
+    $teams = Team::orderBy('order')->get();
+
+    return view('admin.team.order', ['teams' => $teams, 'page_title' =>'Team']);
+
+}
+
+
+
+
+    public function updateOrder(Request $request)
+{
+
+    // dd($request);
+    $teamOrders = $request->input('teamOrders');
+    // $teamName = $request->input('teamName');
+
+    foreach($teamOrders as $order => $teamId){
+        $team = Team::findOrFail($teamId);
+        $team->order = $order +1;
+        $team->save();
+    }
+    
+
+    // $team->name = $teamName;
+  
+
+    // return response()->json(['message' => 'Team order updated successfully']);
+    return redirect('team/reorder/index')->with(['message' => 'Team order updated successfully']);
+
+}
+
+
+
     public function create()
     {
   

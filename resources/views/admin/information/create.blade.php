@@ -19,13 +19,27 @@
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-      
+           <!-- Display validation errors -->
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
+
+
+
         <form id="quickForm" novalidate="novalidate" method="POST" action="{{ route('admin.information.store') }}"
         enctype="multipart/form-data">
         @csrf
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Type --</option>
             <option value="notice">Notice</option>
+            <option value="oppurtunity">Oppurtunity</option>
             <option value="pressrelease">Press Releases</option>
              <option value="news">News</option>
              <option value="tender">Tender</option>
@@ -43,6 +57,11 @@
                     *</span>
                 <textarea style="max-width: 30%;" type="text" class="form-control" name="description" id="description"
                     placeholder="Add Description"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="gdocs">Google Docs URL</label>
+                <input style="width:auto;" type="text" name="gdocs" class="form-control" id="gdocs" placeholder="Google Docs apply form URL">
             </div>
 
             <div class="form-group">

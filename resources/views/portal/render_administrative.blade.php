@@ -16,14 +16,23 @@
 
             @foreach ($administrative as $ad )
             
-            <div class="col-md-6">
-                <img src="{{ asset("uploads/message/" . $ad->image) }}" class="chairman_card_image"  alt="..."></a>
+
+            <?php
+            $strippedcontent = preg_replace('/<(?!p\b)[^>]*>/', '',$ad->description)
+            ?>
+
+            <div class="col-md-5">
+                <img src="{{ asset("uploads/message/" . $ad->image) ?? ''}}" class="chairman_card_image"  alt="..."></a>
 
             </div>
 
-            <div class="col-md-6">
-                {!!ucfirst($ad->description)!!}
-
+            <div class="col-md-7 message_para">
+               
+                {!!$strippedcontent!!}
+                <br>
+                <span style="color: #0b1f6d; font-weight:800; font-size:20px">"{{ $ad->name }}"</span>
+            
+            
             </div>
                 
        

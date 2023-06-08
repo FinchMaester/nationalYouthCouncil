@@ -17,7 +17,10 @@
             </div>
             <div class="col-md-6">
                 <p class="para">
-                    <?=$abouts->content?>
+                    <?php
+                    $strippedcontent = preg_replace('/<(?!p\b)[^>]*>/', '',$abouts->content)
+                    ?>
+                    {!! $strippedcontent !!}
                 </p>
 
             </div>

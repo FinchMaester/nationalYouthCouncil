@@ -35,13 +35,14 @@
 
     <!-- /.content-header -->
 
+    <div class="table-responsive">
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
+                <th>S.N.</th>
                 <th>Type</th>
                 <th>Title</th>
-                <th>Description</th>
-                <th>Slug</th>
+              
                 <th>Image</th>
                 <th>File</th>
                 <th>Action</th>
@@ -51,10 +52,10 @@
         <tbody>
             @foreach ($documents as $document)
                 <tr data-widget="expandable-table" aria-expanded="false">
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $document->type ?? '' }}</td>
                     <td>{{ $document->title ?? '' }}</td>
-                    <td>{{ $document->description ?? '' }}</td>
-                    <td>{{ $document->slug }}</td>
+                    
                     <td><img id="preview" src="{{ url('uploads/documents/image/' . $document->image) }}"
                         style="width: 100px; height:100px; object-fit:cover;" /></td>
                     <td><iframe src="{{ asset('uploads/documents/file/' . $document->file) }}" title="" style="width: 100px; height:100px;"></iframe>
@@ -125,6 +126,29 @@
 
     </table>
 
+    <div class="d-flex justify-content-center">
+        {!! $documents->links() !!}
+      </div>
+      
+  
+  
+      @if (isset($links) && is_array($links))
+  
+  
+      <div class="p-4">
+  
+        @foreach ($links as $link )
+  
+        <a href="{{ $link[1] }}">
+          <button class="btn btn-primary">{{ $link[0] }}</button>
+        </a>
+        @endforeach
+      </div>
+  
+      @endif
+
+
+</div>
     <script>
         var myModal = document.getElementById('myModal')
         var myInput = document.getElementById('myInput')

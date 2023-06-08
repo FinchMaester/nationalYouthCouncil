@@ -4,9 +4,9 @@
     <div class="container">
 
         <div class="row mt-3">
-            <h3 class="sec_title">{{ __("News") }}</h3>
+            <h3 class="sec_title">{{ __("Oppurtunity") }}</h3>
            
-            @foreach ($news as $new ) 
+            @foreach ($oppurtunity as $new ) 
            <div class="col-md-4">
                 <iframe src="{{ asset($new->file) }}" width="100%" height="300px">
                 </iframe>

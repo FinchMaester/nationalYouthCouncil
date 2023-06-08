@@ -246,7 +246,7 @@ nav ul li ul li a {
 }
 
 /* Mobile navigation */
-.nav-mobile {
+/* .nav-mobile {
   display: none;
   position: absolute;
   top: 17%;
@@ -254,7 +254,7 @@ nav ul li ul li a {
   background: transparent;
   height: 70px;
   width: 70px;
-}
+} */
 
 
 /* @media only screen and (min-width: 870px) {
@@ -992,20 +992,24 @@ nav ul li ul li a {
 
    /* Team Page */
    .team_card{
-     width: 20rem;
+     width: 100%;
      overflow: hidden;
-     height: 420px;
+     text-align: center;
+     border:none !important;
+     /* height: 420px; */
 
    }
+   
    .team_card .image{
      height: 300px;
      width: 100%;
-     object-fit: cover;
-     object-position: center;
+     object-fit: contain;
+     /* object-position: ; */
    }
 .team_name{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
+  color: #0b1f6d;
 
 }
 .team_position{
@@ -1037,6 +1041,11 @@ nav ul li ul li a {
 /* For Gallery Video Page */
 .video_card iframe{
   height: 300px;
+}
+.vid_desc{
+  font-size: 16px;
+  font-weight: 600;
+  color: #0b1f6d;
 }
 /* For other posts */
 .oth_title{

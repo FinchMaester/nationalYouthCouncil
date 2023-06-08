@@ -37,12 +37,12 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('adminassets/assets/select2/dist/css/select2.min.css') }}" />
   <link rel="stylesheet" href="{{ asset('adminassets/vendors/flatpickr/flatpickr.min.css') }}" />
 
-  <link rel="stylesheet" href="{{ asset('adminasset/css/custom.css') }}" asp-append-version="true" />
 
   <link href="summernote-bs5.css" rel="stylesheet">
   <script src="summernote-bs5.js"></script>
 
   <link rel="stylesheet" href="{{ asset('summernote/summernote-lite.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('adminasset/css/custom.css') }}" asp-append-version="true" />
 
  
 

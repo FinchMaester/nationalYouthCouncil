@@ -10,8 +10,15 @@ class MyImage extends Model
 {
     use HasFactory;
 
-
     protected $table ='images';
 
+    protected $fillable = [
+        'img_desc',
+        'img'
+    ];
+
+    protected $casts = [
+        'img' => 'array'
+    ];
 
 }

@@ -28,19 +28,16 @@ class ExecutiveDetailController extends Controller
 
     public function fileImport(Request $request) 
     {
-        $request->validate([
-            'file'=>'required|mimes:xlsx,csv',
-        ]);
+    
 
+    $file = $request->file('file');  
+        // Excel::import(new ExecutiveDetailImport, $request->file('file')->store('temp'));
 
-        Excel::import(new ExecutiveDetailImport, $request->file('file')->store('temp'));
-
-        if(Excel::import(new ExecutiveDetailImport, $request->file('file')->store('temp'))){
-       
-
-            return redirect('admin/executivedetails/index')->with("success", "Executive Details Imported!");
-        } else{
-            return redirect()->back()->with('error', 'There was an error while uploading.');
+        try {
+            Excel::import(new ExecutiveDetailImport, $file);
+            return redirect()->route('admin.executivedetails.index')->with('success', 'Data imported successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error importing data: ' . $e->getMessage());
         }
 
         //  return redirect('admin/executivedetails/index')->with("message", "Executive Details Imported!");
@@ -60,7 +57,7 @@ class ExecutiveDetailController extends Controller
     {
 
        
-        $executivedetails = ExecutiveDetail::latest()->paginate(10);
+        $executivedetails = ExecutiveDetail::latest()->paginate(30);
         return view('admin.executivedetail.index', [
             "page_title" => "Executive Details",
             "executivedetails" => $executivedetails

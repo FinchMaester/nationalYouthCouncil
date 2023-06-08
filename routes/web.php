@@ -33,6 +33,7 @@ use App\Http\Controllers\CommitteeDetailController;
 use App\Http\Controllers\ExecutiveDetailController;
 use App\Http\Controllers\OrgchartController;
 use App\Http\Controllers\YouthController;
+use App\Http\Controllers\InstaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -154,6 +155,13 @@ Route::get('admin/team/edit/{id}', [App\Http\Controllers\TeamController::class, 
 Route::post('admin/team/update', [App\Http\Controllers\TeamController::class, 'update'])->name('Team.update');
 Route::get('admin/team/delete/{id}', [App\Http\Controllers\TeamController::class, 'destroy'])->middleware('auth')->name('admin.team.destroy');
 
+// Route::post('/team/reorder', [TeamController::class, 'reorder'])->name('admin.team.reorder');
+
+Route::get('/team/reorder/index', [TeamController::class, 'orderIndex'])->name('admin.team.orderindex');
+
+Route::post('/admin/team/updateorder', [App\Http\Controllers\TeamController::class, 'updateOrder'])
+    ->name('admin.team.updateorder');
+
 
 
 Route::get('admin/sitesetting', [App\Http\Controllers\SiteSettingController::class, 'index'])->middleware('auth');
@@ -258,26 +266,53 @@ Route::get('admin/youth/edit/{id}', [YouthController::class, "edit"])->middlewar
 Route::get('admin/youth/destroy/{id}', [YouthController::class, "destroy"])->middleware('auth')->name('admin.youth.destroy');
 
 
+// FOR MESSAGE
+
+Route::get('admin/message/index', [MessageController::class, 'index'])->name('admin.message.index');
+Route::get('admin/message/create', [MessageController::class, 'create'])->name('admin.message.create');
+Route::post('admin/message/store', [MessageController::class, 'store'])->name('admin.message.store');
+Route::get('admin/message/edit/{id}', [MessageController::class, 'edit'])->name('admin.message.edit');
+Route::post('admin/message/update', [MessageController::class, 'update'])->name('admin.message.update');
+Route::get('admin/message/destroy/{id}', [MessageController::class, 'destroy'])->name('admin.message.destroy');
+Route::get('admin/message/show/{id}', [MessageController::class, 'show'])->middleware('auth')->name('admin.message.show');
+
+
+// For Instagram controller
+
+Route::get('admin/insta', [InstaController::class, 'index'])->name('admin.insta.index');
+Route::get('admin/insta/index', [InstaController::class, 'index'])->name('admin.insta.index');
+
+Route::get('admin/insta/create', [InstaController::class, 'create'])->name('admin.insta.create');
+Route::post('admin/insta/store', [InstaController::class, 'store'])->name('admin.insta.store');
+
+Route::get('admin/insta/edit/{id}', [InstaController::class, 'edit'])->name('admin.insta.edit');
+Route::post('admin/insta/update', [InstaController::class, 'update'])->name('admin.insta.update');
+Route::get('admin/insta/delete/{id}', [InstaController::class, 'destroy'])->name('admin.insta.destroy');
+
+
 Route::get('render_about', [App\Http\Controllers\RenderController::class, 'render_about'])->name('render_about');
 Route::get('render_team', [App\Http\Controllers\RenderController::class, 'render_team'])->name('render_team');
 Route::get('render_images', [App\Http\Controllers\RenderController::class, 'render_images'])->name('render_images');
 Route::get('render_videos', [App\Http\Controllers\RenderController::class, 'render_videos'])->name('render_videos');
 Route::get('render_notice', [App\Http\Controllers\RenderController::class, 'render_notice'])->name('render_notice');
 Route::get('render_publication', [App\Http\Controllers\RenderController::class, 'render_publication'])->name('render_publication');
+Route::get('render_budget', [App\Http\Controllers\RenderController::class, 'render_budget'])->name('render_budget');
 Route::get('render_tender', [App\Http\Controllers\RenderController::class, 'render_tender'])->name('render_tender');
 Route::get('render_rules', [App\Http\Controllers\RenderController::class, 'render_rules'])->name('render_rules');
 Route::get('render_directot', [App\Http\Controllers\RenderController::class, 'render_directot'])->name('render_directot');
 Route::get('render_press', [App\Http\Controllers\RenderController::class, 'render_press'])->name('render_press');
+Route::get('render_oppurtunity', [App\Http\Controllers\RenderController::class, 'render_oppurtunity'])->name('render_oppurtunity');
 Route::get('render_news', [App\Http\Controllers\RenderController::class, 'render_news'])->name('render_news');
 Route::get('render_other', [App\Http\Controllers\RenderController::class, 'render_other'])->name('render_other');
 Route::get('render_committee', [App\Http\Controllers\RenderController::class, 'render_committee'])->name('render_committee');
 Route::get('render_administrative', [App\Http\Controllers\RenderController::class, 'render_administrative'])->name('render_administrative');
-Route::get('render_chairperson', [App\Http\Controllers\RenderController::class, 'render_chairperson'])->name('render_chairperson');
+Route::get('render_vicechairperson', [App\Http\Controllers\RenderController::class, 'render_vice'])->name('render_chairperson');
 Route::get('render_executive_members', [App\Http\Controllers\RenderController::class, 'render_executive_members'])->name('render_executive_members');
 Route::get('render_posts/{slug}', [App\Http\Controllers\RenderController::class, 'render_posts'])->name('render_posts');
 Route::get('render_all_posts', [App\Http\Controllers\RenderController::class, 'render_all_posts'])->name('render_all_posts');
 Route::get('orgnizationchart', [App\Http\Controllers\RenderController::class, 'render_orgchart'])->name('render_orgchart');
 
+Route::get('render_singleimage/{id}', [App\Http\Controllers\RenderController::class, 'render_singleimage'])->name('render_singleimage');
 
 
 Route::get('render_otherpost/{slug}', [App\Http\Controllers\RenderController::class, 'render_otherpost'])->name('render_otherpost');
@@ -290,15 +325,6 @@ Route::get('render_other_post', [App\Http\Controllers\RenderController::class, '
 Route::get('render_youthstats', [App\Http\Controllers\RenderController::class, 'render_youthstats'])->name('render_youthstats');
 Route::get('render_youthactivity', [App\Http\Controllers\RenderController::class, 'render_youthactivity'])->name('render_youthactivity');
 
-// FOR MESSAGE
-
-Route::get('admin/message/index', [MessageController::class, 'index'])->name('admin.message.index');
-Route::get('admin/message/create', [MessageController::class, 'create'])->name('admin.message.create');
-Route::post('admin/message/store', [MessageController::class, 'store'])->name('admin.message.store');
-Route::get('admin/message/edit/{id}', [MessageController::class, 'edit'])->name('admin.message.edit');
-Route::post('admin/message/update', [MessageController::class, 'update'])->name('admin.message.update');
-Route::get('admin/message/destroy/{id}', [MessageController::class, 'destroy'])->name('admin.message.destroy');
-Route::get('admin/message/show/{id}', [MessageController::class, 'show'])->middleware('auth')->name('admin.message.show');
 
 
 
