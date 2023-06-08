@@ -16,17 +16,26 @@ class TeamSeeder extends Seeder
     {
         DB::table('team')->insert([
             [
-                'name' => 'Ramakant Sharma',
-                'position' => 'Administrative Chief',
-                'role' => 'Administrative Chief',
-                'image'=> 'uploads/team/ramakant.jpg',
-                'email' => 'sharma.ramakanta@gmail.com',
-                'contact_number' => '9855064451',
+                'name' => 'Dig Bahadur Limbu',
+                'position' => 'Chairperson',
+                'role' => 'Chairperson',
+                'image'=> 'digbahadur.jpg',
+                'email' => 'info@nyc.gov.np',
+                'contact_number' => '+97714200539',
             ],
             [
+                'name' => 'Shree Surendra Basnet',
+                'position' => 'Vice Chairperson',
+                'role' => 'Vice Chairperson',
+                'image'=> 'surendra.jpg',
+                'email' => 'surendradamak@gmail.com',
+                'contact_number' => '+97716638152',
+            ],
+         
+            [
                 'name' => 'Dinesh Ghimire',
-                'position' => 'Under Secretary',
-                'role' => 'Under Secretary',
+                'position' => 'Administrative Chief',
+                'role' => 'Administrative Chief',
                 'image'=> 'uploads/team/dinesh.jpg',
                 'email' => 'dghimire72@gmail.com',
                 'contact_number' => '9851211483',
@@ -56,12 +65,52 @@ class TeamSeeder extends Seeder
                 'contact_number' => '9861999301',
             ],
             [
+                'name' => 'Nawaraj Niraula',
+                'position' => 'Under Secretary',
+                'role' => 'Under Secretary',
+                'image'=> 'uploads/team/nawaraj.jpg',
+                'email' => 'nawarajniroula@gmail.com',
+                'contact_number' => '9841883040',
+            ],
+            [
                 'name' => 'Ashok Parajuli',
                 'position' => 'Section Officer',
-                'role' => 'Section Officer',
+                'role' => 'Information Officer',
                 'image'=> 'uploads/team/ashok.jpg',
                 'email' => 'aparajuli8@gmail.com',
                 'contact_number' => '9841773715',
+            ],
+            [
+                'name' => 'Narayani K.C.',
+                'position' => 'Section Officer',
+                'role' => 'Information Officer',
+                'image'=> 'uploads/team/ashok.jpg',
+                'email' => 'narayanikc291@yahoo.com',
+                'contact_number' => '9841655414',
+            ],
+            [
+                'name' => 'Sanamaya Ramtel',
+                'position' => 'Section Officer',
+                'role' => 'Information Officer',
+                'image'=> 'uploads/team/ashok.jpg',
+                'email' => 'sapuramtel@gmail.com',
+                'contact_number' => '985439632',
+            ],
+            [
+                'name' => 'Kalpana Khanal Basnet',
+                'position' => 'Section Officer',
+                'role' => 'Information Officer',
+                'image'=> 'uploads/team/ashok.jpg',
+                'email' => 'mailtokhanalkalpana@gmail.com',
+                'contact_number' => '9841606231',
+            ],
+            [
+                'name' => 'Khulanath Gautam',
+                'position' => 'Section Officer',
+                'role' => 'Information Officer',
+                'image'=> 'uploads/team/ashok.jpg',
+                'email' => 'khulanathgtm@yahoo.com',
+                'contact_number' => '9841415745',
             ],
             [
                 'name' => 'Sunita Karki',
@@ -71,22 +120,8 @@ class TeamSeeder extends Seeder
                 'email' => 'sunita.jiri@gmail.com',
                 'contact_number' => '9841478525',
             ],
-            [
-                'name' => 'Kalpana Khanal Basnet',
-                'position' => 'Section Officer',
-                'role' => 'Section Officer',
-                'image'=> 'uploads/team/kalpana.jpg',
-                'email' => 'mailtokhanalkalpana@gmail.com',
-                'contact_number' => '9841606231',            
-            ],
-            [
-                'name' => 'Khulanath Gautam',
-                'position' => 'Section Officer',
-                'role' => 'Section Officer',
-                'image'=> 'uploads/team/khulanath.jpg',
-                'email' => 'khulanathgtm@yahoo.com',
-                'contact_number' => '9841415745',            
-            ],
+           
+        
             [
                 'name' => 'Chandrawoti Koirala',
                 'position' => 'Deputy Executive Officer',
@@ -96,14 +131,6 @@ class TeamSeeder extends Seeder
                 'contact_number' => '9849220278',           
             ],
             [
-                'name' => 'Durga Giri',
-                'position' => 'Deputy Executive Officer',
-                'role' => 'Deputy Executive Officer',
-                'image'=> 'uploads/team/durga.jpg',
-                'email' => 'durgagiri28@gmail.com',
-                'contact_number' => '9844724628',           
-            ],
-            [
                 'name' => 'Rani Kumari Mallik',
                 'position' => 'Technical Assistant',
                 'role' => 'Technical Assistant',
@@ -111,6 +138,8 @@ class TeamSeeder extends Seeder
                 'email' => 'ranukam123@gmail.com',
                 'contact_number' => '9841539741',       
             ],
+       
+         
             [
                 'name' => 'Pushpa Dahal',
                 'position' => 'Accountant',
@@ -118,6 +147,23 @@ class TeamSeeder extends Seeder
                 'image'=> 'uploads/team/pushpa.jpg',
                 'email' => 'apushpaa1234@gmail.com',
                 'contact_number' => '9842494428',           
+            ],
+
+            [
+                'name' => 'Hem Kumar Paudel',
+                'position' => 'Computer Operator',
+                'role' => 'Staffs',
+                'image'=> 'uploads/team/durga.jpg',
+                'email' => 'sagarpaaudel@gmail.com',
+                'contact_number' => '9818503761',           
+            ],
+            [
+                'name' => 'Rajesh Mainali',
+                'position' => 'Computer Operator',
+                'role' => 'Deputy Executive Officer',
+                'image'=> 'uploads/team/durga.jpg',
+                'email' => 'mainalirajesh287@gmail.com',
+                'contact_number' => '9851199118',           
             ],
             [
                 'name' => 'Mira Kafle',

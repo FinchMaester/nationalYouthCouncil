@@ -37,8 +37,8 @@
                 <div class="col-xl-4 col-lg-4 mb-3">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                                <img class="side_logo" src="{{ asset('uploads/sitesetting/' . $sitesetting->side_logo) }}" alt="logo">
-                            <a href="{{ url('/') }}"><img src="{{ asset('uploads/sitesetting/' . $sitesetting->main_logo) }}" class="img-fluid"
+                                <img class="img-fluid" src="{{ asset('uploads/sitesetting/' . $sitesetting->side_logo) }}" alt="logo">
+                            <a href="{{ url('/') }}"><img src="{{ asset('uploads/sitesetting/' . $sitesetting->main_logo) }}" class="side_logo"
                                     alt="logo"></a>
 
 
@@ -54,7 +54,7 @@
                             <a href="{{ $sitesetting->face_link}}"><i
                                     class="fab fa-facebook-f facebook-bg"></i></a>
                             <a href="{{ $sitesetting->insta_link }}"><i class="fab fa-twitter twitter-bg"></i></a>
-                            <a href="{{ $sitesetting->social_link }}"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            <a href="{{ $sitesetting->social_link }}"><i class="fa-brands fa-youtube google-bg"></i></a>
                         </div>
                     </div>
                 </div>

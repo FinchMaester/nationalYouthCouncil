@@ -57,8 +57,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
@@ -75,11 +75,13 @@
   z-index: 999999;
 }
 
+
 #popup img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  max-height: 80vh;
   display: block;
   margin-bottom: 20px;
+
   
 }
 
@@ -115,6 +117,12 @@
 background-position: center;
 background-size: cover;
 }
+
+
+.mainlogo .mainlogo_img{
+    height: 140px;
+    
+}
 .top_nav_flag{
     height: 140px;
     float: right;
@@ -122,7 +130,6 @@ background-size: cover;
 }
 
 .top_nav_topic{
-
     text-align: center;
     margin-top: 3px;
 }
@@ -137,7 +144,7 @@ background-size: cover;
 
 
 
-@media (max-width: 575px) {
+@media (max-width: 580px) {
     .main_nav{
     display: flex;
     justify-content: center;
@@ -146,21 +153,34 @@ background-size: cover;
 
      }
 
-     .mainlogo{
-        display: flex;
-        justify-content: center;
+    .top_nav_topic{
+      padding-top: 25%;
+    }
 
-     }
 
-     .top_nav_flag{
-        margin: 0;
-     }
+    .mainlogo_img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100px !important;
+      width: auto;
+    }
+    .top_nav_flag{
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100px;
+      width: auto;
+    }
+    
+   
 
      .flag_container{
-        display: flex;
-        justify-content: center;
+  
+        float: right;
 
      }
+    
 
      .navigation_media{
         height: 100px;
@@ -174,19 +194,27 @@ background-size: cover;
 
      }
 
-     .hamburger_media{
-        /* border: 1px solid black; */
-        /* position: fixed; */
-        float: right;
-
-
-
-     }
+   
+     .en_ne{
+      height:80px;
+      width: 15px;
+      margin-top: 20%;
+      transition: 0.1s all;
+      display: inline-block;
+    }
   }
 
   @media (min-width: 768px) and (max-width: 991px){
     .top_nav_mainlogo{
       margin-left: -86px;
+    }
+
+    .en_ne{
+      height:80px;
+      width: 15px;
+      
+      transition: 0.1s all;
+      display: inline-block;
     }
   
   }
@@ -2734,7 +2762,9 @@ background-size: cover;
   }
 
   .u-section-6 .u-back-image-1 {
-    object-position: 50% 77.85%;
+    /* object-position: 50% 77.85%;
+   */
+   object-position: center;
     object-fit: cover;
   }
 
@@ -2873,7 +2903,7 @@ background-size: cover;
     }
 
     .u-section-6 .u-gallery-1 {
-      height: 734px;
+      height: 100%;
     }
 
     .u-section-6 .u-gallery-inner-1 {
@@ -2909,11 +2939,11 @@ background-size: cover;
   }
 
   .u-section-7 .embed-responsive-1 {
-    position: absolute;
+    /* position: absolute;
     width: 178%;
     left: -39%;
     height: 178%;
-    top: -39%;
+    top: -39%; */
   }
 
   .u-section-7 .u-layout-cell-2 {
@@ -3587,15 +3617,19 @@ background-size: cover;
   }
 
 
-
+/* For Instagra Embed */
 
 
   /* For Chaiman Page */
   .chairman_card_image{
     width: 100%;
-    height: 400px;
+    height: auto;
     object-fit: cover;
     object-position: center;
+  }
+
+  .message_para{
+    font-size: 20px;
   }
 
 /* For About Page */

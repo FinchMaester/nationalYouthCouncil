@@ -14,13 +14,24 @@ class UsersImport implements ToModel, WithStartRow
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
+    // public function rules(): array{
+    //     return[
+    //         'district' => 'nullable|string',
+    //         'name' => 'nullable|string',
+    //         'address' => 'nullable',
+    //         'phone' => 'nullable|numeric',
+    //         'email' => 'nullable'
+    //     ];
+    // }
+
     public function model(array $row)
     {
         return new CommitteeDetail([
-            'district'     => $row[0],
-            'name'    => $row[1],
+            'district'=> $row[0],
+            'name'=> $row[1],
             'address' => $row[2],
-            'phone' => $row[3]
+            'phone' => $row[3],
+            'email' => $row[4],
         ]);
 
     }

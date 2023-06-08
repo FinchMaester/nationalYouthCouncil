@@ -16,8 +16,9 @@ class CreateInformationTable extends Migration
         Schema::create('information', function (Blueprint $table) {
             $table->id();
             $table->string('type');
-            $table->string("title");
-            $table->string("slug");
+            $table->string('title', 500);
+            $table->string('slug',800);
+            $table->text('gdocs')->nullable();
             $table->longText("description");
             $table->string("image")->nullable();
             $table->string("file");

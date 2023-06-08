@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AboutSeeder::class);
         $this->call(MvcSeeder::class);
         $this->call(OrgchartSeeder::class);
+        $this->call(MessageSeeder::class);
         
 
     }

@@ -108,33 +108,7 @@
 
 
 
-    {{-- For Over Lay Image and the java script --}}
-
- @if (!empty($noticepop))
-   
-
-    <div id="popup-overlay">
-        <div id="popup">
-            <img src="{{ asset('uploads/information/image/' . $noticepop->image) }}" alt="Pop-up Image">
-            <button id="close-btn">Close</button>
-        </div>
-    </div>
-
-
-@endif
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var popup = document.getElementById('popup-overlay');
-            var closeButton = document.getElementById('close-btn');
-
-            popup.style.display = 'block';
-
-            closeButton.addEventListener('click', function() {
-                popup.style.display = 'none';
-            });
-        });
-    </script>
+  
 
 
 
@@ -145,7 +119,7 @@
                 <div class="u-repeater u-repeater-1">
 
 
-                    <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-3"
+                    {{-- <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-3"
                         data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
                         <div class="u-container-layout u-similar-container u-container-layout-7">
                             <div
@@ -260,11 +234,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
+
+
                     @foreach ($teams as $team)
                         <div class="u-container-style u-custom-item u-list-item u-palette-2-dark-2 u-repeater-item u-shape-rectangle u-list-item-3"
-                            data-animation-name="customAnimationIn" data-animation-duration="1750"
-                            data-animation-delay="0">
+                            data-animation-name="customAnimationIn" data-animation-duration="1750" data-animation-delay="0">
                             <div class="u-container-layout u-similar-container u-container-layout-7">
                                 <div
                                     class="u-container-style u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-group u-palette-4-dark-1 u-group-5">
@@ -280,36 +255,36 @@
                                     <div class="u-container-layout u-container-layout-3">
                                         <h4 class="u-align-center u-text u-text-6"> {{ __($team->name) }}</h4>
                                         <p class="u-align-center u-text u-text-11"><span class="u-icon"><svg
-                                                    class="u-svg-content" viewBox="0 0 60 60" x="0px"
-                                                    y="0px" style="width: 1em; height: 1em;">
+                                                    class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px"
+                                                    style="width: 1em; height: 1em;">
                                                     <g>
                                                         <path
                                                             d="M56.612,4.569c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c3.736,3.736,3.736,9.815,0,13.552
                                                 c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
                                                 C61.128,16.434,61.128,9.085,56.612,4.569z">
-                                                                                                    </path>
-                                                                                                    <path
-                                                                                                        d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639
+                                                        </path>
+                                                        <path
+                                                            d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639
                                                 s-0.681,3.401-1.918,4.638c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293
                                                 c1.615-1.614,2.504-3.764,2.504-6.052S54.017,8.459,52.401,6.845z">
-                                                                                                    </path>
-                                                                                                    <path
-                                                                                                        d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38
+                                                        </path>
+                                                        <path
+                                                            d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38
                                                 c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
                                                 C1.065,15.799,1.065,9.72,4.802,5.983z">
-                                                                                                    </path>
-                                                                                                    <path
-                                                                                                        d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053
+                                                        </path>
+                                                        <path
+                                                            d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053
                                                 c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414
                                                 c-1.237-1.237-1.918-2.885-1.918-4.639S7.775,9.22,9.013,7.983C9.403,7.593,9.403,6.96,9.013,6.569z">
-                                                                                                    </path>
-                                                                                                    <circle cx="30" cy="53" r="2"></circle>
-                                                                                                    <path
-                                                                                                        d="M42.595,0H17.405C14.976,0,13,1.977,13,4.405v51.189C13,58.023,14.976,60,17.405,60h25.189C45.024,60,47,58.023,47,55.595
+                                                        </path>
+                                                        <circle cx="30" cy="53" r="2"></circle>
+                                                        <path
+                                                            d="M42.595,0H17.405C14.976,0,13,1.977,13,4.405v51.189C13,58.023,14.976,60,17.405,60h25.189C45.024,60,47,58.023,47,55.595
                                                 V4.405C47,1.977,45.024,0,42.595,0z M33,3h1c0.552,0,1,0.447,1,1s-0.448,1-1,1h-1c-0.552,0-1-0.447-1-1S32.448,3,33,3z M26,3h4
                                                 c0.552,0,1,0.447,1,1s-0.448,1-1,1h-4c-0.552,0-1-0.447-1-1S25.448,3,26,3z M30,57c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4
                                                 S32.206,57,30,57z M45,46H15V8h30V46z">
-                                                                                                    </path>
+                                                        </path>
                                                     </g>
                                                 </svg><img></span>&nbsp;{{ __($team->contact_number) }}
                                             <span class="u-file-icon u-icon u-text-white"><img
@@ -323,8 +298,8 @@
                     @endforeach
 
 
-                   
-            
+
+
 
                 </div>
             </div>
@@ -446,7 +421,7 @@
 
 
 
-    
+
     <section class="u-clearfix u-palette-5-light-3 u-section-5" id="carousel_457a">
         <div class="u-clearfix u-sheet u-valign-middle-xs u-sheet-1">
             <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
@@ -462,14 +437,14 @@
                                         <li class="u-tab-item" role="presentation">
                                             <a class="active u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-1"
                                                 id="link-tab-0da5" href="#tab-0da5" role="tab"
-                                                aria-controls="tab-0da5" aria-selected="true">{{ __('News') }}</a>
+                                                aria-controls="tab-0da5" aria-selected="true">{{ __('Notice') }}</a>
                                         </li>
-                                      
+
 
                                         <li class="u-tab-item" role="presentation">
                                             <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-2"
                                                 id="link-tab-14b7" href="#tab-14b7" role="tab"
-                                                aria-controls="tab-14b7" aria-selected="false">{{ __('Notice') }}</a>
+                                                aria-controls="tab-14b7" aria-selected="false">{{ __('News') }}</a>
                                         </li>
                                         <li class="u-tab-item" role="presentation">
                                             <a class="u-active-palette-1-base u-button-style u-grey-10 u-tab-link u-text-active-white u-text-black u-tab-link-3"
@@ -485,71 +460,88 @@
                                         </li>
                                     </ul>
 
-                     
+
                                     <div class="u-tab-content">
 
-                                        <div class="u-container-style u-tab-active u-tab-pane" id="tab-0da5" role="tabpanel"
-                                            data-animation-name="" data-animation-duration="0" data-animation-delay="0"
-                                            data-animation-direction="" >
+                                        <div class="u-container-style u-tab-active u-tab-pane" id="tab-0da5"
+                                            role="tabpanel" data-animation-name="" data-animation-duration="0"
+                                            data-animation-delay="0" data-animation-direction="">
                                             <div
                                                 class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-sm u-valign-top-xl u-container-layout-17">
                                                 <div class="u-expanded-width u-list u-list-4">
                                                     <div class="u-repeater u-repeater-4">
-                                                        @if (count($news) === 0)
+
+                                                        @if (count($notices) === 0)
                                                             <p>{{ __('There are no files to Display') }}</p>
                                                         @else
-                                                            @foreach ($news as $new)
+                                                            @foreach ($notices as $notice)
                                                                 <div class="u-container-style u-list-item u-repeater-item">
                                                                     <div
                                                                         class="u-container-layout u-similar-container u-container-layout-18">
                                                                         <span class="u-file-icon u-icon u-icon-61">
 
                                                                             <a class="nodecoration" target="_blank"
-                                                                                href="{{ asset('uploads/information/file/' . $new->file) }}" download><span
-                                                                                    class="events_i"><i
+                                                                                href="{{ asset($notice->file) }}"
+                                                                                download><span class="events_i"><i
                                                                                         class="fa fa-download"
                                                                                         aria-hidden="true"></i></span>
                                                                             </a>
 
                                                                         </span>
                                                                         <span class="u-file-icon u-icon u-icon-62">
-                                                                            <a class="nodecoration" href="{{ asset('uploads/information/file/' . $new->file) }}" target="_blank">
-                                                                            <i
-                                                                                class="fas fa-eye"></i>
+                                                                            <a class="nodecoration"
+                                                                                href="{{ asset($notice->file) }}"
+                                                                                target="_blank">
+                                                                                <i class="fas fa-eye"></i>
                                                                             </a>
-                                                                            </span><span
-                                                                            class="u-file-icon u-icon u-icon-63">
-                                                                            
-                                                                          
-                                                                             
-                                                                             @if (isset($new->image)) 
-                                                                            
-                                                                            <img
-                                                                                src="{{ asset('uploads/information/image/' . $new->image) }}"
-                                                                                alt="">
-                                                                            
+                                                                        </span><span class="u-file-icon u-icon u-icon-63">
+
+                                                                            @if (isset($notice->image))
+                                                                                <img src="{{ asset($notice->image) }}"
+                                                                                    alt="">
                                                                             @else
-                                                                          
-                                                                            <img src="{{ url('img/logo.png') }}">
+                                                                                <img src="{{ url('img/logo.png') }}">
                                                                             @endif
-                                                                            </span>
-                                                                        <h5 class="u-text u-text-37">{{ $new->title }}
+                                                                        </span>
+                                                                        <h5 class="u-text u-text-37">{{ $notice->title }}
                                                                         </h5>
+
+
+
+
                                                                         <p class="u-text u-text-38"><span
-                                                                                class="u-file-icon u-icon"><img
-                                                                                    src="img/8110713.png"
-                                                                                    alt=""></span>&nbsp;
+                                                                                class="u-file-icon u-icon">
+                                                                                @if (!empty($notice->gdocs))
+                                                                                    <a href="{{ $notice->gdocs }}"
+                                                                                        target="__blank"
+                                                                                        data-toggle="tooltip"
+                                                                                        data-placement="top"
+                                                                                        title="Open the Form">
+                                                                                        <i class="fa fa-file-text-o"
+                                                                                            aria-hidden="true"></i>
+                                                                                    </a>
+                                                                                @else
+                                                                                    <i class="fa fa-file-o"
+                                                                                        aria-hidden="true"></i>
+                                                                                @endif
+                                                                            </span>
+
 
                                                                         </p>
+
                                                                         <p class="u-text u-text-39"><i
                                                                                 class="fa fa-calendar"
                                                                                 aria-hidden="true"></i>
-                                                                            {{ date('F jS,Y', strtotime($new->created_at)) }}
+                                                                            {{ date('F jS,Y', strtotime($notice->created_at)) }}
                                                                         </p>
+
                                                                     </div>
+
                                                                 </div>
                                                             @endforeach
                                                         @endif
+                                                        
+                                                     
                                                     </div>
                                                 </div>
                                             </div>
@@ -568,59 +560,54 @@
                                                 <div class="u-expanded-width u-list u-list-4">
                                                     <div class="u-repeater u-repeater-4">
 
-                                                        @if (count($notices) === 0)
+                                                        @if (count($news) === 0)
                                                             <p>{{ __('There are no files to Display') }}</p>
                                                         @else
-                                                            @foreach ($notices as $notice)
+                                                            @foreach ($news as $new)
                                                                 <div class="u-container-style u-list-item u-repeater-item">
                                                                     <div
                                                                         class="u-container-layout u-similar-container u-container-layout-18">
                                                                         <span class="u-file-icon u-icon u-icon-61">
 
                                                                             <a class="nodecoration" target="_blank"
-                                                                                href="{{ asset('uploads/information/file/' . $notice->file) }}" download><span
-                                                                                    class="events_i"><i
+                                                                                href="{{ asset($new->file) }}"
+                                                                                download><span class="events_i"><i
                                                                                         class="fa fa-download"
                                                                                         aria-hidden="true"></i></span>
                                                                             </a>
 
                                                                         </span>
                                                                         <span class="u-file-icon u-icon u-icon-62">
-                                                                            <a class="nodecoration" href="{{ asset('uploads/information/file/' . $notice->file) }}" target="_blank">
-                                                                            <i
-                                                                                class="fas fa-eye"></i>
+                                                                            <a class="nodecoration"
+                                                                                href="{{ asset( $new->file) }}"
+                                                                                target="_blank">
+                                                                                <i class="fas fa-eye"></i>
                                                                             </a>
-                                                                            </span><span
-                                                                            class="u-file-icon u-icon u-icon-63">
-                                                                            
-                                                                            @if (isset($notice->image))
-                                                                                
+                                                                        </span><span class="u-file-icon u-icon u-icon-63">
 
-                                                                            <img
-                                                                                src="{{ asset('uploads/information/image/' . $notice->image) }}"
-                                                                                alt=""> 
 
-                                                                                @else
-                                                                                    <img src="{{ url('logo.png') }}" alt="{{ $notice->title }}">
-                                                                                
+
+                                                                            @if (isset($new->image))
+                                                                                <img src="{{ asset($new->image) }}"
+                                                                                    alt="">
+                                                                            @else
+                                                                                <img src="{{ url('img/logo.png') }}">
                                                                             @endif
-                                                                            </span>
-                                                                        <h5 class="u-text u-text-37">{{ $notice->title }}
+                                                                        </span>
+                                                                        <h5 class="u-text u-text-37">{{ $new->title }}
                                                                         </h5>
                                                                         <p class="u-text u-text-38"><span
                                                                                 class="u-file-icon u-icon"><img
                                                                                     src="img/8110713.png"
-                                                                                    alt=""></span>
+                                                                                    alt=""></span>&nbsp;
 
                                                                         </p>
                                                                         <p class="u-text u-text-39"><i
                                                                                 class="fa fa-calendar"
                                                                                 aria-hidden="true"></i>
-                                                                            {{ date('F jS,Y', strtotime($notice->created_at)) }}
+                                                                            {{ date('F jS,Y', strtotime($new->created_at)) }}
                                                                         </p>
-
                                                                     </div>
-
                                                                 </div>
                                                             @endforeach
                                                         @endif
@@ -647,29 +634,28 @@
                                                                         <span class="u-file-icon u-icon u-icon-61">
 
                                                                             <a class="nodecoration" target="_blank"
-                                                                                href="{{ asset('uploads/documents/file/' . $publication->file) }}" download><span
-                                                                                    class="events_i"><i
+                                                                                href="{{ asset('uploads/documents/file/' . $publication->file) }}"
+                                                                                download><span class="events_i"><i
                                                                                         class="fa fa-download"
                                                                                         aria-hidden="true"></i></span>
                                                                             </a>
 
                                                                         </span>
                                                                         <span class="u-file-icon u-icon u-icon-62">
-                                                                            <a class="nodecoration" href="{{ asset('uploads/documents/file/' . $publication->file) }}" target="_blank">
-                                                                            <i
-                                                                                class="fas fa-eye"></i>
+                                                                            <a class="nodecoration"
+                                                                                href="{{ asset('uploads/documents/file/' . $publication->file) }}"
+                                                                                target="_blank">
+                                                                                <i class="fas fa-eye"></i>
                                                                             </a>
-                                                                            </span><span
-                                                                            class="u-file-icon u-icon u-icon-63">
-                                                                            @if(isset($publication->image))
-                                                                            <img
-                                                                                src="{{ asset('uploads/documents/image/' . $publication->image) }}"
-                                                                                alt="{{ $publication->title }}">
+                                                                        </span><span class="u-file-icon u-icon u-icon-63">
+                                                                            @if (isset($publication->image))
+                                                                                <img src="{{ asset('uploads/documents/image/' . $publication->image) }}"
+                                                                                    alt="{{ $publication->title }}">
                                                                             @else
-                                                                            <img src="{{ url('img/logo.png') }}" alt="{{ $publication->title }}">
-
+                                                                                <img src="{{ url('img/logo.png') }}"
+                                                                                    alt="{{ $publication->title }}">
                                                                             @endif
-                                                                            </span>
+                                                                        </span>
                                                                         <h5 class="u-text u-text-37">
                                                                             {{ $publication->title }}
                                                                         </h5>
@@ -710,30 +696,30 @@
                                                                         <span class="u-file-icon u-icon u-icon-61">
 
                                                                             <a class="nodecoration" target="_blank"
-                                                                                href="{{ asset('uploads/information/file/' . $pre->file) }}" download><span
-                                                                                    class="events_i"><i
+                                                                                href="{{ asset($pre->file) }}"
+                                                                                download><span class="events_i"><i
                                                                                         class="fa fa-download"
                                                                                         aria-hidden="true"></i></span>
                                                                             </a>
 
                                                                         </span>
                                                                         <span class="u-file-icon u-icon u-icon-62">
-                                                                            <a class="nodecoration" href="{{ asset('uploads/information/file/' . $pre->file) }}" target="_blank">
+                                                                            <a class="nodecoration"
+                                                                                href="{{ asset($pre->file) }}"
+                                                                                target="_blank">
 
-                                                                            <i
-                                                                                class="fas fa-eye"></i>
+                                                                                <i class="fas fa-eye"></i>
                                                                             </a>
-                                                                            
-                                                                            </span><span
-                                                                            class="u-file-icon u-icon u-icon-63">
-                                                                            @if(isset($pre->image))
-                                                                            <img
-                                                                                src="{{ asset('uploads/information/image/' . $pre->image) }}"
-                                                                                alt="{{ $pre->title }}">
+
+                                                                        </span><span class="u-file-icon u-icon u-icon-63">
+                                                                            @if (isset($pre->image))
+                                                                                <img src="{{ asset($pre->image) }}"
+                                                                                    alt="{{ $pre->title }}">
                                                                             @else
-                                                                            <img src="{{ url('img/logo.png') }}" alt="{{ $pre->title }}">
+                                                                                <img src="{{ url('img/logo.png') }}"
+                                                                                    alt="{{ $pre->title }}">
                                                                             @endif
-                                                                            </span>
+                                                                        </span>
                                                                         <h5 class="u-text u-text-37">{{ $pre->title }}
                                                                         </h5>
                                                                         <p class="u-text u-text-38"><span
@@ -785,11 +771,38 @@
     </section>
 
 
-   
-       
 
 
- 
+
+
+
+
+    {{-- <section class="u-align-center u-clearfix u-palette-5-light-3 u-section-6" id="carousel_f852">
+        <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
+            <h3 class="u-text u-text-default u-text-1"> {{ __('Gallery') }}<span style="font-weight: 700;"></span>
+            </h3>
+            <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
+                <div class="u-gallery-inner u-gallery-inner-1">
+                    @foreach ($images as $img)
+                    @foreach ($img->img as $imgUrl)
+                        <div class="u-effect-fade u-gallery-item">
+                            <div class="u-back-slide" data-image-width="513" data-image-height="300">
+                                <img class="u-back-image u-expanded u-back-image-1"
+                                    src="{{ asset($imgUrl) }}">
+                            </div>
+                            <div class="u-over-slide u-shading u-over-slide-1">
+                                <h3 class="u-gallery-heading"></h3>
+                                <p class="u-gallery-text"></p>
+                            </div>
+                        </div>
+                        @endforeach
+                    @endforeach
+
+
+                </div>
+            </div>
+        </div>
+    </section> --}}
 
     <section class="u-align-center u-clearfix u-palette-5-light-3 u-section-6" id="carousel_f852">
         <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
@@ -797,24 +810,229 @@
             </h3>
             <div class="u-expanded-width u-gallery u-layout-grid u-lightbox u-show-text-on-hover u-gallery-1">
                 <div class="u-gallery-inner u-gallery-inner-1">
-                    @foreach ($images as $img)
-                        <div class="u-effect-fade u-gallery-item">
-                            <div class="u-back-slide" data-image-width="513" data-image-height="300">
-                                <img class="u-back-image u-expanded u-back-image-1"
-                                    src="{{ asset('uploads/image/' . $img->img) }}">
-                            </div>
-                            <div class="u-over-slide u-shading u-over-slide-1">
-                                <h3 class="u-gallery-heading"></h3>
-                                <p class="u-gallery-text"></p>
-                            </div>
+
+                   
+                        <div class="row">
+                            @foreach ($images as $image)
+                           
+                                <div class="col-md-6 col-lg-6 col-sm-12 mb-3">
+                                     <a href="{{ route('render_singleimage',$image->id) }}">
+                                    <div class="accordion">
+                                        <ul>
+
+                                            @foreach ($image->img as $imgUrl)
+                                                <li tabindex="{{ $loop->iteration }}"
+                                                    style=" background-image: url('{{ asset($imgUrl) }}');">
+
+                                                </li>
+                                            @endforeach
+
+                                        </ul>
+                                        {{-- <span class="gallery_title text-center">
+                {{ $image->img_desc }}
+            </span> --}}
+                                    </div>
+                                       </a>
+                                </div>
+                         
+                            @endforeach
                         </div>
-                    @endforeach
-
-
+                   
                 </div>
             </div>
+
         </div>
+        {{-- </div> --}}
     </section>
+
+
+  {{-- For Instagram Embed --}}
+  <section class="insta-embed">
+    <div class="container">
+        <div class="row">
+            @foreach ($instas as $insta)
+       
+            <div class="col-md-4">
+                <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="{{ $insta->url }}" data-instgrm-version="14"></blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+            </div>
+                     
+            @endforeach
+    </div>
+</section>
+
+
+    <style>
+        .accordion {
+            width: 100%;
+            max-width: 100%;
+            height: 250px;
+            overflow: hidden;
+            margin: 0px auto;
+        }
+
+        .accordion ul {
+            width: 100%;
+            display: table;
+            table-layout: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .accordion ul li {
+            display: table-cell;
+            vertical-align: bottom;
+            position: relative;
+            width: 16.666%;
+            height: 250px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+            transition: all 500ms ease;
+        }
+
+        .accordion ul li div {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .accordion ul li div a {
+            display: block;
+            height: 250px;
+            width: 100%;
+            position: relative;
+            z-index: 3;
+            vertical-align: bottom;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            color: #fff;
+            text-decoration: none;
+            font-family: Open Sans, sans-serif;
+            transition: all 200ms ease;
+        }
+
+        .accordion ul li div a * {
+            opacity: 0;
+            margin: 0;
+            width: 100%;
+            text-overflow: ellipsis;
+            position: relative;
+            z-index: 5;
+            white-space: nowrap;
+            overflow: hidden;
+            -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+            -webkit-transition: all 400ms ease;
+            transition: all 400ms ease;
+        }
+
+        .accordion ul li div a h2 {
+            font-family: Montserrat, sans-serif;
+            text-overflow: clip;
+            font-size: 24px;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+            top: 160px;
+        }
+
+        .accordion ul li div a p {
+            top: 160px;
+            font-size: 13.5px;
+        }
+
+
+        .accordion ul:hover li,
+        .accordion ul:focus-within li {
+            width: 8%;
+        }
+
+        .accordion ul li:focus {
+            outline: none;
+        }
+
+        .accordion ul:hover li:hover,
+        .accordion ul li:focus,
+        .accordion ul:focus-within li:focus {
+            width: 60%;
+            background-size: cover;
+        }
+
+        .accordion ul:hover li:hover a,
+        .accordion ul li:focus a,
+        .accordion ul:focus-within li:focus a {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .accordion ul:hover li:hover a *,
+        .accordion ul li:focus a *,
+        .accordion ul:focus-within li:focus a * {
+            opacity: 1;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        .accordion ul:hover li {
+            width: 8% !important;
+        }
+
+        .accordion ul:hover li a * {
+            opacity: 0 !important;
+        }
+
+        .accordion ul:hover li:hover {
+            width: 60% !important;
+        }
+
+        .accordion ul:hover li:hover a {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .accordion ul:hover li:hover a * {
+            opacity: 1 !important;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        /* @media screen and (max-width: 600px) {
+
+
+            .accordion {
+                height: auto;
+            }
+
+            .accordion ul li,
+            .accordion ul li:hover,
+            .accordion ul:hover li,
+            .accordion ul:hover li:hover {
+                position: relative;
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+                -webkit-transition: none;
+                transition: none;
+            }
+        } */
+
+        /* .about {
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .about a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .about a:hover {
+            text-decoration: underline;
+        } */
+    </style>
+
+
+
     <section class="u-clearfix u-palette-5-light-2 u-section-7" id="sec-931a">
         <div class="u-clearfix u-sheet u-sheet-1">
             <h3 class="u-text u-text-default u-text-1"> {{ __('Video') }}</h3>
@@ -827,8 +1045,8 @@
                                 <div class="u-container-layout u-container-layout-1">
                                     <div class="u-align-left u-expanded u-uploaded-video u-video">
                                         <div class="embed-responsive embed-responsive-1">
-                                            <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"
-                                                class="embed-responsive-item" src="https://www.youtube.com/embed/{{ $vid->vid_url }}" frameborder="0"
+                                            <iframe class="embed-responsive-item"
+                                                src="https://www.youtube.com/embed/{{ $vid->vid_url }}" frameborder="0"
                                                 allowfullscreen=""></iframe>
                                         </div>
                                     </div>
@@ -836,7 +1054,7 @@
                             </div>
                         @endforeach
 
-                      
+
                     </div>
                 </div>
             </div>
@@ -853,13 +1071,13 @@
                         <div class="u-container-layout u-container-layout-1">
                             <div class="u-absolute-hcenter u-expanded u-grey-light-2 u-map">
                                 <div class="embed-responsive">
-                              
-                                   
-                                   
-                                    <iframe src="{{ $sitesetting->google_map }}"
-                                    width="600" height="450" style="border:0;" allowfullscreen=""
-                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                  
+
+
+
+                                    <iframe src="{{ $sitesetting->google_map }}" width="600" height="450"
+                                        style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                                 </div>
                             </div>
                         </div>
@@ -923,38 +1141,38 @@
 
                                 </form> --}}
                                 <form id="quick_contactindex" class="form-horizontal" method="POST" role="form"
-                                action="{{ route('admin.contactus.store') }}">
-                                @csrf
-                                <div class="form-group">
-            
-                                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name"
-                                        value="" required>
-            
-                                </div>
-            
-                                <div class="form-group">
-            
-                                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email"
-                                        value="" required>
-            
-                                </div>
-            
-                                <div class="form-group">
-            
-            
-                                    <input type="phone" name="phone" class="form-control" id="phone" placeholder="Phone No."
-                                        required>
-            
-            
-                                </div>
-            
-                                <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-            
-            
-            
-            
-            
-                                {{-- <div class="g-recaptcha" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"></div>
+                                    action="{{ route('admin.contactus.store') }}">
+                                    @csrf
+                                    <div class="form-group">
+
+                                        <input type="text" class="form-control" id="name" placeholder="NAME"
+                                            name="name" value="" required>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+                                        <input type="email" class="form-control" id="email" placeholder="EMAIL"
+                                            name="email" value="" required>
+
+                                    </div>
+
+                                    <div class="form-group">
+
+
+                                        <input type="phone" name="phone" class="form-control" id="phone"
+                                            placeholder="Phone No." required>
+
+
+                                    </div>
+
+                                    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+
+
+
+
+                                    {{-- <div class="g-recaptcha" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"></div>
             
             
             
@@ -967,41 +1185,40 @@
                                         </div>
             
                                     </button> --}}
-            
-                                {{-- {!! htmlFormSnippet() !!} --}}
-                                {{-- <div class="g-recaptcha" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"></div>
+
+                                    {{-- {!! htmlFormSnippet() !!} --}}
+                                    {{-- <div class="g-recaptcha" data-sitekey="{{ getenv('RECAPTCHA_SITE_KEY') }}"></div>
                                 <button class="btn send-button" id="submit" type="submit" value="SEND">
                                     <div class="alt-send-button">
                                         <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
                                     </div>
             
                                 </button> --}}
-            
-            
-                        <button class="btn btn-primary p-2 mt-2 mx-auto g-recaptcha" data-sitekey="{{ config('services.recaptcha.site_key') }}" 
-                        data-callback='onSubmit' 
-                        data-action='submit' style="background: #0b1f6d">
-                            <div class="alt-send-button">
-                                <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
-                            </div>
 
-                        </button> 
-            
-            
-                            </form>
-                            <script>
-                                function onSubmit(token) {
-                                    document.getElementById("quick_contactindex").submit();
-                                }
-            
-                            </script>
+
+                                    <button class="btn btn-primary p-2 mt-2 mx-auto g-recaptcha"
+                                        data-sitekey="{{ config('services.recaptcha.site_key') }}"
+                                        data-callback='onSubmit' data-action='submit' style="background: #0b1f6d">
+                                        <div class="alt-send-button">
+                                            <i class="fa fa-paper-plane"></i><span class="send-text">Let's Connect</span>
+                                        </div>
+
+                                    </button>
+
+
+                                </form>
+                                <script>
+                                    function onSubmit(token) {
+                                        document.getElementById("quick_contactindex").submit();
+                                    }
+                                </script>
                             </div>
                         </div>
                     </div>
                     <div class="u-container-style u-image u-image-contain u-layout-cell u-size-15-lg u-size-15-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1"
                         data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500"
                         data-image-width="396" data-image-height="768">
-                     
+
 
 
 
@@ -1018,10 +1235,10 @@
     <section class="u-align-center u-clearfix u-palette-5-light-1 u-section-9" id="carousel_3ac4">
         <div class="u-clearfix u-sheet u-sheet-1">
             <h3 class="u-text u-text-1">{{ __('Blog') }}</h3>
-           
+
             <div class="u-blog u-expanded-width u-blog-1">
                 <div class="u-repeater u-repeater-1">
-               
+
                     @foreach ($posts as $post)
                         <div
                             class="u-align-left u-blog-post u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
@@ -1029,30 +1246,30 @@
                                 class="u-container-layout u-similar-container u-valign-top-sm u-valign-top-xs u-container-layout-1 ">
 
                                 <a class="u-post-header-link" href="">
-                                    
+
                                     <img alt=""
                                         class="u-blog-control u-expanded-width-xs u-image u-image-default u-image-1"
                                         src="{{ asset('uploads/posts/' . $post->image) }}" data-image-width="567"
                                         data-image-height="696">
-                                    
+
                                 </a>
-                              
+
                                 <h4 class="u-blog-control u-text u-text-2">
-                                   
+
                                     <a href="/render_posts/{{ $post->slug }}">
                                         {{ $post->title }}
 
                                     </a>
                                 </h4>
-                               
+
                                 <div class="u-blog-control u-metadata u-text-grey-30 u-metadata-1">
-                                   
+
                                     <span class="u-meta-date u-meta-icon">
-                                       
+
                                         {{ date('Y-m-d', strtotime($post->created_at)) }}
-                                       
+
                                     </span>
-                                    
+
                                     <span class="u-meta-comments u-meta-icon">
                                         Comments (0)
                                     </span>
@@ -1061,15 +1278,37 @@
                             </div>
                         </div>
                     @endforeach
-       
+
                 </div>
             </div>
-         
+
         </div>
     </section>
+
+
+
+
+      {{-- For Over Lay Image and the java script --}}
+
+      @if (!empty($noticepop->image))
+      <div id="popup-overlay">
+          <div id="popup">
+              <img src="{{ asset($noticepop->image) }}" alt="Pop-up Image">
+              <button id="close-btn">Close</button>
+          </div>
+      </div>
+  @endif
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var popup = document.getElementById('popup-overlay');
+          var closeButton = document.getElementById('close-btn');
+
+          popup.style.display = 'block';
+
+          closeButton.addEventListener('click', function() {
+              popup.style.display = 'none';
+          });
+      });
+  </script>
 @endsection
-
-
-
-
-

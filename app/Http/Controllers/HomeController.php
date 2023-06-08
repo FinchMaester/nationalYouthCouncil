@@ -17,6 +17,7 @@ use App\Models\OtherPost;
 use App\Models\CoverImage;
 use App\Models\Information;
 use App\Models\SiteSetting;
+use App\Models\Insta;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -27,10 +28,14 @@ class HomeController extends Controller
     public function index(Request $req){
 
         $coverimages = CoverImage::latest()->get()->take(5);
-        $links = Link::latest()->get()->take(5);
-        $images = MyImage::latest()->get()->take(6);
-        $teams = Team::where('role', 'Administrative Chief')
-                        ->orWhere('role', 'Information Officer')->get()->take(2);
+        $links = Link::latest()->get()->take(7);
+        $images = MyImage::latest()->get()->take(4);
+        $teams = Team::where('role', 'Chairperson')
+                        ->orWhere('role', 'Vice Chairperson')
+                        ->orWhere('role', 'Administrative Chief')
+                        ->orWhere('role', 'Information Officer')
+                        
+                        ->get()->take(4);
         
         // $suchana = Team::where('position', 'Information Officer')->get()->take(1);
         $about = About::first();
@@ -42,6 +47,7 @@ class HomeController extends Controller
         $press = Information::whereType('pressrelease')->latest()->get()->take(5);
         $news = Information::whereType('news')->latest()->get()->take(5);
         $noticepop = Information::whereType('notice')->latest()->first();
+        $instas = Insta::latest()->get()->take(3);
 
         return view('portal.index', [
             'coverimages' => $coverimages,
@@ -58,6 +64,7 @@ class HomeController extends Controller
             // 'suchana'=> $suchana,
             'news' => $news,
             'noticepop' => $noticepop,
+            'instas' => $instas
 
         ]);
 

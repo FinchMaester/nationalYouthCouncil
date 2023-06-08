@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-
 use Exception;
 use Carbon\Carbon;
 use App\Models\MyImage;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Gate;
+use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\UtilityFunctions;
 
 class ImageController extends Controller
@@ -31,29 +32,41 @@ class ImageController extends Controller
     public function store(Request $request)
     {
     
-       
-        $this->validate($request, [
-            'img_desc' => 'required|string',
-            'img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:1536',
-        ]);
-
+    //    dd($request);
   
-        $newImageName = time() . '-' . $request->img_desc . '.' .$request->img->extension();
-        $request->img->move(public_path('uploads/image/'), $newImageName );
+        $data = $request->validate([
+            'img_desc' => 'required|string|max:255',
+            'img' => 'required|array',
+            'img.*' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048' // maximum file size of 2 MB
+        ]);
+        
+        $images = [];
+        
+        foreach ($data['img'] as $image) {
+            $fileName = uniqid() . '.webp';
+            $image_path = 'uploads/image/' . $fileName;
+        
+            $directory = public_path('uploads/image');
 
-
-
-        $image = new MyImage;
-
-    
-            $image->img_desc = $request->img_desc;
-            
-            $image->img =$newImageName;
-            
-        $image->save();
-
+            // Create the directory if it doesn't exist
+            if (!File::isDirectory($directory)) {
+                File::makeDirectory($directory, 0755, true, true);
+            }
+            // Open the uploaded image file
+            $img = Image::make($image->getRealPath());
+        
+            // Convert the image to webp format and set quality to 70%
+            $img->encode('webp', 70)->save(public_path($image_path));
+        
+            array_push($images, $image_path);
+        }
+        
+        $data['img'] = $images;
+        
+        MyImage::create($data);
+        
         return redirect('admin/image/index')->with(['successMessage' => 'Success !! Image created']);
-    }
+            }
 
     public function destroy($id){
         $image = MyImage::find($id);

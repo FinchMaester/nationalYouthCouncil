@@ -20,6 +20,18 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
+            @if(session('success'))
+            <div class="alert alert-success">
+              {!! session('success') !!}
+            </div>
+            @endif
+
+            @if(session('error'))
+            <div class="alert alert-danger">
+              {!! session('error') !!}
+            </div>
+            @endif
+
         <form id="quickForm"  method="POST" action="{{ route('About.store') }}"
         enctype="multipart/form-data">
         @csrf

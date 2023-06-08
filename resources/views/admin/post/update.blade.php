@@ -33,8 +33,8 @@
               {{-- <option value="0" disabled selected> --select type-- </option> --}}
               {{-- @if ($post->getCategories->contains($category->id)) --}}
                 @foreach ($categories as $category )
-                    <option value ="{{ $category->id }}"> {{ $category->title ?? '' }} </option>
-                    {{-- @if ($post->getCategories->contains($category->id))selected @endif --}}
+                <option value ="{{ $category->id }}" {{ $category->id == $post->get_categories->pluck('id')->first() ? 'selected' : '' }}>{{ $category->title }}</option>
+                {{-- @if ($post->getCategories->contains($category->id))selected @endif --}}
                     
                 @endforeach
 

@@ -20,14 +20,16 @@
                 </div><!-- /.col -->
             </div><!-- /.row -->
 
-
-    <table class="table table-bordered table-hover">
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-responsive">
         <thead>
             <tr>
+              <th>S.N.</th>
                 <th>Type</th>
                 <th>Title</th>
-                <th>Slug</th>
-                <th>Description</th>
+                {{-- <th>Slug</th> --}}
+           
+                <th>Docs URl</th>
                 <th>Image</th>
                 <th>File</th>
                 <th>Action</th>
@@ -37,13 +39,14 @@
         <tbody>
             @foreach ($information as $info)
                 <tr data-widget="expandable-table" aria-expanded="false">
+                  <td>{{ $loop->iteration }}</td>
                     <td>{{ $info->type ?? '' }}</td>
                     <td>{{ $info->title ?? '' }}</td>
-                    <td>{{ $info->slug ?? '' }}</td>
-                    <td>{{ $info->description ?? '' }}</td>
-                    <td><img id="preview" src="{{ url('uploads/information/image/' . $info->image) }}"
+                    {{-- <td>{{ $info->slug ?? '' }}</td> --}}
+                    <td width="200px">{{ $info->gdocs ?? '' }}</td>
+                    <td><img id="preview" src="{{ asset( $info->image) }}"
                       style="width: 100px; height:100px; object-fit:cover;" /></td>
-                    <td><iframe src="{{ asset('uploads/information/file/' . $info->file) }}" title="" style="width: 100px; height:100px;"></iframe>
+                    <td><iframe src="{{ asset($info->file) }}" title="" style="width: 100px; height:100px;"></iframe>
 
                     <td>
 
@@ -118,6 +121,30 @@
 
         @endforeach
     </table>
+
+    <div class="d-flex justify-content-center">
+      {!! $information->links() !!}
+    </div>
+    
+
+
+    @if (isset($links) && is_array($links))
+
+
+    <div class="p-4">
+
+      @foreach ($links as $link )
+
+      <a href="{{ $link[1] }}">
+        <button class="btn btn-primary">{{ $link[0] }}</button>
+      </a>
+      @endforeach
+    </div>
+
+    @endif
+
+
+  </div>
 
     <script>
         var myModal = document.getElementById('myModal')

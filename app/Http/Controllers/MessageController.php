@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Message;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MessageController extends Controller
 {
@@ -14,14 +15,11 @@ class MessageController extends Controller
      */
     public function index()
     {
-        $administrative = Message::whereType('administrativehead')->latest()->get()->take(1);
-        $chairperson = Message::whereType('chairperson')->latest()->get()->take(1);
-        $messages = Message::all();
+              $messages = Message::all();
         return view('admin.message.index', [
             "messages" => $messages,
             "page_title" => "Message Index",
-            "administrative" => $administrative,
-            "chairperson" => $chairperson
+           
         ]);
     }
 
@@ -52,9 +50,12 @@ class MessageController extends Controller
             "image" => "image|mimes:jpg,png,peg,gif,svg|max:2048",
         ]);
 
-        $newImage = time() . "-" . $request->name . "-" . $request->image->extension();
-        $request->image->move(public_path('uploads/message/'), $newImage);
-
+        if($request->hasFile('image')){
+            $newImage = time() . "-image" . $request->title . '.' . $request->image->extension();
+            $request->image->move(public_path('uploads/message/'), $newImage);
+        }else{
+            $newImage= null;
+        }
         $message = new Message();
         $message->type = $request->type;
         $message->name = $request->name;
@@ -113,13 +114,20 @@ class MessageController extends Controller
 
         $message = Message::find($request->id);
 
-        $newImage = time() . "-" . $request->name . "-" . $request->image->extension();
-        $request->image->move(public_path('uploads/message'), $newImage);
-
+     
+        if ($request->hasFile('image')) {
+            $newImageName = time() . '-image' . $request->title . $request->image->extension();
+            $request->image->move(public_path('uploads/message/'), $newImageName );
+            Storage::delete('uploads/message/' . $message->image);
+            $message->image = $newImageName;
+        }else{
+            unset($request['file']);
+            
+        }
         $message->type = $request->type;
         $message->name = $request->name;
         $message->description = $request->description;
-        $message->image = $newImage;
+ 
 
         $message->save();
 

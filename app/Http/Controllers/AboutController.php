@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Exception;
 use Carbon\Carbon;
 use App\Models\About;
-use App\Models\Sitesetting;
+use App\Models\SiteSetting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Gate;
@@ -19,10 +19,10 @@ class AboutController extends Controller
     public function index()
     {
         
-        $abouts = About::paginate(50);
-        $sitesetting = Sitesetting::first();
+        $abouts = About::paginate(1);
 
-        return view('admin.about.index', ['abouts' => $abouts, 'page_title' =>'About', 'sitesetting' => $sitesetting]);
+
+        return view('admin.about.index', ['abouts' => $abouts, 'page_title' =>'About']);
     }
 
     /**

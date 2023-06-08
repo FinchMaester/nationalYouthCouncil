@@ -17,7 +17,9 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrapcss/bootstrap.min.css') }}">
     <script src="https://kit.fontawesome.com/160b82d057.js" crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/png" sizes="128x128" href="{{ asset('favicon.png') }}">
+    
     <link rel="stylesheet" href="{{ asset('css/venobox.min.css') }}" type="text/css" media="screen" />
     <script class="u-script" type="text/javascript" src="{{ asset('js/jquery.js') }}" defer=""></script>
     <script class="u-script" type="text/javascript" src="{{ asset('js/aasha.js') }}" defer=""></script>

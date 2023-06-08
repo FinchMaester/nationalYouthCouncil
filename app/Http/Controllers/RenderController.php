@@ -28,7 +28,7 @@ class RenderController extends Controller
     public function render_about(){
         $sitesetting = SiteSetting::first();
         $mvcs = Mvc::latest()->get()->take(4);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $categories = Category::all();
         $abouts = About::first();
         $teams = Team::latest()->get()->take(3);
@@ -39,7 +39,7 @@ class RenderController extends Controller
         $orgchart = Orgchart::first();
         $sitesetting = SiteSetting::first();
         $mvcs = Mvc::latest()->get()->take(4);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $categories = Category::all();
         $abouts = About::first();
         $teams = Team::latest()->get()->take(3);
@@ -50,10 +50,12 @@ class RenderController extends Controller
 
     public function render_team(){
         $sitesetting = SiteSetting::first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $categories = Category::all();
         $abouts = About::latest()->get()->take(1);
-        $teams = Team::all();
+        $excludedRoles = ['Chairperson', 'Vice Chairperson'];
+        $teams = Team::whereNotIn('role', $excludedRoles)->orderBy('order')->get();
+        // $teams = Team::all();
         $notice =OtherPost::whereType('notice')->latest()->get()->take(5);
         $publication = OtherPost::whereType('publication')->latest()->get()->take(5);
         $tender = OtherPost::whereType('tender')->latest()->get()->take(5);
@@ -72,7 +74,7 @@ class RenderController extends Controller
     public function render_images(){
         $sitesetting = SiteSetting::first();
         $images = MyImage::all();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $notice =OtherPost::whereType('notice')->latest()->get()->take(5);
         $publication = OtherPost::whereType('publication')->latest()->get()->take(5);
         $tender = OtherPost::whereType('tender')->latest()->get()->take(5);
@@ -85,10 +87,20 @@ class RenderController extends Controller
         return view('portal.render_images', compact('images','notice','publication','tender','links','rules','directot','press','news','other', 'sitesetting'));
     }
 
+    public function render_singleimage($id){
+        $sitesetting = SiteSetting::first();
+        $images = MyImage::find($id);
+        $links = Link::latest()->get()->take(7);
+        // if (!$images) {
+        //     return redirect()->back()->with(['errorMessage' => 'No images found.']);
+        // }
+
+        return view('portal.render_singleimage', compact('sitesetting', 'images','links'));
+    }
     public function render_videos(){
         $sitesetting = SiteSetting::first();
         $videos = Video::all();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $notice =OtherPost::whereType('notice')->latest()->get()->take(5);
         $publication = OtherPost::whereType('publication')->latest()->get()->take(5);
         $tender = OtherPost::whereType('tender')->latest()->get()->take(5);
@@ -106,7 +118,7 @@ class RenderController extends Controller
     public function render_notice(){
         $sitesetting = SiteSetting::first();
         $notices = Information::whereType('notice')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_notice', compact('notices', 'sitesetting', 'links'));
 
@@ -114,7 +126,7 @@ class RenderController extends Controller
     public function render_publication(){
         $sitesetting = SiteSetting::first();
         $publications = Document::whereType('publication')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_publication', compact('publications', 'sitesetting', 'links'));
 
@@ -122,14 +134,14 @@ class RenderController extends Controller
     public function render_tender(){
         $sitesetting = SiteSetting::first();
         $tender = Information::whereType('tender')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_tender', compact('tender', 'sitesetting', 'links'));
 
     }
     public function render_rules(){
         $sitesetting = SiteSetting::first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         $rules = Document::whereType('policy')->latest()->get()->take(20);
         return view('portal.render_rules', compact('rules', 'sitesetting', 'links'));
@@ -138,7 +150,7 @@ class RenderController extends Controller
     public function render_directot(){
         $sitesetting = SiteSetting::first();
         $directot =Document::whereType('directive')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_directot', compact('directot', 'sitesetting', 'links'));
 
@@ -146,7 +158,7 @@ class RenderController extends Controller
     public function render_press(){
         $sitesetting = SiteSetting::first();
         $press =Information::whereType('pressrelease')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_press', compact('press', 'sitesetting', 'links'));
 
@@ -154,15 +166,33 @@ class RenderController extends Controller
     public function render_news(){
         $sitesetting = SiteSetting::first();
         $news = Information::whereType('news')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_news', compact('news', 'sitesetting', 'links'));
+
+    }
+    public function render_oppurtunity(){
+        $sitesetting = SiteSetting::first();
+        $oppurtunity = Information::whereType('oppurtunity')->latest()->get()->take(20);
+        $links = Link::latest()->get()->take(7);
+
+        return view('portal.render_oppurtunity', compact('oppurtunity', 'sitesetting', 'links'));
+
+    }
+    public function render_budget(){
+        $sitesetting = SiteSetting::first();
+        // $budgets = Information::where('type', 'programbudget')->get();
+        $budgets = Document::whereType('programbudget')->latest()->get()->take(20);
+
+        $links = Link::latest()->get()->take(7);
+
+        return view('portal.render_budget', compact('budgets', 'sitesetting', 'links'));
 
     }
     public function render_youthstats(){
         $sitesetting = SiteSetting::first();
         $youth = Youth::whereType('youthstats')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_youthstats', compact('youth', 'sitesetting', 'links'));
 
@@ -170,7 +200,7 @@ class RenderController extends Controller
     public function render_youthactivity(){
         $sitesetting = SiteSetting::first();
         $youthactivity = Youth::whereType('youthactivity')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_youthactivity', compact('youthactivity', 'sitesetting', 'links'));
 
@@ -178,7 +208,7 @@ class RenderController extends Controller
     public function render_other(){
         $sitesetting = SiteSetting::first();
         $other = Information::whereType('other')->latest()->get()->take(20);
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_other', compact('other', 'sitesetting', 'links'));
 
@@ -186,7 +216,7 @@ class RenderController extends Controller
     public function render_otherpost(Request $req, $slug=''){
         $sitesetting = SiteSetting::first();
         $otherpost = Document::where("slug", $slug)->first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_otherpost', compact('otherpost','sitesetting', 'links'));
 
@@ -194,7 +224,7 @@ class RenderController extends Controller
     public function render_otherpost_news(Request $req, $id=''){
         $sitesetting = SiteSetting::first();
         $otherpost = Document::where("id", $id)->first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
 
         return view('portal.render_otherpost_news', compact('otherpost','sitesetting', 'links'));
@@ -205,7 +235,7 @@ class RenderController extends Controller
     public function render_info(Request $req, $slug){
         $sitesetting = SiteSetting::first();
         $otherpost = Information::where("slug", $slug)->first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.includes.render_infopost', compact('otherpost', 'sitesetting', 'links'));
     }
@@ -213,7 +243,7 @@ class RenderController extends Controller
     public function render_other_post(Request $req, $slug){
         $sitesetting = SiteSetting::first();
         $otherpost = Other::where("slug", $slug)->first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.includes.render_otherpost', compact('otherpost', 'sitesetting', 'links'));
     }
@@ -221,8 +251,8 @@ class RenderController extends Controller
     public function render_committee()
     {
         $sitesetting = SiteSetting::first();
-        $committee = CommitteeDetail::latest()->get();
-        $links = Link::latest()->get()->take(6);
+        $committee = CommitteeDetail::all();
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_committee', [
             "committee" => $committee,
@@ -235,8 +265,8 @@ class RenderController extends Controller
     public function render_administrative()
     {
         $sitesetting = SiteSetting::first();
-        $administrative = Message::whereType('administrativehead')->latest()->get()->take(1);
-        $links = Link::latest()->get()->take(6);
+        $administrative = Message::whereType('Administrativehead')->latest()->get()->take(1);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_administrative', [
             "administrative" => $administrative,
@@ -246,29 +276,42 @@ class RenderController extends Controller
         ]);
     }
 
-    public function render_chairperson()
-    {
-        $sitesetting = SiteSetting::first();
-        $chairperson = Message::whereType('chairperson')->latest()->get()->take(1);
-        $links = Link::latest()->get()->take(6);
+    // public function render_chairperson()
+    // {
+    //     $sitesetting = SiteSetting::first();
+    //     $message = Message::whereType('Vicechairperson')->latest()->get()->take(1);
+    //     $links = Link::latest()->get()->take(6);
+
+    //     return view('portal.render_chairperson', [
+    //         "message" => $message,
+    //         "sitesetting" => $sitesetting,
+    //         "page_title" => "Message from Vice Chairperson",
+    //         "links" => $links,
+
+    //     ]);
+    // }
+
+    public function render_vice(Request $req){
+        $sitesetting = Sitesetting::first();
+        $links = Link::latest()->get()->take(7);
+        $message = Message::where('type','Vicechairperson')->first();
 
         return view('portal.render_chairperson', [
-            "chairperson" => $chairperson,
-            "sitesetting" => $sitesetting,
-            "page_title" => "Message from Chairperson",
-            "links" => $links,
-
+            'sitesetting' => $sitesetting,
+            'links' => $links,
+            'page_title' => "Message from the Vice Chairperson",
+            'message' => $message
         ]);
     }
 
     public function contact_page(){
 
         $sitesetting = SiteSetting::first();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.contact_page', [
             'sitesetting' => $sitesetting,
-            "links" => $links,
+            'links' => $links,
         ]);
 
     }
@@ -277,7 +320,7 @@ class RenderController extends Controller
     {
         $sitesetting = SiteSetting::first();
         $executivedetail = ExecutiveDetail::all();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
 
         return view('portal.render_executive_members', [
             'executivedetail' => $executivedetail,
@@ -293,7 +336,7 @@ class RenderController extends Controller
         $sitesetting = SiteSetting::first();
         $post = Post::where("slug", $slug)->first();
         $posts = Post::all();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $postslist = Post::all()->except($post->id);
         return view('portal.render_post',[
             'sitesetting'=>$sitesetting,
@@ -309,7 +352,7 @@ class RenderController extends Controller
         # code...
         $sitesetting = SiteSetting::first();
         $posts = Post::all();
-        $links = Link::latest()->get()->take(6);
+        $links = Link::latest()->get()->take(7);
         $postslist = Post::latest()->get()->take(6);
         return view('portal.render_all_posts',[
             'sitesetting'=>$sitesetting,

@@ -26,7 +26,7 @@
             <tr>
                 <th>Position</th>
                 <th>Name</th>
-                <th>Description</th>
+                {{-- <th>Description</th> --}}
                 <th>Image</th>
                 <th>Action</th>
 
@@ -37,8 +37,8 @@
                 <tr data-widget="expandable-table" aria-expanded="false">
                     <td>{{ $msg->type ?? '' }}</td>
                     <td>{{ $msg->name ?? '' }}</td>
-                    <td>{!! $msg->description ?? '' !!}</td>
-                    <td><img id="preview" src="{{ url('uploads/message/' . $msg->image) }}"
+                    {{-- <td>{!! Str::substr($msg->description, 0, 200) !!}</td> --}}
+                    <td><img id="preview" src="{{ url('uploads/message/' . $msg->image ?? '') }}"
                       style="width: 100px; height:100px; object-fit:cover;" /></td>
                     <td>
                         <div style="display: flex; flex-direction:row;">

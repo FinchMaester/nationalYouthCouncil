@@ -1,12 +1,15 @@
 <section class="topnav">
     <div class="container main_nav">
-        <div class="row">
-            <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 mainlogo">
+        <div class="row ">
+            <div class="col-md-3 col-lg-3 mainlogo">
 
-                <img src="{{ asset('uploads/sitesetting/' . $sitesetting->main_logo) }}" class="top_nav_mainlogo">
+                <img class="mainlogo_img" src="{{ asset('uploads/sitesetting/' . $sitesetting->main_logo) }}"
+                    class="top_nav_mainlogo">
 
             </div>
-            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 top_nav_topic" style="margin-top:3px">
+
+            <div class="col-md-6 col-lg-6 top_nav_topic">
+
                 <h4 style="color: black"> {{ __($sitesetting->govn_name) }} </h4>
                 <h5>{{ __($sitesetting->ministry_name) }}</h5>
                 <h6 class="nav_text">{{ __($sitesetting->office_name) }}</h6>
@@ -15,7 +18,7 @@
                 </h6>
 
             </div>
-            <div class="col-md-3 col-lg-3 col-sm-12 flag_container">
+            <div class="col-md-3 col-lg-3 flag_container">
 
                 <img class="top_nav_flag" src="{{ asset('uploads/sitesetting/' . $sitesetting->flag_logo) }}"
                     alt="nyc flag logo">
@@ -40,39 +43,6 @@
 
 
 <header class=" u-clearfix u-header u-section-row-container" id="sec-05f6">
-    {{-- <div class="u-section-rows">
-        <div class="u-align-center u-palette-4-dark-2 u-section-row" id="sec-b03b">
-            <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-sheet-1">
-                <div class="u-social-icons u-social-icons-1">
-                    <img src="{{ asset($sitesetting->main_logo)}}" class="top_image_nav" data-image-width="100">
-
-
-
-                </div>
-
-                        <div class="top-info">
-                        <h4 style="color: black"> नेपाल सरकार </h4>
-                        <h5>युवा तथा खेलकुद मन्त्रालय</h5>
-                        <h6>राष्ट्रिय युवा परिषद्</h6>
-                        <h7>
-                            सानोठिमी, भक्तपुर
-                        </h7>
-                    </div>
-
-                @foreach (config('app.languages') as $langLocale => $langName)
-                <a href="{{ url()->current() }}?change_language={{ $langLocale }}"
-                    class="u-active-palette-4-dark-1 u-border-none u-btn u-button-style u-palette-4-light-1 u-btn-4">
-                    {{ strtoupper($langLocale) }}
-                </a>
-                @endforeach
-
-                <img class="flag_image" src="{{ asset('img/nepal_flag.gif') }}" alt="">
-            </div>
-
-
-        </div>
-    </div> --}}
-
 
 
     <div class="u-align-center-xs u-palette-4-dark-1 u-section-row u-sticky navigation_media" id="sec-71fa">
@@ -124,19 +94,19 @@
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Employee Details') }}</a>
                                     </li>
                                     <li class="u-nav-item"><a href="{{ route('render_executive_members') }}"
-                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Council Members') }}</a>
-                                </li>
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Council Members') }}</a>
+                                    </li>
                                     <li class="u-nav-item"><a href="{{ route('render_committee') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('District Committees') }}</a>
                                     </li>
-                                  
-                                    
-                                    <li class="u-nav-item"><a href="{{ 'render_chairperson' }}"
+
+
+                                    <li class="u-nav-item"><a href="{{ route('render_chairperson') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Message from Vice Chairperson') }}</a>
                                     </li>
                                     <li class="u-nav-item"><a href="{{ route('render_administrative') }}"
-                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Message from the Administrative Head') }}</a>
-                                </li>
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Message from the Administrative Head') }}</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -147,6 +117,9 @@
                                 <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-3">
 
                                     {{-- added jankari --}}
+                                    <li class="u-nav-item"><a href="{{ route('render_budget') }}"
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Programs & Budget') }}</a>
+                                    </li>
                                     <li class="u-nav-item"><a href="{{ route('render_rules') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Acts & Regulations') }}</a>
                                     </li>
@@ -154,9 +127,9 @@
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Directory') }}</a>
                                     </li>
                                     <li class="u-nav-item"><a href="{{ route('render_publication') }}"
-                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Publication') }}</a>
-                                </li>
-                                   
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Publication') }}</a>
+                                    </li>
+
                                 </ul>
                             </div>
                         </li>
@@ -187,8 +160,11 @@
                                     <li class="u-nav-item"><a href="{{ route('render_notice') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Notice') }}</a>
                                     </li>
+                                    <li class="u-nav-item"><a href="{{ route('render_oppurtunity') }}"
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Oppurtunity') }}</a>
+                                    </li>
                                     <li class="u-nav-item"><a href="{{ route('render_press') }}"
-                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Press Release') }}</a>
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Press Release') }}</a>
                                     </li>
                                     <li class="u-nav-item"><a href="{{ route('render_tender') }}"
                                             class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Tender') }}</a>
@@ -217,19 +193,19 @@
                             </div>
                         </li>
                         <li class="u-nav-item"><a
-                            class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
-                            href="#" style="padding: 10px 16px;">{{ __('Youth') }}</a>
-                        <div class="u-nav-popup">
-                            <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
-                                <li class="u-nav-item"><a href="{{ route('render_youthactivity') }}"
-                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Youth Activity') }}</a>
-                                </li>
-                                <li class="u-nav-item"><a href="{{ route('render_youthstats') }}"
-                                        class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Youth Statistics') }}</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                                class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
+                                href="#" style="padding: 10px 16px;">{{ __('Youth') }}</a>
+                            <div class="u-nav-popup">
+                                <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-5">
+                                    <li class="u-nav-item"><a href="{{ route('render_youthactivity') }}"
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Youth Activity') }}</a>
+                                    </li>
+                                    <li class="u-nav-item"><a href="{{ route('render_youthstats') }}"
+                                            class="u-active-palette-4-light-1 u-button-style u-nav-link u-white">{{ __('Youth Statistics') }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
 
                         <li class="u-nav-item"><a
                                 class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
@@ -238,7 +214,7 @@
 
                         </li>
 
-                      
+
                         <li class="u-nav-item"><a href="{{ route('contact_page') }}"
                                 class="u-active-white u-button-style u-hover-white u-nav-link u-text-active-palette-4-dark-1 u-text-body-alt-color u-text-hover-palette-4-base"
                                 style="padding: 10px 18px 10px 16px;">{{ __('Contact') }}</a>
@@ -272,20 +248,20 @@
                                             <li class="u-nav-item"><a href="{{ route('render_team') }}"
                                                     class="u-button-style u-nav-link">{{ __('Employee Details') }}</a>
                                             </li>
-                                          
+
                                             <li class="u-nav-item"><a href="{{ route('render_executive_members') }}"
                                                     class="u-button-style u-nav-link">{{ __('Council Members') }}</a>
                                             </li>
                                             <li class="u-nav-item"><a href="{{ route('render_committee') }}"
-                                                class="u-button-style u-nav-link">{{ __('District Committees') }}</a>
-                                        </li>
+                                                    class="u-button-style u-nav-link">{{ __('District Committees') }}</a>
+                                            </li>
                                             <li class="u-nav-item"><a href="{{ route('render_chairperson') }}"
-                                                class="u-button-style u-nav-link">{{ __('Message from Vice Chairperson') }}</a>
-                                        </li>
+                                                    class="u-button-style u-nav-link">{{ __('Message from Vice Chairperson') }}</a>
+                                            </li>
                                             <li class="u-nav-item"><a href="{{ route('render_administrative') }}"
                                                     class="u-button-style u-nav-link">{{ __('Message from the Administrative Head') }}</a>
                                             </li>
-                                           
+
                                         </ul>
                                     </div>
                                 </li>
@@ -293,17 +269,20 @@
                                         href="#l">{{ __('Documents') }}</a>
                                     <div class="u-nav-popup">
                                         <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-9">
-
+                                            <li class="u-nav-item"><a href="{{ route('render_budget') }}"
+                                                    class="u-button-style u-nav-link">{{ __('Programs & Budget') }}</a>
+                                            </li>
                                             <li class="u-nav-item"><a href="{{ route('render_rules') }}"
                                                     class="u-button-style u-nav-link">{{ __('Acts & Regulations') }}</a>
                                             </li>
+
                                             <li class="u-nav-item"><a href="{{ route('render_directot') }}"
                                                     class="u-button-style u-nav-link">{{ __('Directory') }}</a>
                                             </li>
-                                            
+
                                             <li class="u-nav-item"><a href="{{ route('render_publication') }}"
-                                                class="u-button-style u-nav-link">{{ __('Publication') }}</a>
-                                        </li>
+                                                    class="u-button-style u-nav-link">{{ __('Publication') }}</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -315,9 +294,12 @@
                                             <li class="u-nav-item"><a href="{{ route('render_news') }}"
                                                     class="u-button-style u-nav-link">{{ __('Notice') }}</a>
                                             </li>
+                                            <li class="u-nav-item"><a href="{{ route('render_oppurtunity') }}"
+                                                    class="u-button-style u-nav-link">{{ __('Programs & Budget') }}</a>
+                                            </li>
                                             <li class="u-nav-item"><a href="{{ route('render_press') }}"
-                                                class="u-button-style u-nav-link">{{ __('Press Release') }}</a>
-                                        </li>
+                                                    class="u-button-style u-nav-link">{{ __('Press Release') }}</a>
+                                            </li>
                                             <li class="u-nav-item"><a href="{{ route('render_tender') }}"
                                                     class="u-button-style u-nav-link">{{ __('Tender') }}</a>
                                             </li>
@@ -354,24 +336,24 @@
                                         class="u-button-style u-nav-link">{{ __('Blog') }}</a>
                                 </li>
 
-                                
+
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link"
-                                    href="#">{{ __('Youth') }}</a>
-                                <div class="u-nav-popup">
-                                    <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12">
-                                        <li class="u-nav-item"><a href="{{ route('render_youthactivity') }}"
-                                                class="u-button-style u-nav-link">
-                                                {{ __('Youth Activity') }}
-                                            </a>
-                                        </li>
-                                        <li class="u-nav-item"><a href="{{ route('render_youthstats') }}"
-                                                class="u-button-style u-nav-link">
-                                                {{ __('Youth Statistics') }}
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                                        href="#">{{ __('Youth') }}</a>
+                                    <div class="u-nav-popup">
+                                        <ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-12">
+                                            <li class="u-nav-item"><a href="{{ route('render_youthactivity') }}"
+                                                    class="u-button-style u-nav-link">
+                                                    {{ __('Youth Activity') }}
+                                                </a>
+                                            </li>
+                                            <li class="u-nav-item"><a href="{{ route('render_youthstats') }}"
+                                                    class="u-button-style u-nav-link">
+                                                    {{ __('Youth Statistics') }}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
                                 <li class="u-nav-item"><a href="{{ route('contact_page') }}"
                                         class="u-button-style u-nav-link">{{ __('Contact') }}</a>
                                 </li>

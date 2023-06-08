@@ -19,7 +19,6 @@ class CreateContactUsTable extends Migration
             $table->string('email');
             $table->bigInteger('phone');
             $table->text('message');
-          
             $table->timestamps();
         });
     }

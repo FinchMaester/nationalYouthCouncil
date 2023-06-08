@@ -23,14 +23,25 @@
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
+            @if(session('success'))
+            <div class="alert alert-success">
+              {!! session('success') !!}
+            </div>
+            @endif
 
+            @if(session('error'))
+            <div class="alert alert-danger">
+              {!! session('error') !!}
+            </div>
+            @endif
       <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Sn</th>
+                <th>State</th>
                 <th>District</th>
                 <th>Name</th>
-                <th>Address</th>
+                
                 <th>Phone</th>
                 <th>Action</th>
 
@@ -40,9 +51,10 @@
             @foreach ($committeedetails as $cd)
                 <tr data-widget="expandable-table" aria-expanded="false">
                     <td>{{ $loop->iteration}}</td>
+                    <td>{{ $cd->address }}</td>
                     <td>{{ $cd->district ?? '' }}</td>
                     <td>{{ $cd->name ?? '' }}</td>
-                    <td>{{ $cd->address }}</td>
+                    
                     <td>{{ $cd->phone ?? '' }}</td>
                     <td>
                         

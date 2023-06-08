@@ -9,6 +9,9 @@ use App\Models\Image;
 use App\Models\MyPage;
 use App\Models\Category;
 use App\Models\Document;
+use App\Models\ExecutiveDetail;
+use App\Models\CommitteeDetail;
+use App\Models\ContactUs;
 use App\Models\SiteSetting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -20,15 +23,30 @@ class AdminController extends Controller
 {
     //
     public function index(Request $req){
-   
-        return view('admin.index',  ['page_title' =>'Dashboard']);
-
+        $totalTeam = Team::get()->count();
+        $totalExecutives = ExecutiveDetail::get()->count();
+        $totalCommittee = CommitteeDetail::get()->count();
+        $totalDocument = Document::where('type','notice')->count();
+        $totalPosts = Post::get()->count();
+        $totalContact = ContactUs::get()->count();
+        return view('admin.index',  
+        [
+            'page_title' =>'Dashboard',
+            'totalTeam' => $totalTeam,
+            'totalDocument' => $totalDocument,
+            'totalExecutives' => $totalExecutives,
+            'totalCommittee' => $totalCommittee,
+            'totalPosts' => $totalPosts,
+            'totalContact' => $totalContact
+        
+        
+        ]);
     }
 
     public function dashboard()
     {
         # code...
-        $totalTeam = Team::count();
+        $totalTeam = Team::get()->count();
         $totalDocument = Document::where('type','notice')->count();
        
         return view('admin.dashboard',compact('totalTeam','totalDocument'));

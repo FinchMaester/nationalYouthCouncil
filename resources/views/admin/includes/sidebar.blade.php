@@ -145,6 +145,11 @@ use App\Models\SiteSetting;
                             </span><span class="nav-link-text ps-1">Team</span></div>
                     </a>
                     <ul class="nav collapse" id="events">
+                        <li class="nav-item"><a class="nav-link" href="{{ route('admin.team.index') }}">
+                            <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Team</span>
+                            </div>
+                        </a>
+                    </li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('admin.executivedetails.index') }}">
                                 <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Executive Members</span>
                                 </div>
@@ -155,11 +160,7 @@ use App\Models\SiteSetting;
                                 </div>
                             </a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="{{ route('admin.team.index') }}">
-                                <div class="d-flex align-items-center"><span class="nav-link-text ps-1">Team</span>
-                                </div>
-                            </a>
-                        </li>
+                       
                     </ul>
 
                     <!-- parent pages-->
@@ -187,12 +188,7 @@ use App\Models\SiteSetting;
 
 
 
-                    <a class="nav-link" href="{{ route('admin.categories.index') }}" role="button">
-                        <div class="d-flex align-items-center"><span class="nav-link-icon">
-                            <i class="fas fa-sort-alpha-up"></i>
-                                <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
-                                class="nav-link-text ps-1">Category</span></div>
-                    </a>
+                   
 
                     <a class="nav-link" href="{{ route('admin.message.index') }}" role="button">
                         <div class="d-flex align-items-center"><span class="nav-link-icon">
@@ -201,11 +197,25 @@ use App\Models\SiteSetting;
                                 class="nav-link-text ps-1">Message</span></div>
                     </a>
 
+                    <a class="nav-link" href="{{ route('admin.categories.index') }}" role="button">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon">
+                            <i class="fas fa-sort-alpha-up"></i>
+                                <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
+                                class="nav-link-text ps-1">Category</span></div>
+                    </a>
+
                     <a class="nav-link" href="{{ route('admin.posts.index') }}" role="button">
                         <div class="d-flex align-items-center"><span class="nav-link-icon">
                             <i class="far fa-file"></i>
                                 <!-- <span class="fas fa-calendar-alt"></span> Font Awesome fontawesome.com --></span><span
                                 class="nav-link-text ps-1">Post</span></div>
+                    </a>
+
+                    <a class="nav-link" href="{{ route('admin.insta.index') }}" role="button">
+                        <div class="d-flex align-items-center"><span class="nav-link-icon">
+                            <i class="fas fa-sort-alpha-up"></i>
+                                <!-- <span class="fas fa-comments"></span> Font Awesome fontawesome.com --></span><span
+                                class="nav-link-text ps-1">Instagram</span></div>
                     </a>
 
 
@@ -217,7 +227,7 @@ use App\Models\SiteSetting;
                     </a>
 
 
-
+                   
                    
 
                     <a class="nav-link" href="{{ route('admin.youth.index') }}" role="button">

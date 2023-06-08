@@ -26,8 +26,8 @@
         @csrf
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Position--</option>
-            <option value="administrativehead">Administrative Head</option>
-            <option value="chairperson">Chairperson</option>
+            <option value="Administrativehead">Administrative Head</option>
+            <option value="Vicechairperson">Vice Chairperson</option>
         </select>
         
 

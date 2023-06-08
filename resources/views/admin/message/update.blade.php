@@ -26,8 +26,8 @@
         <input name="id" id="" value = "{{ $message->id }}" hidden>
         <select name="type" id="type">
             <option value="0" disabled selected>--Select Type --</option>
-            <option value="administrativehead">Administrative Head</option>
-            <option value="chairperson">Chairperson</option>
+            <option value="Administrativehead" {{ $message->type == 'Administrativehead' ? 'selected' : '' }}>Administrative Head</option>
+            <option value="Vicechairperson" {{ $message->type == 'Vicechairperson' ? 'selected' : '' }}>Vice Chairperson</option>
         </select>
         
 

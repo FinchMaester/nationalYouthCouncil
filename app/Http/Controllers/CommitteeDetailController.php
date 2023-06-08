@@ -23,8 +23,20 @@ class CommitteeDetailController extends Controller
     */
     public function fileImport(Request $request)
     {
-        Excel::import(new UsersImport, $request->file('file')->store('temp'));
-        return back();
+
+        $file = $request->file('file');  
+        // Excel::import(new ExecutiveDetailImport, $request->file('file')->store('temp'));
+
+        try {
+            Excel::import(new UsersImport, $file);
+            return redirect()->route('admin.committeedetails.index')->with('success', 'Data imported successfully');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Error importing data: ' . $e->getMessage());
+        }
+
+
+        
+
     }
     /**
     * @return \Illuminate\Support\Collection
@@ -43,7 +55,7 @@ class CommitteeDetailController extends Controller
      */
     public function index()
     {
-        $committeedetails = CommitteeDetail::paginate(10);
+        $committeedetails = CommitteeDetail::paginate(20);
         return view('admin.committeedetail.index',[
             "page_title" => "Committee Details",
             "committeedetails" => $committeedetails

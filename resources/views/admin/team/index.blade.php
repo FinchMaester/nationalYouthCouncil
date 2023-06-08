@@ -11,6 +11,8 @@
                     <h1 class="m-0">{{ $page_title }}</h1>
                     <a href="{{ route('admin.team.create') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
                       Add New</button></a>
+                    <a href="{{ route('admin.team.orderindex') }}"><button class="btn-primary btn-sm"><i class="fa fa-plus"></i>
+                      Order</button></a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -31,6 +33,7 @@
           <th>Image</th>
           <th>Contact No.</th>
           <th>Email</th>
+          <th>Order</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -45,6 +48,7 @@
               style="max-width: 100px; max-height:100px; object-fit: cover" /></td>
           <td>{{ $team->contact_number ?? '' }}</td>
           <td>{{ $team->email ?? '' }}</td>
+         <td>{{ $team->order ?? '' }}</td>
           <td>
             {{-- <a href="/admin/team/edit/{{ $team->id }}"> --}}
               <div style="display: flex; flex-direction:row;">
@@ -74,6 +78,10 @@
 
         @endforeach
       </tbody>
+
+
+
+      
 
       @foreach($teams as $team)
       <div class="modal fade" id="delete{{ $team->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -123,6 +131,8 @@
 
       
     </table>
+
+
 
     <div class="d-flex justify-content-center">
       {!! $teams->links() !!}

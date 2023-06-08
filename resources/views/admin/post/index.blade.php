@@ -24,11 +24,11 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
+              <th>S.N.</th>
                 <th>Title</th>
                 <th>Category</th>
                 <th>Image</th>
                 <th>Slug</th>
-                <th>Content</th>
                 <th>Action</th>
 
             </tr>
@@ -36,6 +36,7 @@
         <tbody>
             @foreach ($posts as $post)
                 <tr data-widget="expandable-table" aria-expanded="false">
+                  <td>{{ $loop->iteration }}</td>
                     <td>{{ $post->title ?? '' }}</td>
                     @foreach ($post->get_categories as $category )
                     <td>{{  $category->title  }}</td>   
@@ -43,7 +44,7 @@
                     <td><img id="preview1" src="{{ url('uploads/posts/' . $post->image) }}"
                       style="width: 100px; height:100px; object-fit:cover;" /></td>
                     <td>{{ $post->slug ?? '' }}</td>
-                    <td>{!! $post->content !!}</td>
+                    
                     <td>
                         
                         {{-- <a href="edit/{{ $post->id }}"> --}}
